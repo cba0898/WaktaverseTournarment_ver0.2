@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: e0f6de60347757c4a93cf9f2e54d16ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5391786713392469086
+    second: idol_sd_illust_0
+  - first:
+      213: -7898552870192000837
+    second: idol_sd_illust_1
+  - first:
+      213: 4527032706468041690
+    second: idol_sd_illust_3
+  - first:
+      213: 1580622102938261915
+    second: idol_sd_illust_4
+  - first:
+      213: -3145106812550405422
+    second: idol_sd_illust_6
+  - first:
+      213: -4727579616489219634
+    second: idol_sd_illust_14
+  - first:
+      213: -4064993190275132544
+    second: idol_sd_illust_18
+  - first:
+      213: 7805274462304372572
+    second: idol_sd_illust_20
+  - first:
+      213: -3898019262037957475
+    second: idol_sd_illust_21
+  - first:
+      213: -1343025800494269759
+    second: idol_sd_illust_22
+  - first:
+      213: 1297206941940727858
+    second: idol_sd_illust_27
+  - first:
+      213: 1052321150654026696
+    second: idol_sd_illust_28
+  - first:
+      213: 4857042161471751474
+    second: idol_sd_illust_31
+  - first:
+      213: -7110669311783187769
+    second: idol_sd_illust_32
+  - first:
+      213: 5213743231489144119
+    second: idol_sd_illust_35
+  - first:
+      213: 5909402721417469103
+    second: idol_sd_illust_36
+  - first:
+      213: -3464034752415589851
+    second: idol_sd_illust_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idol_sd_illust_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 557
+        width: 121
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54dd6ce27973da40800000000000000
+      internalID: 5391786713392469086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 554
+        width: 139
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0509c4304b26290800000000000000
+      internalID: -7898552870192000837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 551
+        width: 105
+        height: 119
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad35a93e24043de30800000000000000
+      internalID: 4527032706468041690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_4
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 547
+        width: 148
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9914c99d6f7fe510800000000000000
+      internalID: 1580622102938261915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_6
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 551
+        width: 129
+        height: 125
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2a54974065a54d0800000000000000
+      internalID: -3145106812550405422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_14
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 393
+        width: 135
+        height: 143
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec958c7f263446eb0800000000000000
+      internalID: -4727579616489219634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 392
+        width: 99
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083d44f0b3e3697c0800000000000000
+      internalID: -4064993190275132544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_20
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 394
+        width: 133
+        height: 123
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c578414f4c7e15c60800000000000000
+      internalID: 7805274462304372572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_21
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 392
+        width: 130
+        height: 132
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94e89e322477e9c0800000000000000
+      internalID: -3898019262037957475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_22
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 394
+        width: 118
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caba5d662d9c5de0800000000000000
+      internalID: -1343025800494269759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 230
+        width: 108
+        height: 142
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2304c8e37da900210800000000000000
+      internalID: 1297206941940727858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_28
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 231
+        width: 139
+        height: 136
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c31d56d2889a9e00800000000000000
+      internalID: 1052321150654026696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_31
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 226
+        width: 149
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2358e95bc1ea76340800000000000000
+      internalID: 4857042161471751474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_32
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 225
+        width: 204
+        height: 141
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca44e35fe3d15d90800000000000000
+      internalID: -7110669311783187769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_35
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 22
+        width: 148
+        height: 166
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735f10f68dfea5840800000000000000
+      internalID: 5213743231489144119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_36
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 21
+        width: 165
+        height: 159
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac90dc377a620250800000000000000
+      internalID: 5909402721417469103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idol_sd_illust_37
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 18
+        width: 153
+        height: 177
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a19a4feb64defc0800000000000000
+      internalID: -3464034752415589851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

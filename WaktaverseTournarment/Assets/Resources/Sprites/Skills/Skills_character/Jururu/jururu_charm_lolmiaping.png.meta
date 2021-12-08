@@ -1,0 +1,360 @@
+fileFormatVersion: 2
+guid: cecbe9be1923ddd4c9a396f476893ae5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5614149115112078883
+    second: jururu_charm_lolmiaping_0
+  - first:
+      213: -7871127956019959288
+    second: jururu_charm_lolmiaping_1
+  - first:
+      213: 8799896449512912267
+    second: jururu_charm_lolmiaping_2
+  - first:
+      213: -101446660331099824
+    second: jururu_charm_lolmiaping_3
+  - first:
+      213: 5493164194411554633
+    second: jururu_charm_lolmiaping_4
+  - first:
+      213: -10542316213007714
+    second: jururu_charm_lolmiaping_5
+  - first:
+      213: 2822715957862083150
+    second: jururu_charm_lolmiaping_6
+  - first:
+      213: -7421340786484239961
+    second: jururu_charm_lolmiaping_7
+  - first:
+      213: -5782037317343056876
+    second: jururu_charm_lolmiaping_8
+  - first:
+      213: -2851859720714248966
+    second: jururu_charm_lolmiaping_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 258.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e345a00e679ed40800000000000000
+      internalID: 5614149115112078883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_1
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 259
+        width: 129
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80aa8c7b3d224c290800000000000000
+      internalID: -7871127956019959288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_2
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 258.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85307d62338f1a70800000000000000
+      internalID: 8799896449512912267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 258.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059a057ccc6979ef0800000000000000
+      internalID: -101446660331099824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_4
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 258.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947abc41bb3ab3c40800000000000000
+      internalID: 5493164194411554633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a830bb1db8adff0800000000000000
+      internalID: -10542316213007714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a2232553d4c2720800000000000000
+      internalID: 2822715957862083150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a12d78efd9120990800000000000000
+      internalID: -7421340786484239961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_8
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ce6b5c1b312cfa0800000000000000
+      internalID: -5782037317343056876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jururu_charm_lolmiaping_9
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 0.5
+        width: 129
+        height: 258.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc159d91b82c68d0800000000000000
+      internalID: -2851859720714248966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f1c4097ffc3355b4daf1691b06539a27
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: Hikiking
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uD788\uD0A4\uD0B9"
+  discription: "\uADF8\uB9BC\uC790 \uBD84\uC2E0 - \uBCBD\uB825\uC77C\uC12C"
+  target: 4
+  range: 910
+  movePos: 0
+  effect: {fileID: 1756335059320137928, guid: aac1e5b4d02cdae409bf64ca10310a03, type: 3}
+  thisAction: 4
+  isUsed: 0
+  MoveCount: 0
+  condition: 2
+  value: 50
+  cost: 40
+  turns: 0
+  applyCount: 1
+  isSpread: 0

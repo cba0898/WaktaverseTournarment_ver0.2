@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: RoentRad
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uD53C\uD3ED"
+  discription: "\uB9E4\uB2C8\uC800\uC758 \uD32C\uB364\uC740 \uD53C\uD3ED\uB2E8\uC785\uB2C8\uB2E4."
+  target: 4
+  range: 372
+  movePos: 0
+  effect: {fileID: 6860000041131192389, guid: 478e458b7c6f68a4fb3f2dfb78acd09f, type: 3}
+  thisAction: 4
+  isUsed: 0
+  MoveCount: 0
+  condition: 2
+  value: 40
+  cost: 50
+  turns: 0
+  applyCount: 1
+  isSpread: 0

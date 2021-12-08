@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 2896cca0f171e6242bde66edf7c71709
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1723552367370615923
+    second: Icon_total2_0
+  - first:
+      213: -8773177076175967378
+    second: Icon_total2_1
+  - first:
+      213: -6955508418060190971
+    second: Icon_total2_2
+  - first:
+      213: 221869604686323287
+    second: Icon_total2_3
+  - first:
+      213: -5348612807096424263
+    second: Icon_total2_4
+  - first:
+      213: 4270427576321266824
+    second: Icon_total2_5
+  - first:
+      213: 4510320235254188635
+    second: Icon_total2_6
+  - first:
+      213: 8503219889939027555
+    second: Icon_total2_7
+  - first:
+      213: 4648652994309613140
+    second: Icon_total2_8
+  - first:
+      213: 5252102871364725283
+    second: Icon_total2_9
+  - first:
+      213: 6140543158555246569
+    second: Icon_total2_10
+  - first:
+      213: -2278566297644842510
+    second: Icon_Gosegu
+  - first:
+      213: -2297356003100555120
+    second: Icon_Viichan
+  - first:
+      213: -1313622784187593632
+    second: Icon_Roentgenium
+  - first:
+      213: 2487655054320033108
+    second: Icon_Wakgood
+  - first:
+      213: 2173798992543767541
+    second: Icon_Lilpa_old
+  - first:
+      213: 6739602711923796364
+    second: Icon_Ine
+  - first:
+      213: 3922105346314008136
+    second: Icon_Ine_old
+  - first:
+      213: 644233744522929174
+    second: Icon_Jingburger
+  - first:
+      213: 695619550174596879
+    second: Icon_Jururu
+  - first:
+      213: -2283812220494294954
+    second: Icon_Lilpa
+  - first:
+      213: 5720878794063898385
+    second: Icon_Frame
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icon_Gosegu
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1c3bf4608e060e0800000000000000
+      internalID: -2278566297644842510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Viichan
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 536
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098849813e62e10e0800000000000000
+      internalID: -2297356003100555120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Roentgenium
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 536
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c83a3a90315cde0800000000000000
+      internalID: -1313622784187593632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Wakgood
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 536
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d537c771de58220800000000000000
+      internalID: 2487655054320033108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Lilpa_old
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 369
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb5cab9aa2ea2e10800000000000000
+      internalID: 2173798992543767541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Ine
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 369
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c892a7365f0e78d50800000000000000
+      internalID: 6739602711923796364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Ine_old
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 369
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846f4b2480e1e6630800000000000000
+      internalID: 3922105346314008136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Jingburger
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614eb966d27c0f800800000000000000
+      internalID: 644233744522929174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Jururu
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 202
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f49fa9b4657a900800000000000000
+      internalID: 695619550174596879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Lilpa
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 202
+        width: 166
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650ddb7b2e44e40e0800000000000000
+      internalID: -2283812220494294954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Frame
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1176e33e3f4a46f40800000000000000
+      internalID: 5720878794063898385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2dd62d13048534049bc3ea55b9308497
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

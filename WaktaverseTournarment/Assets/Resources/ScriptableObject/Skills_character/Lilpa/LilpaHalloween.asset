@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: LilpaHalloween
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uD560\uB85C\uC708\uB370\uC774"
+  discription: "\uB9B4\uD30C\uC758 \uB0A0! \uADF8\uB54C\uB85C \uBCC0\uC2E0! \uB9E4
+    \uD134 \uB9C8\uB098\uB97C \uD68C\uBCF5\uD55C\uB2E4."
+  target: 2
+  range: 32
+  movePos: 0
+  effect: {fileID: 0}
+  thisAction: 128
+  isUsed: 0
+  MoveCount: 0
+  condition: 4
+  value: 10
+  cost: 0
+  turns: 3
+  applyCount: 1
+  isSpread: 0

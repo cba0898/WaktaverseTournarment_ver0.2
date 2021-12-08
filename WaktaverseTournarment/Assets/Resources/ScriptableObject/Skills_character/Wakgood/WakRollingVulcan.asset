@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: WakRollingVulcan
+  m_EditorClassIdentifier: 
+  skillName: "\uB864\uB9C1\uBC1C\uCE78"
+  discription: "\uB864\uB9C1\uBC1C\uCE78 \uCDA9\uC804\uB3C4 \uC548\uD574\uB193\uACE0!"
+  target: 4
+  range: -1
+  movePos: 0
+  effect: {fileID: 0}
+  thisAction: 4
+  condition: 2
+  value: 3
+  cost: 45
+  turns: 0
+  applyCount: 5
+  isSpread: 0
