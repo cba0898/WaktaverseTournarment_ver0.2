@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
   m_Name: IneDoves
   m_EditorClassIdentifier: 
+  priority: 2
   skillName: "\uBE44\uB458\uAE30\uC758 \uAC15\uC2B5"
   discription: 
   target: 4
-  range: 372
+  range: 10
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 2315902533725290240, guid: 9aafbae9da8c9b44b92dc8feacf45e3b, type: 3}
   thisAction: 4
+  isUsed: 0
+  MoveCount: 0
   condition: 2
-  value: 5
-  cost: 20
+  value: 10
+  cost: 25
   turns: 0
-  applyCount: 5
+  applyCount: 3
   isSpread: 0

@@ -24,6 +24,6 @@ MonoBehaviour:
   isUsed: 0
   MoveCount: 0
   condition: 32
-  value: -100
-  cost: 25
+  value: -50
+  cost: 15
   turns: 1

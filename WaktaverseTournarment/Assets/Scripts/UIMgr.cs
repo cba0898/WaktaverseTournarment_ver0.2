@@ -149,13 +149,18 @@ public class UIMgr : MonoBehaviour
         SetCharImg(playerIcon, CurPlayer, "Sprites/Characters/Icon/Icon_total", "Icon");
         SetCharImg(GameMgr.Instance.playerImg, CurPlayer, "Sprites/Characters/Characters_total", "Characters");
         SetCharImg(miniMap.playerMiniMapIcon, CurPlayer, "Sprites/Characters/Characters_total", "Characters");
-        
+
 
         SetCharImg(enemyIcon, CurEnemy, "Sprites/Characters/Icon/Icon_total", "Icon");
         SetCharImg(GameMgr.Instance.enemyImg, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
         SetCharImg(miniMap.enemyMiniMapIcon, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
-
-
+    }
+    [SerializeField] Image background;
+    [SerializeField] Sprite[] backgroundSprites;
+    // 전투 화면 백그라운드 설정
+    private void InitBattleBackground()
+    {
+        background.sprite = backgroundSprites[Random.Range(0, backgroundSprites.Length)];
     }
 
     // 카드에 데이터를 넣고 카드의 위치를 지정
@@ -445,6 +450,7 @@ public class UIMgr : MonoBehaviour
         MoveScene(SCENE.CharMatch, SCENE.Play);
 
         InitCardSetScene();
+        InitBattleBackground();
         GameMgr.Instance.InitBattleScene();
         DataMgr.Instance.SetCardData();
 

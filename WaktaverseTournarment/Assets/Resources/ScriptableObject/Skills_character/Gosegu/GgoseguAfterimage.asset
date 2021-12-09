@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uC794\uC0C1\uC785\uB2C8\uB2E4\uB9CC?"
-  discription: "\uC5D0~"
+  discription: "\uC5D0~ \uB54C\uB824\uBCF4\uB77C\uB2C8\uAE4C~?"
   target: -1
   range: 32
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 3552552085030617196, guid: 9e48fa76228cdef4390a913a6e33a76e, type: 3}
   thisAction: 128
   isUsed: 0
   MoveCount: 0

@@ -109,9 +109,9 @@ public class GameMgr : MonoBehaviour
 
     // 이렇게 쓰면 안됨
     public void InitCharPos()
-    {
-        Player.transform.localPosition = new Vector2((float)DataMgr.Instance.tileInterval.x * -1.5f, 0f);
-        Enemy.transform.localPosition = new Vector2((float)DataMgr.Instance.tileInterval.x * 1.5f, 0f);
+    {        
+        Player.transform.localPosition = DataMgr.Instance.SetUnitPos(DataMgr.Instance.tileInterval.x, DataMgr.Instance.playerPosRate);
+        Enemy.transform.localPosition = DataMgr.Instance.SetUnitPos(DataMgr.Instance.tileInterval.x, DataMgr.Instance.enemyPosRate);
     }
 
     // 배틀 화면 초기화

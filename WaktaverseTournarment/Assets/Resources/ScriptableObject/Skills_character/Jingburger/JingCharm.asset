@@ -9,16 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eae4136e5247e5b4ab84ece94c37b6e4, type: 3}
+  m_Script: {fileID: 11500000, guid: a371e5ca5c1d7c6439dfa0c12da6cce9, type: 3}
   m_Name: JingCharm
   m_EditorClassIdentifier: 
-  priority: 1
-  skillName: "\uBBF8\uC778\uACC4"
-  discription: "\uC801\uC744 \uB04C\uC5B4\uB2F9\uAE34\uB2E4."
+  priority: 0
+  skillName: "\uC0B4\uB824\uC8FC\uC138\uC694~\u2665"
+  discription: "2\uD134 \uB3D9\uC548 \uC801\uC758 \uACF5\uACA9\uC744 \uC18C\uADF9\uC801\uC73C\uB85C
+    \uB9CC\uB4E0\uB2E4.(\uC801 \uACF5\uACA9\uB825 \uAC10\uC18C)"
   target: 4
-  range: 0
-  movePos: 16
-  effect: {fileID: 0}
-  thisAction: 2
+  range: 32
+  movePos: 0
+  effect: {fileID: 9019769313175145042, guid: dd3ee02104784ed4db363c27283a5a1e, type: 3}
+  thisAction: 128
   isUsed: 0
-  MoveCount: 1
+  MoveCount: 0
+  condition: 16
+  value: -20
+  cost: 10
+  turns: 2

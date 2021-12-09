@@ -13,8 +13,8 @@ public class MiniMap : MonoBehaviour
 
     public void InitMiniMapPos()
     {
-        miniMapPlayer.transform.localPosition = new Vector2(miniMapInterval.x * -1.5f, 0f);
-        miniMapEnemy.transform.localPosition = new Vector2(miniMapInterval.x * 1.5f, 0f);
+        miniMapPlayer.transform.localPosition = DataMgr.Instance.SetUnitPos(miniMapInterval.x, DataMgr.Instance.playerPosRate);
+        miniMapEnemy.transform.localPosition = DataMgr.Instance.SetUnitPos(miniMapInterval.x, DataMgr.Instance.enemyPosRate);
     }
 
     public void SetMiniMapPos(Unit unit, Vector2 pos)

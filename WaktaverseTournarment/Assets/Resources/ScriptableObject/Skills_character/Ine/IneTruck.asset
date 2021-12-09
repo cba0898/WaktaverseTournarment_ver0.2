@@ -20,11 +20,11 @@ MonoBehaviour:
   movePos: 0
   effect: {fileID: 3429731784906049575, guid: bd4800b1eaba6c94f88a85a7926ff46c, type: 3}
   thisAction: 4
-  isUsed: 0
+  isUsed: 1
   MoveCount: 0
   condition: 2
-  value: 50
-  cost: 45
+  value: 40
+  cost: 35
   turns: 0
   applyCount: 1
   isSpread: 0

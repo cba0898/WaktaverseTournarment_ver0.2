@@ -52,6 +52,14 @@ public class DataMgr : MonoBehaviour
     [SerializeField] private List<Character> enemyList = new List<Character>(); // 적 캐릭터 리스트
 
     private int enemyIndex = 0; // 적 캐릭터 리스트의 인덱스
+    [SerializeField] public float playerPosRate;
+    [SerializeField] public float enemyPosRate;
+    public Vector2 SetUnitPos(float xInterval, float rate)
+    {
+        Vector2 pos = new Vector2(xInterval * rate, 0f);
+        return pos;
+    }
+
     /*--------------캐릭터 정보---------*/
 
     /*--------------스킬 정보------------*/
