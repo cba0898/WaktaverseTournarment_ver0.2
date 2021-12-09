@@ -128,16 +128,6 @@ public class UIMgr : MonoBehaviour
         option.SetActive(false);
     }
 
-    //--------------사운드---------------
-    // bgm key 문자열 변수들
-    private string keyMain = "Main";
-    private string keyCardSet = "CardSet";
-    private string keyBattle = "Battle";
-    private string keyWin = "Win";
-    private string keyLose = "Lose";
-    private string keyEnding = "Ending";
-    //--------------사운드---------------
-
     // 다음 라운드 버튼 활성화
     public void ActiveNextRound(bool value)
     {
@@ -422,7 +412,7 @@ public class UIMgr : MonoBehaviour
                 break;
             case BUTTON.CharMatch_Start:
                 CharMatchStart();
-                SoundMgr.Instance.OnPlayBGM(keyCardSet);
+                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
             case BUTTON.CardSet_Start:
                 CardSetStart();
@@ -438,7 +428,7 @@ public class UIMgr : MonoBehaviour
                 ClearSlot();
 
                 MoveScene(SCENE.Battle, SCENE.CardSet);
-                SoundMgr.Instance.OnPlayBGM(keyCardSet);
+                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
         }
     }
@@ -535,8 +525,6 @@ public class UIMgr : MonoBehaviour
         sceneList[(int)SCENE.Play].gameObject.SetActive(false);
         sceneList[(int)SCENE.Battle].gameObject.SetActive(false);
         sceneList[(int)SCENE.CardSet].gameObject.SetActive(true);
-        SoundMgr.Instance.LoadAudio();
-        SoundMgr.Instance.OnPlayBGM(keyMain);
     }
 
     // 씬 전환

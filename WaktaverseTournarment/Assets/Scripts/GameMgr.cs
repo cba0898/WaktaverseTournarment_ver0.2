@@ -84,6 +84,9 @@ public class GameMgr : MonoBehaviour
     public void Start()
     {
         UIMgr.Instance.InitScene();
+        SoundMgr.Instance.LoadAudio();
+        SoundMgr.Instance.StopBGM();
+        SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyMain);
     }
 
     public void Update()
@@ -641,6 +644,11 @@ public class GameMgr : MonoBehaviour
                 UIMgr.Instance.cardSet.OnSelectUnique();
             }
         }
+    }
+
+    public void ResetGame()
+    {
+        UIMgr.Instance.InitScene();
     }
 }
 

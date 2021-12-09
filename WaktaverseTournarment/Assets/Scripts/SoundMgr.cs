@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,14 @@ public class SoundMgr : MonoBehaviour
     [SerializeField] private AudioSource BGM;    // BGM
     [SerializeField] private AudioSource SFX;    // SFX
 
+    // bgm key 문자열 변수들
+    public string keyMain = "Main";
+    public string keyCardSet = "CardSet";
+    public string keyBattle = "Battle";
+    public string keyWin = "Win";
+    public string keyLose = "Lose";
+    public string keyEnding = "Ending";
+
     //void Start()
     //{
     //    LoadAudio();
@@ -49,29 +58,37 @@ public class SoundMgr : MonoBehaviour
     public bool BGMSoundMute { get { return (masterMute && BGMMute); } }
     public float BGMSoundVolume { get { return (BGMVolume * masterVolume); } }
 
-    public void ChangeMaterVolume(Slider slider)
+    public void ChangeMasterVolume(Slider slider)
     {
         masterVolume = slider.value;
+        ApplyBGMVolume();
+        ApplySFXVolume();
     }
-    public void MuteMaterVolume(Toggle toggle)
+    public void MuteMasterVolume(Toggle toggle)
     {
         masterMute = toggle.isOn;
+        ApplyBGMVolume();
+        ApplySFXVolume();
     }
     public void ChangeSFXVolume(Slider slider)
     {
         SFXVolume = slider.value;
+        ApplySFXVolume();
     }
     public void MuteSFXVolume(Toggle toggle)
     {
         SFXMute = toggle.isOn;
+        ApplySFXVolume();
     }
     public void ChangeBGMVolume(Slider slider)
     {
         BGMVolume = slider.value;
+        ApplyBGMVolume();
     }
     public void MuteBGMVolume(Toggle toggle)
     {
         BGMMute = toggle.isOn;
+        ApplyBGMVolume();
     }
 
     public void LoadAudio()
@@ -79,17 +96,23 @@ public class SoundMgr : MonoBehaviour
         audioDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Audios/BGM");
     }
 
-    public void SetBGMVolume(float value)
+    public void ApplyBGMVolume()
     {
-        BGM.volume = value;
+        BGM.volume = BGMSoundVolume * Convert.ToInt32(BGMSoundMute);
+    }
+    public void ApplySFXVolume()
+    {
+        SFX.volume = SFXSoundVolume * Convert.ToInt32(SFXSoundMute);
     }
 
     public void OnPlayBGM(string key)
     {
         //기존 음악 정지
         StopBGM();
+
         BGM.clip = audioDictionary[key];
-        BGM.Play();
+        // 배경음이 없을 경우에만 재생
+        if (!BGM.isPlaying) BGM.Play();
     }
 
     public void StopBGM()
