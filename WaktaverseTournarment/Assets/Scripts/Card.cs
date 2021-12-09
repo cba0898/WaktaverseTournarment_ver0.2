@@ -43,16 +43,16 @@ public class Card : MonoBehaviour
         switch (skillData.movePos)
         {
             case LOCATION.CENTER_TOP:   // Up
-                SetMoveDirection(90);
+                SetMoveDirection(90, data);
                 break;
             case LOCATION.CENTER_BOTTOM:    // Down
-                SetMoveDirection(-90);
+                SetMoveDirection(-90, data);
                 break;
             case LOCATION.LEFT: // Left
-                SetMoveDirection(180);
+                SetMoveDirection(180, data);
                 break;
             case LOCATION.RIGHT:    // Right
-                SetMoveDirection(0);
+                SetMoveDirection(0, data);
                 break;
         }
         switch(skillData.target)
@@ -76,8 +76,8 @@ public class Card : MonoBehaviour
                 if(arrSkillRange[i] != nullvec)
                     attackArea[i].SetActive(true);
             }
-            value.text = string.Format("DM  {0:D2}", atk.value * atk.applyCount);
-            cost.text = string.Format("MP  {0:D2}", atk.cost);
+            value.text = string.Format("데미지  {0:D2}", atk.value * atk.applyCount);
+            cost.text = string.Format("마나  -{0:D2}", atk.cost);
             return;
         }
         if (skillData is Utility)
@@ -89,33 +89,30 @@ public class Card : MonoBehaviour
                 // HP에 영향을 주는 경우
                 case INFLUENCE.HP:
                     // 회복
-                    value.text = string.Format("HP  {0:D2}", util.value);
-                    cost.text = string.Format("MP  {0:D2}", util.cost);
+                    value.text = string.Format("체력  +{0:D2}", util.value);
+                    cost.text = string.Format("마나  -{0:D2}", util.cost);
                     hpBuff.SetActive(true);
                     break;
                 // MP에 영향을 주는 경우
                 case INFLUENCE.MP:
                     // 총명
-                    value.text = string.Format("DM  {0:D2}", util.value);
-                    cost.text = string.Format("MP   {0:D2}", util.cost);
+                    value.text = string.Format("체력  {0:D2}", util.value);
+                    cost.text = string.Format("마나   +{0:D2}", util.cost);
 
                     mpBuff.SetActive(true);
                     break;
                 // 공격력에 영향을 주는 경우
                 case INFLUENCE.ATK:
-                    value.text = string.Format("DM  {0:D2}", util.value);
-                    cost.text = string.Format("MP  {0:D2}", util.cost);
+                    value.text = string.Format("공격력  +{0:D2}", util.value);
+                    cost.text = string.Format("마나  -{0:D2}", util.cost);
                     atkBuff.SetActive(true);
                     break;
                 // 방어력에 영향을 주는 경우
                 case INFLUENCE.DEF:
                     // 가드
-                    value.text = string.Format("DM  {0:D2}", util.value);
-                    cost.text = string.Format("MP  {0:D2}", util.cost);
+                    value.text = string.Format("피해량  {0:D2}", util.value);
+                    cost.text = string.Format("마나  -{0:D2}", util.cost);
                     hpBuff.SetActive(true);
-                    break;
-                // 상태이상의 경우
-                case INFLUENCE.STURN:
                     break;
             }
         }
@@ -157,11 +154,21 @@ public class Card : MonoBehaviour
     }
 
     // 이동 카드의 지시방향에 따라 화살표의 방향을 지정
-    private void SetMoveDirection(int indexZ)
+    private void SetMoveDirection(int indexZ, Normal data)
     {
-        movePos.transform.rotation = Quaternion.Euler(0, 0, indexZ);
+        // 대시일 경우(이동을 2번 이상 할 경우)
+        if (1 < data.MoveCount)
+        {
+            dashPos.transform.rotation = Quaternion.Euler(0, 0, indexZ);
 
-        movePos.SetActive(true);
+            dashPos.SetActive(true);
+        }
+        else
+        {
+            movePos.transform.rotation = Quaternion.Euler(0, 0, indexZ);
+
+            movePos.SetActive(true);
+        }
     }
 
     public void OnSelectCard()

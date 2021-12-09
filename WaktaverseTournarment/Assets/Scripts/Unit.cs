@@ -19,20 +19,6 @@ public class Unit : MonoBehaviour
     [SerializeField] private Text mpText;   // mp바
 
     public bool isInArea;                   // 캐릭터가 스킬 범위안에 있는지 확인
-    //public bool isMove = false;
-    //
-    //public void OnMoveEnter()
-    //{
-    //    isMove = true;
-    //}
-    //public void OnMoveExit()
-    //{
-    //    isMove = false;
-    //}
-    //private void Awake()
-    //{
-    //    InitUnit();
-    //}
 
     public void AddHP(int value)
     {

@@ -86,6 +86,14 @@ public class GameMgr : MonoBehaviour
         UIMgr.Instance.InitScene();
     }
 
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIMgr.Instance.ToggleOptionWindow();
+        }
+    }
+
     public void OnPlay()
     {
         if (null != StartRoundCoroutine) StopCoroutine(StartRoundCoroutine);

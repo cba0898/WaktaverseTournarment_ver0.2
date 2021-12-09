@@ -6,9 +6,8 @@ public enum INFLUENCE
 {
     HP = 1 << 1,
     MP = 1 << 2,
-    STURN = 1 << 3,
-    ATK = 1 << 4,
-    DEF = 1 << 5
+    ATK = 1 << 3,
+    DEF = 1 << 4
 };
 
 [CreateAssetMenu(fileName = "Utility", menuName = "Skill/Utility", order = 1)]

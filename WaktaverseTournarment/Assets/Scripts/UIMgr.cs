@@ -112,6 +112,22 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Text subText;
     //--------------게임 오버 화면-------------
 
+    //-------------옵션--------------
+    [SerializeField] private GameObject option;
+    //-------------옵션--------------
+    public void ToggleOptionWindow()
+    {
+        // 옵션창이 열려있을 경우 다시 닫음
+        if (option.activeSelf)
+            option.SetActive(false);
+        else
+            option.SetActive(true);
+    }
+    public void CloseWindow()
+    {
+        option.SetActive(false);
+    }
+
     //--------------사운드---------------
     // bgm key 문자열 변수들
     private string keyMain = "Main";
@@ -476,15 +492,15 @@ public class UIMgr : MonoBehaviour
         {
             case RESULTSCENE.Win:
                 mainText.text = "WIN!";
-                subText.text = "승리했습니다!";
+                subText.text = "나이스 킹아~!";
                 break;
             case RESULTSCENE.Lose:
                 mainText.text = "LOSE!";
-                subText.text = "패배했습니다!";
+                subText.text = "정배들 정신이 들어?!";
                 break;
             case RESULTSCENE.Draw:
                 mainText.text = "DRAW!";
-                subText.text = "무승부!";
+                subText.text = "아.. 아깝다!";
                 break;
         }
         // 배틀 화면 비활성화, 카드 세팅화면 활성화(초기화)
