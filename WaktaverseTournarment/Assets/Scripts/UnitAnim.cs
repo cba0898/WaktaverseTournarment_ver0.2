@@ -16,4 +16,42 @@ public class UnitAnim : MonoBehaviour
     {
         isMove = false;
     }
+
+    public void OnBuffEnter()
+    {
+        if (anim) anim.SetBool("isBuff", true);
+    }
+    public void OnBuffExit()
+    {
+        if (anim) anim.SetBool("isBuff", false);
+    }
+
+    public void OnHitEnter()
+    {
+        if (anim) anim.SetBool("isHit", true);
+    }
+    public void OnHitExit()
+    {
+        if (anim) anim.SetBool("isHit", false);
+    }
+    public void OnBackEnter()
+    {
+        if (anim) anim.SetBool("isBack", true);
+    }
+    public void OnBackExit()
+    {
+        if (anim) anim.SetBool("isBack", false);
+    }
+    public void OnActionEnter()
+    {
+        if (anim) anim.SetBool("isAction", true);
+    }
+    public void OnActionExit()
+    {
+        if (anim) anim.SetBool("isAction", false);
+    }
+    public void OnDieEnter()
+    {
+        if (anim) anim.SetBool("isDie", true);
+    }
 }

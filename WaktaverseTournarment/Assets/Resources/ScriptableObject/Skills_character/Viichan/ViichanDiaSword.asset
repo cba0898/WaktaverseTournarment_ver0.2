@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uB9C8\uD06C\uC81C\uC77C\uAC80"
-  discription: 
+  discription: "\uB9C8\uD06C\uB85C \uB530\uB77C\uC640."
   target: 4
   range: 46
   movePos: 0
   effect: {fileID: 6871836205972588850, guid: b161cc396f1931f4ead6aacc1e6893cd, type: 3}
   thisAction: 4
-  isUsed: 0
+  isUsed: 1
   MoveCount: 0
   condition: 2
   value: 40

@@ -52,10 +52,10 @@ public class SoundMgr : MonoBehaviour
     private bool BGMMute = false;
     private float BGMVolume = 1;
 
-    public bool SFXSoundMute { get { return (masterMute && SFXMute); } }
+    public bool SFXSoundMute { get { return (masterMute || SFXMute); } }
     public float SFXSoundVolume { get { return (SFXVolume * masterVolume); } }
 
-    public bool BGMSoundMute { get { return (masterMute && BGMMute); } }
+    public bool BGMSoundMute { get { return (masterMute || BGMMute); } }
     public float BGMSoundVolume { get { return (BGMVolume * masterVolume); } }
 
     public void ChangeMasterVolume(Slider slider)
@@ -66,7 +66,7 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteMasterVolume(Toggle toggle)
     {
-        masterMute = toggle.isOn;
+        masterMute = !toggle.isOn;
         ApplyBGMVolume();
         ApplySFXVolume();
     }
@@ -77,7 +77,7 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteSFXVolume(Toggle toggle)
     {
-        SFXMute = toggle.isOn;
+        SFXMute = !toggle.isOn;
         ApplySFXVolume();
     }
     public void ChangeBGMVolume(Slider slider)
@@ -87,22 +87,26 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteBGMVolume(Toggle toggle)
     {
-        BGMMute = toggle.isOn;
+        BGMMute = !toggle.isOn;
         ApplyBGMVolume();
     }
 
     public void LoadAudio()
     {
         audioDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Audios/BGM");
+        BGM.loop = true;
+        SFX.loop = false;
     }
 
     public void ApplyBGMVolume()
     {
-        BGM.volume = BGMSoundVolume * Convert.ToInt32(BGMSoundMute);
+        BGM.volume = BGMSoundVolume;
+        BGM.mute = BGMSoundMute;
     }
     public void ApplySFXVolume()
     {
-        SFX.volume = SFXSoundVolume * Convert.ToInt32(SFXSoundMute);
+        SFX.volume = SFXSoundVolume;
+        SFX.mute = SFXSoundMute;
     }
 
     public void OnPlayBGM(string key)
@@ -118,5 +122,14 @@ public class SoundMgr : MonoBehaviour
     public void StopBGM()
     {
         BGM.Stop();
+    }
+
+    public void ToMain()
+    {
+        // 기존 재생 사운드 정지
+        BGM.Stop();
+        SFX.Stop();
+        // 메인화면 BGM 재생
+        BGM.clip = audioDictionary[keyMain];
     }
 }

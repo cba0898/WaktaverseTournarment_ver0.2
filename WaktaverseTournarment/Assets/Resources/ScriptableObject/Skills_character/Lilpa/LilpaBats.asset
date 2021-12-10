@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LilpaBats
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uBC30\uD2B8\uC2A4\uC6DC"
+  skillName: "\uBC15\uC950\uB2E8\uC758 \uD589\uC9C4"
   discription: "\uB194\uBCF4\uC138\uC694 \uB9B4\uD30C\uB2D8!"
   target: 4
-  range: 682
+  range: 672
   movePos: 0
   effect: {fileID: 0}
   thisAction: 4

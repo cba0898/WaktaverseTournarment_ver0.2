@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uC7A1\uC544\uBA39\uAE30"
-  discription: 
+  discription: "\uB2E4\uB871\uC774\uB2E4\uB871~"
   target: 4
-  range: 80
+  range: 36
   movePos: 0
   effect: {fileID: 0}
   thisAction: 4

@@ -366,13 +366,18 @@ public class DataMgr : MonoBehaviour
         SelectCardList.Remove(card);
     }
     // 카드 리스트 초기화
-    public void ClearCardList()
+    public void ClearSelectCardList()
     {
         foreach(var card in SelectCardList)
         {
             card.SetOriginPos();
         }
         SelectCardList.Clear();
+    }
+    // 적의 카드 리스트 초기화
+    public void ClearEnemyCardList()
+    {
+        EnemyCardList.Clear();
     }
 
     // 카드리스트에 있는지 확인
@@ -462,10 +467,30 @@ public class DataMgr : MonoBehaviour
         {
             arrPublicSkill[i].isUsed = false;
         }
-        //for (int i = 0; i < arrPlayerSkill.Length; i++)
-        //{
-        //    arrPlayerSkill[i].isUsed = false;
-        //}
+    }
+
+
+
+    // 특수카드 정보 초기화
+    public void ResetUniqueList()
+    {
+        playerOwnUniqueList.Clear();    // 플레이어가 얻은 유니크 스킬 리스트
+        playerUniqueList.Clear();    // 유니크 스킬 데이터를 사용하기 위한 리스트
+        enemyOwnUniqueList.Clear();    // 적이 얻은 유니크 스킬 리스트
+        enemyUniqueList.Clear();    // 유니크 스킬 데이터를 사용하기 위한 리스트
     }
     /*--------------전투 정보------------*/
+
+    // DataMgr가 관리하는 변동 정보 제거
+    public void ResetData()
+    {
+        CurrentPlayer = Character.start;
+        CurrentEnemy = Character.start;
+        InitRound();
+        InitTurnCount();
+        ClearSelectCardList();
+        ClearEnemyCardList();
+        ResetUniqueList();
+        InitUsed();
+    }
 }

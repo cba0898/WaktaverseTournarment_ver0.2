@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Unit : MonoBehaviour
 {
+    private Rigidbody2D unitRigid2D;
     [SerializeField] public int hp { get; private set; }        // 체력   
     [SerializeField] public int hpMax { get; private set; }     // 체력   
     [SerializeField] public int mp { get; private set; }        // 마나
@@ -19,6 +22,11 @@ public class Unit : MonoBehaviour
     [SerializeField] private Text mpText;   // mp바
 
     public bool isInArea;                   // 캐릭터가 스킬 범위안에 있는지 확인
+
+    public void Awake()
+    {
+        unitRigid2D = GetComponent<Rigidbody2D>();
+    }
 
     public void AddHP(int value)
     {
@@ -68,5 +76,20 @@ public class Unit : MonoBehaviour
     public Vector2 GetUnitPos()
     {
         return transform.localPosition;
+    }
+
+    private string AttackTag = "Attack";
+    private string BuffTag = "Buff";
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == AttackTag)
+            unitanim.OnHitEnter();
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == AttackTag)
+            unitanim.OnHitExit();
     }
 }

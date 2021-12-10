@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class Option : MonoBehaviour
 {
+    public GameObject OptionObject;
     [SerializeField] private GameObject soundSetting;
     [SerializeField] private GameObject credit;
     [SerializeField] private GameObject reallyExit;
 
     public void OnClose()
     {
-        UIMgr.Instance.CloseWindow();
+        UIMgr.Instance.CloseOption();
     }
 
     public void OnMain()
     {
-        UIMgr.Instance.CloseWindow();
-        UIMgr.Instance.InitScene();
+        UIMgr.Instance.CloseOption();
+        GameMgr.Instance.ResetGame();
+        SoundMgr.Instance.ToMain();
     }
 
     public void OnSoundSetting()
@@ -50,5 +52,14 @@ public class Option : MonoBehaviour
     public void OnExit()
     {
         Application.Quit();
+    }
+
+    // 옵션 창의 상태를 초기 상태로 되돌린다.
+    public void ResetOption()
+    {
+        soundSetting.SetActive(false);
+        credit.SetActive(false);
+        reallyExit.SetActive(false);
+        OptionObject.SetActive(false);
     }
 }

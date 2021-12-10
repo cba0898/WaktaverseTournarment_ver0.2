@@ -83,7 +83,7 @@ public class GameMgr : MonoBehaviour
     // 게임 시작
     public void Start()
     {
-        UIMgr.Instance.InitScene();
+        UIMgr.Instance.ResetUIData();
         SoundMgr.Instance.LoadAudio();
         SoundMgr.Instance.StopBGM();
         SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyMain);
@@ -123,6 +123,7 @@ public class GameMgr : MonoBehaviour
     {        
         Player.transform.localPosition = DataMgr.Instance.SetUnitPos(DataMgr.Instance.tileInterval.x, DataMgr.Instance.playerPosRate);
         Enemy.transform.localPosition = DataMgr.Instance.SetUnitPos(DataMgr.Instance.tileInterval.x, DataMgr.Instance.enemyPosRate);
+
     }
 
     // 배틀 화면 초기화
@@ -130,9 +131,9 @@ public class GameMgr : MonoBehaviour
     {
         // 캐릭터 위치 초기화
         InitCharPos();
-        FaceUnit(Player, Enemy);
+        FaceUnit(Player.gameObject, Enemy.gameObject);
         UIMgr.Instance.miniMap.InitMiniMapPos();
-        // 배틀을 처음 시작한 경우에만 세팅
+        // 배틀을 처음 시작한 경우에만 초기 위치를 저장
         if (DataMgr.Instance.IsFirstEnemy())
         {
             for (int i = 0; i < 3; i++)
@@ -151,8 +152,10 @@ public class GameMgr : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             yield return StartTurn();
-            WinCheck(Player, Enemy);
-            DataMgr.Instance.NextTurn();
+            if (WinCheck(Player, Enemy))
+                break;
+            else
+                DataMgr.Instance.NextTurn();
         }
         UIMgr.Instance.ActiveNextRound(true);
     }
@@ -262,9 +265,9 @@ public class GameMgr : MonoBehaviour
             unit.AddMP(-1 * atk.cost);
             SetAttackTile(unit, target, card.skillData);
             yield return new WaitForSeconds(0.5f);
-            OnActionEnter(unit);
+            unit.unitanim.OnActionEnter();
             yield return PlayAnim(unit, effectIndex);
-            OnActionExit(unit);
+            unit.unitanim.OnActionExit();
             if (target.isInArea)
             {
                 DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
@@ -283,28 +286,24 @@ public class GameMgr : MonoBehaviour
         {
             var pos = SetMoveTile(target, card.skillData);
             yield return new WaitForSeconds(0.5f);
-            FaceUnit(Player, Enemy);
+            FaceUnit(Player.gameObject, Enemy.gameObject);
         }
         yield return new WaitForSeconds(1.0f);
         ActiveBuff();
         ResetTile();
     }
 
-    private void OnBackEnter(Unit unit)
+
+    public void OnResetDie()
     {
-        if (unit.unitanim.anim) unit.unitanim.anim.SetBool("isBack", true);
-    }
-    private void OnBackExit(Unit unit)
-    {
-        if (unit.unitanim.anim) unit.unitanim.anim.SetBool("isBack", false);
-    }
-    private void OnActionEnter(Unit unit)
-    {
-        if (unit.unitanim.anim) unit.unitanim.anim.SetBool("isAction", true);
-    }
-    private void OnActionExit(Unit unit)
-    {
-        if (unit.unitanim.anim) unit.unitanim.anim.SetBool("isAction", false);
+        // Die 애니메이션 종료
+        if (Player.unitanim.anim) Player.unitanim.anim.SetBool("isDie", false);
+        if (Enemy.unitanim.anim) Enemy.unitanim.anim.SetBool("isDie", false);
+        // 캐릭터 오브젝트 초기화
+        Player.gameObject.SetActive(false);
+        Player.gameObject.SetActive(true);
+        Enemy.gameObject.SetActive(false);
+        Enemy.gameObject.SetActive(true);
     }
 
     // 이동 처리 코루틴
@@ -321,9 +320,9 @@ public class GameMgr : MonoBehaviour
 
         // 액션 시작
         if (isBack)
-            OnBackEnter(unit);
+            unit.unitanim.OnBackEnter();
         else
-            OnActionEnter(unit);
+            unit.unitanim.OnActionEnter();
 
         // 액션 중 실제 이동을 시작하는 시점까지 대기
         while (!unit.unitanim.isMove) yield return null;
@@ -342,9 +341,9 @@ public class GameMgr : MonoBehaviour
 
         // 액션 종료. 다시 Idle로 전환
         if (isBack)
-            OnBackExit(unit);
+            unit.unitanim.OnBackExit();
         else
-            OnActionExit(unit);
+            unit.unitanim.OnActionExit();
     }
 
     // 무브 타일 효과 세팅
@@ -395,21 +394,6 @@ public class GameMgr : MonoBehaviour
     }
 
     // 유닛을 마주보도록 처리
-    private void FaceUnit(Unit player, Unit enemy)
-    {
-        if (player.transform.localPosition.x > enemy.transform.localPosition.x)
-        {
-            player.transform.localScale = new Vector3(-1, 1, 1);
-            enemy.transform.localScale = new Vector3(1, 1, 1);
-        }
-        else
-        {
-            player.transform.localScale = new Vector3(1, 1, 1);
-            enemy.transform.localScale = new Vector3(-1, 1, 1);
-        }
-    }
-
-    // 나주엥 이걸로 통일
     public void FaceUnit(GameObject player, GameObject enemy)
     {
         if (player.transform.localPosition.x > enemy.transform.localPosition.x)
@@ -611,31 +595,37 @@ public class GameMgr : MonoBehaviour
     }
     /*----------------------스킬 적용--------------------*/
 
-    private void WinCheck(Unit player, Unit enemy)
+    private bool WinCheck(Unit player, Unit enemy)
     {
         // 어느 누구도 죽지 않았을 경우
         if (player.hp != 0 && enemy.hp != 0)
         {
-            return;
+            return false;
         }
-        // 결판이 났을 경우 데이터 초기화
+        // 결판이 났을 경우 데이터 초기화 + 시합 종료 UI 활성화
         else
         {
             // 나중에 인스턴스별로 묶어서 함수 만들자
             DataMgr.Instance.InitRound();
-            DataMgr.Instance.ClearCardList();
+            DataMgr.Instance.ClearSelectCardList();
+            // 시합 종료 UI 활성화
+            UIMgr.Instance.OnGameSetUI();
         }
 
         if (player.hp == 0 && enemy.hp == 0)
         {
+            player.unitanim.OnDieEnter();
+            enemy.unitanim.OnDieEnter();
             UIMgr.Instance.GameOverUI(RESULTSCENE.Draw);
         }
         else if (player.hp == 0)
         {
+            player.unitanim.OnDieEnter();
             UIMgr.Instance.GameOverUI(RESULTSCENE.Lose);
         }
         else if (enemy.hp == 0)
         {
+            enemy.unitanim.OnDieEnter();
             UIMgr.Instance.GameOverUI(RESULTSCENE.Win);
             // 전원을 다 처치하지 않았다면 다음 적으로 넘어감
             if (!DataMgr.Instance.IsAllClear())
@@ -644,11 +634,31 @@ public class GameMgr : MonoBehaviour
                 UIMgr.Instance.cardSet.OnSelectUnique();
             }
         }
+        return true;
     }
 
+    // GameMgr가 가지고 있는 정보 초기화
+    public void ResetGameData()
+    {
+        InitBattleScene();
+        ResetTile();
+        Player.InitUnit();
+        Enemy.InitUnit();
+        buffList.Clear();
+        // 플레이어와 적 카드 리스트 개수는 같다.
+        for(int i=0;i< playerCardList.Count;i++)
+        {
+            playerCardList[i].ResetCardUI();
+            enemyCardList[i].ResetCardUI();
+        }
+    }
+
+    // 게임의 모든 변동정보 초기화
     public void ResetGame()
     {
-        UIMgr.Instance.InitScene();
+        ResetGameData();
+        UIMgr.Instance.ResetUIData();
+        DataMgr.Instance.ResetData();
     }
 }
 

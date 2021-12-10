@@ -25,4 +25,4 @@ MonoBehaviour:
   condition: 16
   value: -100
   cost: 25
-  turns: 2
+  turns: 1

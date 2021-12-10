@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uB9B4 \uD30C"
-  discription: "\uC9E7\uC9C0\uB9CC \uAC15\uD558\uB2E4!"
+  discription: "\uC774 \uC74C\uD30C\uB294 \uC544\uBB34 \uC18C\uB9AC\uB3C4 \uB4E4\uB9AC\uC9C0
+    \uC54A\uB294\uB2E4."
   target: 4
   range: 112
   movePos: 0

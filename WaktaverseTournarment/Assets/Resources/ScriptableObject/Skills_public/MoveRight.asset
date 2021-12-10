@@ -20,5 +20,5 @@ MonoBehaviour:
   movePos: 64
   effect: {fileID: 0}
   thisAction: 2
-  isUsed: 1
+  isUsed: 0
   MoveCount: 1

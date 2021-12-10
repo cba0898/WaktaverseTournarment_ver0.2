@@ -113,19 +113,20 @@ public class UIMgr : MonoBehaviour
     //--------------게임 오버 화면-------------
 
     //-------------옵션--------------
-    [SerializeField] private GameObject option;
+    [SerializeField] private Option option;
     //-------------옵션--------------
     public void ToggleOptionWindow()
     {
         // 옵션창이 열려있을 경우 다시 닫음
-        if (option.activeSelf)
-            option.SetActive(false);
+        if (option.OptionObject.activeSelf)
+            option.ResetOption();
         else
-            option.SetActive(true);
+            option.OptionObject.SetActive(true);
     }
-    public void CloseWindow()
+    // 옵션 창 닫기
+    public void CloseOption()
     {
-        option.SetActive(false);
+        option.ResetOption();
     }
 
     // 다음 라운드 버튼 활성화
@@ -335,7 +336,7 @@ public class UIMgr : MonoBehaviour
             isSlotSet[i] = false;
         }
         slotList[currentSlotIndex = 0].isOn = true;
-        DataMgr.Instance.ClearCardList();
+        DataMgr.Instance.ClearSelectCardList();
 
         // 남게되는 마나 초기화, disable 항목 초기화
         GameMgr.Instance.Player.SetRemainCost(GameMgr.Instance.Player.mp);
@@ -474,7 +475,24 @@ public class UIMgr : MonoBehaviour
 
         GameMgr.Instance.OnPlay();
     }
+    [SerializeField] GameObject gameSet;
 
+    // 시합 종료 UI 활성화
+    public void OnGameSetUI()
+    {
+        if(!gameSet.activeSelf) gameSet.SetActive(true);
+    }
+    // 시합 종료 비활성화 및 게임 결과창으로 이동
+    public void OffGameSetUI()
+    {
+        // 시합 종료 UI 비활성화
+        if (gameSet.activeSelf) gameSet.SetActive(false);
+        GameMgr.Instance.OnResetDie();
+        // 배틀 화면 비활성화, 카드 세팅화면 활성화(초기화)
+        MoveScene(SCENE.Battle, SCENE.CardSet);
+        // 플레이 화면 비활성화, 게임 오버 창 활성화
+        MoveScene(SCENE.Play, SCENE.GameOver);
+    }
     // 전투 창에서 결과 창으로
     public void GameOverUI(RESULTSCENE result)
     {
@@ -493,31 +511,29 @@ public class UIMgr : MonoBehaviour
                 subText.text = "아.. 아깝다!";
                 break;
         }
-        // 배틀 화면 비활성화, 카드 세팅화면 활성화(초기화)
-        MoveScene(SCENE.Battle, SCENE.CardSet);
-        // 플레이 화면 비활성화, 게임 오버 창 활성화
-        MoveScene(SCENE.Play, SCENE.GameOver);
     }
 
-    // 재시작
+    public void ResetUniqueCardUI()
+    {
+        for(int i =0;i < uniqueCards.Length;i++)
+        {
+            uniqueCards[i].ResetCardUI();
+        }       
+    }
+
+    // 재시작. 적의 정보, 특수카드 정보는 남아있음.
     public void Restart()
     {
         MoveScene(SCENE.GameOver, SCENE.CharMatch);
         charMatch.SetMatchImg(DataMgr.Instance.GetEnemyIndex());
-        GameMgr.Instance.Player.InitUnit();
-        GameMgr.Instance.Enemy.InitUnit();
+        GameMgr.Instance.ResetGameData();
         CheckDisable(GameMgr.Instance.Player.mpRemain);
         DataMgr.Instance.InitTurnCount();
-    }
-
-    // 배틀 씬 초기화
-    public void ResetBattleScene()
-    {
-
+        ResetUniqueCardUI();
     }
 
     // 초기 씬 활성화 상태 구현
-    public void InitScene()
+    public void ResetUIData()
     {
         sceneList[(int)SCENE.Main].gameObject.SetActive(true);
         sceneList[(int)SCENE.CharSelect].gameObject.SetActive(false);
@@ -525,6 +541,9 @@ public class UIMgr : MonoBehaviour
         sceneList[(int)SCENE.Play].gameObject.SetActive(false);
         sceneList[(int)SCENE.Battle].gameObject.SetActive(false);
         sceneList[(int)SCENE.CardSet].gameObject.SetActive(true);
+        gameSet.SetActive(false);
+        ResetUniqueCardUI();
+        sceneList[(int)SCENE.GameOver].gameObject.SetActive(false);
     }
 
     // 씬 전환
