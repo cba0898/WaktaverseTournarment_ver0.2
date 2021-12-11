@@ -64,6 +64,7 @@ public class GameMgr : MonoBehaviour
     public Unit Player;
     public Unit Enemy;
 
+
     public Vector2 minPos;      // 위치의 최저값
     public Vector2 maxPos;      // 위치의 최대값
 
@@ -79,6 +80,7 @@ public class GameMgr : MonoBehaviour
     private List<Buff> buffList = new List<Buff>();         // 버프 리스트
 
     private Coroutine StartRoundCoroutine = null;
+
 
     // 게임 시작
     public void Start()
@@ -632,6 +634,11 @@ public class GameMgr : MonoBehaviour
             {
                 DataMgr.Instance.NextEnemy();
                 UIMgr.Instance.cardSet.OnSelectUnique();
+            }
+            else
+            {
+                // 전원을 다 처치하면 엔딩 버튼 활성화
+                UIMgr.Instance.OnEndButton();
             }
         }
         return true;

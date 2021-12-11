@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: IneTruck
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uC57C\uB784 \uD2B8\uB7ED"
-  discription: 
+  skillName: "\uD584\uC774\uB124 \uD2B8\uB7ED"
+  discription: "\uC57C\uB784! \uC57C\uB784! \uD584\uC774\uB124\uB77C\uB124~"
   target: 4
   range: 126
   movePos: 0
@@ -28,3 +28,4 @@ MonoBehaviour:
   turns: 0
   applyCount: 1
   isSpread: 0
+  isIdle: 0

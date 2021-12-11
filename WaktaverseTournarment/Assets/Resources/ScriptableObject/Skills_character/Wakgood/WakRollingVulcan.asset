@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
   m_Name: WakRollingVulcan
   m_EditorClassIdentifier: 
+  priority: 2
   skillName: "\uB864\uB9C1\uBC1C\uCE78"
   discription: "\uB864\uB9C1\uBC1C\uCE78 \uCDA9\uC804\uB3C4 \uC548\uD574\uB193\uACE0!"
   target: 4
-  range: -1
+  range: 126
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 7796024693427423426, guid: 1056acd2e4b6964449456b50e58ba274, type: 3}
   thisAction: 4
+  isUsed: 0
+  MoveCount: 0
   condition: 2
-  value: 3
+  value: 5
   cost: 45
   turns: 0
   applyCount: 5
   isSpread: 0
+  isIdle: 0

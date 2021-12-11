@@ -110,6 +110,9 @@ public class UIMgr : MonoBehaviour
     //--------------게임 오버 화면-------------
     [SerializeField] private Text mainText;
     [SerializeField] private Text subText;
+    [SerializeField] private Reward reward;
+    [SerializeField] private GameObject end;
+    [SerializeField] private GameObject ToMainButton;
     //--------------게임 오버 화면-------------
 
     //-------------옵션--------------
@@ -499,20 +502,42 @@ public class UIMgr : MonoBehaviour
         switch (result)
         {
             case RESULTSCENE.Win:
+                reward.SuccessReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "WIN!";
-                subText.text = "나이스 킹아~!";
+                subText.text = "승리! 디스크 조각을 획득했다!";
                 break;
             case RESULTSCENE.Lose:
+                reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "LOSE!";
-                subText.text = "정배들 정신이 들어?!";
+                subText.text = "패배! 조각을 얻는데 실패했다..! 다시..!";
                 break;
             case RESULTSCENE.Draw:
+                reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "DRAW!";
-                subText.text = "아.. 아깝다!";
+                subText.text = "아.. 아깝다! 조각을 얻는데 실패했다! 다시!!";
                 break;
         }
     }
-
+    public void SetResultSubText(string text)
+    {
+        subText.text = text;
+    }
+    public void OnEndButton()
+    {
+        end.SetActive(true);
+    }
+    public void OffEndButton()
+    {
+        end.SetActive(true);
+    }
+    public void OnToMainButton()
+    {
+        ToMainButton.SetActive(true);
+    }
+    public void OffToMainButton()
+    {
+        ToMainButton.SetActive(false);
+    }
     public void ResetUniqueCardUI()
     {
         for(int i =0;i < uniqueCards.Length;i++)
@@ -544,6 +569,9 @@ public class UIMgr : MonoBehaviour
         gameSet.SetActive(false);
         ResetUniqueCardUI();
         sceneList[(int)SCENE.GameOver].gameObject.SetActive(false);
+        reward.InitReward();
+        OffEndButton();
+        OffToMainButton();
     }
 
     // 씬 전환

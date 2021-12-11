@@ -34,6 +34,7 @@ public class Option : MonoBehaviour
 
     public void OnCredit()
     {
+        SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyMain);
         credit.SetActive(true);
     }
     public void OffCredit()

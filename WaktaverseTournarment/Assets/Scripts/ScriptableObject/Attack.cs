@@ -7,6 +7,7 @@ public class Attack : Utility
 {
     public int applyCount;
     public bool isSpread;
+    public bool isIdle;
 
     public Attack() { priority = 2; }
 }
