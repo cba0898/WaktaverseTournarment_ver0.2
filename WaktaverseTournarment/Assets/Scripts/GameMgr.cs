@@ -87,7 +87,6 @@ public class GameMgr : MonoBehaviour
     {
         UIMgr.Instance.ResetUIData();
         SoundMgr.Instance.LoadAudio();
-        SoundMgr.Instance.StopBGM();
         SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyMain);
     }
 
@@ -291,7 +290,7 @@ public class GameMgr : MonoBehaviour
             FaceUnit(Player.gameObject, Enemy.gameObject);
         }
         yield return new WaitForSeconds(1.0f);
-        ActiveBuff();
+        ActiveBuff(buffList);
         ResetTile();
     }
 
@@ -533,41 +532,72 @@ public class GameMgr : MonoBehaviour
         }
     }
 
+
+    //[SerializeField] Sprite atkBuffImg;
+    //[SerializeField] Sprite atkDebuffImg;
+    //[SerializeField] Sprite defBuffImg;
+    //[SerializeField] Sprite defDebuffImg;
+    //[SerializeField] List<Image> playerBuffIcons; //버프 아이콘 리스트
+    //[SerializeField] List<Image> enemyBuffIcons; //버프 아이콘 리스트
+    //[SerializeField] List<Text> playerBuffIconText; //버프 텍스트 리스트
+    //[SerializeField] List<Text> enemyBuffIconText; //버프 텍스트 리스트
+    //private int playerBuffCount = 0;    // 플레이어가 적용중인 버프 개수
+    //private int enemyBuffCount = 0;     // 적이 적용중인 버프 개수
+
+    // 버프 아이콘 세팅
+    public void SetBuffIcon(Unit unit, Sprite sprite, string text)
+    {
+        unit.buffIcons[unit.buffCount].sprite = sprite;
+        unit.buffIconText[unit.buffCount].text = text;
+    }
+
     // 버프 발동
-    private void ActiveBuff()
+    private void ActiveBuff(List<Buff> buffs)
     {
         // 버프가 하나도 없을때는 작동하지 않는다.
-        if (0 >= buffList.Count) return;
+        if (0 >= buffs.Count) return;
 
         Buff playerBuff = new Buff();
         Buff enemyBuff = new Buff();
-        for (int i = 0; i < buffList.Count;)
+        for (int i = 0; i < buffs.Count;)
         {
             // 버프 지속시간이 만료된 경우 해당 버프 제거
-            if (0 >= buffList[i].turn)
+            if (0 >= buffs[i].turn)
             {
-                buffList.RemoveAt(i);
+                buffs.RemoveAt(i);
                 Debug.Log("buff end");
                 continue;
             }
 
             // 타겟이 플레이어일 경우
-            if (buffList[i].buffTarget == Player)
+            if (buffs[i].buffTarget == Player)
             {
-                playerBuff = AddToBuff(playerBuff, buffList[i]);
+                playerBuff = AddToBuff(playerBuff, buffs[i]);
+                Player.AddBuffCount();                
             }
             else
             {
-                enemyBuff = AddToBuff(enemyBuff, buffList[i]);
+                enemyBuff = AddToBuff(enemyBuff, buffs[i]);
+                Enemy.AddBuffCount();
             }
             // 지속 턴 감소
-            buffList[i].DecsTurn();
+            buffs[i].DecsTurn();
             Debug.Log("buff active");
-            Debug.Log(buffList[i].turn);
+            Debug.Log(buffs[i].turn);
             i++;
         }
+
         BuffProcess(Player, playerBuff);
         BuffProcess(Enemy, enemyBuff);
+    }
+
+    // 버프 아이콘 활성화
+    private void ActiveBuffIcon(Unit unit)
+    {
+        for(int i=0;i<unit.buffCount;i++)
+        {
+            unit.buffIcons[i].gameObject.SetActive(true);
+        }
     }
 
     // 버프 합치기

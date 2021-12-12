@@ -403,7 +403,6 @@ public class UIMgr : MonoBehaviour
         switch(button)
         {
             case BUTTON.Main_Start:
-                //SoundMgr.Instance.SetBGMVolume(0.7f);
                 MoveScene(SCENE.Main, SCENE.CharSelect);
                 break;
             case BUTTON.CharSelect_Select:
@@ -428,6 +427,10 @@ public class UIMgr : MonoBehaviour
                 // 턴이 끝나면 마나 15 회복
                 GameMgr.Instance.Player.AddMP(15);
                 GameMgr.Instance.Enemy.AddMP(15);
+
+                // 턴이 끝나면 버프 아이콘 비활성화
+                GameMgr.Instance.Player.InitBuffIcon();
+                GameMgr.Instance.Enemy.InitBuffIcon();
 
                 ClearSlot();
 
@@ -471,7 +474,6 @@ public class UIMgr : MonoBehaviour
     {
         // 카드 세 장이 배치가 끝나기 전에는 리턴
         if (3 != DataMgr.Instance.GetCardListCount()) return;
-        SoundMgr.Instance.StopBGM();
         Debug.Log("CardSetStart");
 
         MoveScene(SCENE.CardSet, SCENE.Battle);

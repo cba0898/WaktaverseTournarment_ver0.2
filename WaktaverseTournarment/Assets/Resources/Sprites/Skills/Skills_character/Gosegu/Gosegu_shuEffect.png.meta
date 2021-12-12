@@ -118,36 +118,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC288\uBE05-Sheet_0"
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 88
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03a499e3422306c10800000000000000
-      internalID: 2044689362076650032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: "\uC288\uBE05-Sheet_1"
       rect:
         serializedVersion: 2
-        x: 88
+        x: 30
         y: 0
         width: 88
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +142,12 @@ TextureImporter:
       name: "\uC288\uBE05-Sheet_2"
       rect:
         serializedVersion: 2
-        x: 176
+        x: 144
         y: 0
         width: 88
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +163,12 @@ TextureImporter:
       name: "\uC288\uBE05-Sheet_3"
       rect:
         serializedVersion: 2
-        x: 264
+        x: 247
         y: 0
         width: 88
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,12 +184,12 @@ TextureImporter:
       name: "\uC288\uBE05-Sheet_4"
       rect:
         serializedVersion: 2
-        x: 352
+        x: 350
         y: 0
         width: 88
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -469,7 +469,11 @@ public class DataMgr : MonoBehaviour
         }
     }
 
-
+    // 버프 설명 텍스트 삽입
+    public void SetBuffData(string text, Normal data)
+    {
+        text = data.discription;
+    }
 
     // 특수카드 정보 초기화
     public void ResetUniqueList()

@@ -15,6 +15,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public int mpRemain { get; private set; }          // 남게되는 마나
     [SerializeField] public int addAtk { get; private set; }    // 추가 데미지
     [SerializeField] public int defense { get; private set; }   // 방어력. 받는 데미지 가/감
+
     [SerializeField] public UnitAnim unitanim;  // 애니메이션
     [SerializeField] private Slider hpSlider;   // hp바
     [SerializeField] private Slider mpSlider;   // mp바
@@ -22,7 +23,24 @@ public class Unit : MonoBehaviour
     [SerializeField] private Text mpText;   // mp바
 
     public bool isInArea;                   // 캐릭터가 스킬 범위안에 있는지 확인
+    public int buffCount { get; private set; }    // 캐릭터가 적용중인 버프 개수
 
+    [SerializeField] public List<Image> buffIcons; //버프 아이콘 리스트
+    [SerializeField] public List<Text> buffIconText; //버프 텍스트 리스트
+
+    public void AddBuffCount()
+    {
+        buffCount++;
+    }
+
+    public void InitBuffIcon()
+    {
+        buffCount = 0;
+        for (int i = 0; i < buffIcons.Count; i++)
+        {
+            buffIcons[i].gameObject.SetActive(false);
+        }
+    }
     public void Awake()
     {
         unitRigid2D = GetComponent<Rigidbody2D>();
@@ -71,6 +89,7 @@ public class Unit : MonoBehaviour
         mpSlider.value = mp;
         hpText.text = string.Format("HP {0}", hp);
         mpText.text = string.Format("MP {0}", mp);
+        InitBuffIcon();
     }
 
     public Vector2 GetUnitPos()

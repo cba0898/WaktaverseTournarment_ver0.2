@@ -18,12 +18,14 @@ MonoBehaviour:
   target: 4
   range: 122
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 7785966572225931256, guid: 97565089e5ea93c42a4f9e3b9b6ac3c0, type: 3}
   thisAction: 4
   isUsed: 0
+  MoveCount: 0
   condition: 2
   value: 15
   cost: 25
   turns: 0
   applyCount: 2
   isSpread: 0
+  isIdle: 0

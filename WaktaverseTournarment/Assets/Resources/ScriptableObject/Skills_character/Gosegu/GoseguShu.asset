@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: GoseguShu
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uC289. \uC288\uC289. \uC288\uC288\uBD95"
+  discription: "\uC288\uBD95\uC774 \uADFC\uBCF8\uC785\uB2C8\uB2E4~ \uC5D0?"
+  target: 2
+  range: 730
+  movePos: 0
+  effect: {fileID: 5299185106749798743, guid: 49dfd7001aef52341bf03c92276348f0, type: 3}
+  thisAction: 4
+  isUsed: 0
+  MoveCount: 0
+  condition: 2
+  value: 5
+  cost: 30
+  turns: 0
+  applyCount: 5
+  isSpread: 0
+  isIdle: 0

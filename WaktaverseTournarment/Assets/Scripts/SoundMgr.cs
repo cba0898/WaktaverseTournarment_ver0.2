@@ -40,9 +40,6 @@ public class SoundMgr : MonoBehaviour
     public string keyLose = "Lose";
     public string keyEnding = "Ending";
 
-    //void Start()
-    //{
-    //    LoadAudio();
     private bool masterMute = false;
     private float masterVolume = 1;
 
@@ -66,7 +63,7 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteMasterVolume(Toggle toggle)
     {
-        masterMute = !toggle.isOn;
+        masterMute = toggle.isOn;
         ApplyBGMVolume();
         ApplySFXVolume();
     }
@@ -77,7 +74,7 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteSFXVolume(Toggle toggle)
     {
-        SFXMute = !toggle.isOn;
+        SFXMute = toggle.isOn;
         ApplySFXVolume();
     }
     public void ChangeBGMVolume(Slider slider)
@@ -87,7 +84,7 @@ public class SoundMgr : MonoBehaviour
     }
     public void MuteBGMVolume(Toggle toggle)
     {
-        BGMMute = !toggle.isOn;
+        BGMMute = toggle.isOn;
         ApplyBGMVolume();
     }
 
@@ -113,7 +110,8 @@ public class SoundMgr : MonoBehaviour
     {
         //기존 음악 정지
         StopBGM();
-
+        // 플레이 중이라면 리턴
+        if (BGM.isPlaying) return;
         BGM.clip = audioDictionary[key];
         // 배경음이 없을 경우에만 재생
         if (!BGM.isPlaying) BGM.Play();
@@ -129,7 +127,8 @@ public class SoundMgr : MonoBehaviour
         // 기존 재생 사운드 정지
         BGM.Stop();
         SFX.Stop();
+
         // 메인화면 BGM 재생
-        BGM.clip = audioDictionary[keyMain];
+        OnPlayBGM(keyMain);
     }
 }

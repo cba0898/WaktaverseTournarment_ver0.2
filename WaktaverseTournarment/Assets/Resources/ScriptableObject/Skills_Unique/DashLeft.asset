@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DashLeft
   m_EditorClassIdentifier: 
   priority: 1
-  skillName: "\uB300\uC2DC"
+  skillName: "\uB3C4\uC57D(\uC67C\uCABD)"
   discription: "\uC67C\uCABD\uC73C\uB85C 2\uCE78 \uC774\uB3D9"
   target: 2
   range: 0
