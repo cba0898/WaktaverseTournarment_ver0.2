@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uB178\uB798"
-  discription: "\uB178\uB798\uAC00 \uD790\uB9C1\uC774 \uB418\uC694~"
+  discription: "\uB178\uB798\uAC00 \uD790\uB9C1\uC774 \uB418\uC694~ [\uCCB4\uB825
+    \uD68C\uBCF5]"
   target: 2
   range: 32
   movePos: 0
@@ -22,6 +23,7 @@ MonoBehaviour:
   thisAction: 16
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 0}
   condition: 2
   value: 20
   cost: 15

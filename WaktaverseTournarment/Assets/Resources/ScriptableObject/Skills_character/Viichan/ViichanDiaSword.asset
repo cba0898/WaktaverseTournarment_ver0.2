@@ -14,17 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uB9C8\uD06C\uC81C\uC77C\uAC80"
-  discription: "\uB9C8\uD06C\uB85C \uB530\uB77C\uC640."
+  discription: "\uB9C8\uD06C\uB85C \uB530\uB77C\uC640.!"
   target: 4
   range: 46
   movePos: 0
   effect: {fileID: 6871836205972588850, guid: b161cc396f1931f4ead6aacc1e6893cd, type: 3}
   thisAction: 4
-  isUsed: 1
+  isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 86e7ad6307685b94fbfa4419e42dbbd5, type: 3}
   condition: 2
   value: 40
   cost: 45
   turns: 0
   applyCount: 1
   isSpread: 0
+  isIdle: 0

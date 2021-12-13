@@ -12,6 +12,7 @@ public class Card : MonoBehaviour
     [SerializeField] private GameObject hpBuff;         // 체력 관련 버프 이미지
     [SerializeField] private GameObject mpBuff;         // 마나 관련 버프 이미지
     [SerializeField] private GameObject atkBuff;        // 공격력 관련 버프 이미지
+    [SerializeField] private GameObject defBuff;        // 공격력 관련 버프 이미지
     [SerializeField] private Text skillName;            // 카드 설명
     [SerializeField] private Text discription;          // 카드 설명
     [SerializeField] private Text value;                // 카드 데미지, 회복량 등 value
@@ -76,8 +77,12 @@ public class Card : MonoBehaviour
                 if(arrSkillRange[i] != nullvec)
                     attackArea[i].SetActive(true);
             }
-            value.text = string.Format("데미지  {0:D2}", atk.value * atk.applyCount);
-            cost.text = string.Format("마나  -{0:D2}", atk.cost);
+            // 다단히트의 경우
+            if (1 < atk.applyCount)
+                value.text = string.Format("공격{0:D}x{1:D}", atk.value, atk.applyCount);
+            else
+                value.text = string.Format("공격  {0:D}", atk.value);
+            cost.text = string.Format("마나 -{0:D2}", atk.cost);
             return;
         }
         if (skillData is Utility)
@@ -89,30 +94,39 @@ public class Card : MonoBehaviour
                 // HP에 영향을 주는 경우
                 case INFLUENCE.HP:
                     // 회복
-                    value.text = string.Format("체력  +{0:D2}", util.value);
-                    cost.text = string.Format("마나  -{0:D2}", util.cost);
+                    value.text = string.Format("체력 +{0:D2}", util.value);
+                    cost.text = string.Format("마나 -{0:D2}", util.cost);
                     hpBuff.SetActive(true);
                     break;
                 // MP에 영향을 주는 경우
                 case INFLUENCE.MP:
                     // 총명
                     value.text = string.Format("체력  {0:D2}", util.value);
-                    cost.text = string.Format("마나   +{0:D2}", util.cost);
+                    cost.text = string.Format("마나 +{0:D2}", util.cost);
 
                     mpBuff.SetActive(true);
                     break;
-                // 공격력에 영향을 주는 경우
+                // 버프 아이콘
                 case INFLUENCE.ATK:
-                    value.text = string.Format("공격력  +{0:D2}", util.value);
-                    cost.text = string.Format("마나  -{0:D2}", util.cost);
+                    if(0 < util.value)
+                        value.text = string.Format("공격 +{0:D2}", util.value);
+                    else
+                        value.text = string.Format("공격 {0:D2}", util.value);
+                    cost.text = string.Format("마나 -{0:D2}", util.cost);
                     atkBuff.SetActive(true);
                     break;
-                // 방어력에 영향을 주는 경우
-                case INFLUENCE.DEF:
-                    // 가드
-                    value.text = string.Format("피해량  {0:D2}", util.value);
-                    cost.text = string.Format("마나  -{0:D2}", util.cost);
-                    hpBuff.SetActive(true);
+                // 방어 아이콘
+                case INFLUENCE.DEF:                    
+                    if (0 < util.value) value.text = string.Format("방어 +{0:D2}", util.value);
+                    else value.text = string.Format("방어 {0:D2}", util.value);
+                    if (0 < util.cost) cost.text = string.Format("마나 -{0:D2}", util.cost);
+                    else cost.text = string.Format("마나   {0:D2}", util.cost);
+                    // 버프일 경우 버프 효과 아이콘 활성화
+                    if (util.thisAction == Action.BUFF)
+                        atkBuff.SetActive(true);
+                    // 방어의 경우는 방어효과 활성화
+                    else
+                        defBuff.SetActive(true);
                     break;
             }
         }
@@ -132,8 +146,8 @@ public class Card : MonoBehaviour
     // 카드 UI를 리셋
     public void ResetCardUI()
     {
-        value.text = "DM 00";
-        cost.text = "MP 00";
+        value.text = "공격  00";
+        cost.text = "마나  00";
         for (int i = 0; i < 9; i++)
         {
             attackArea[i].SetActive(false);
@@ -141,6 +155,7 @@ public class Card : MonoBehaviour
         hpBuff.SetActive(false);
         mpBuff.SetActive(false);
         atkBuff.SetActive(false);
+        defBuff.SetActive(false);
         movePos.SetActive(false);
     }
 
@@ -213,18 +228,6 @@ public class Card : MonoBehaviour
         isDisable = false;
         disable.SetActive(false);
     }
-    //public void SetCard(Card card)
-    //{
-    //    card.skillImg = this.skillImg;
-    //    card.movePos = this.movePos;
-    //    card.dashPos = this.dashPos;
-    //    card.buff = this.buff;
-    //    card.skillName = this.skillName;
-    //    card.discription = this.discription;
-    //    card.value = this.value;
-    //    card.cost = this.cost;
-    //}
-
 
     public void CardOpen()
     {
@@ -245,7 +248,7 @@ public class Card : MonoBehaviour
         {
             Utility util = skillData as Utility;
             // MP회복의 경우 미적용
-            if (util.condition == INFLUENCE.MP) return;
+            if (util.thisAction == Action.MP) return;
 
             if (util.cost > remainMp)
                 DisableCard();

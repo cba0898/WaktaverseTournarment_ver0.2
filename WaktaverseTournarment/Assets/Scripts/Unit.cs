@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(BoxCollider2D))]
+//[RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Unit : MonoBehaviour
 {
@@ -26,8 +26,8 @@ public class Unit : MonoBehaviour
     public int buffCount { get; private set; }    // 캐릭터가 적용중인 버프 개수
 
     [SerializeField] public List<Image> buffIcons; //버프 아이콘 리스트
-    [SerializeField] public List<Text> buffIconText; //버프 텍스트 리스트
-
+    [SerializeField] public List<Text> buffTurnTexts; //버프 턴 수
+    [SerializeField] public List<Text> buffDiscriptions; //버프 설명
     public void AddBuffCount()
     {
         buffCount++;

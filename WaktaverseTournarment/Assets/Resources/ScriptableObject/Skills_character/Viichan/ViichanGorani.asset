@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uACE0\uB77C\uB2C8!"
-  discription: 
+  discription: "\uC724\uBC24\uBE44! \uACE0\uB77C\uB2C8! \uC7A1\uC544!"
   target: 4
   range: 116
   movePos: 0
@@ -22,9 +22,11 @@ MonoBehaviour:
   thisAction: 4
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 00f93a7e63c64a545b1bfc55a3edd8a0, type: 3}
   condition: 2
   value: 25
   cost: 15
   turns: 0
   applyCount: 1
   isSpread: 0
+  isIdle: 0

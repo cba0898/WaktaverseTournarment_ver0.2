@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uAC1D\uAD00\uC548 \uC628"
-  discription: "3\uD134 \uB3D9\uC548 \uC801\uC774 \uBC1B\uB294 \uD53C\uD574\uAC00
+  discription: "2\uD134 \uB3D9\uC548 \uD0C0\uACA9 \uB2F9 \uACF5\uACA9\uB825\uC774
     \uC99D\uAC00\uD55C\uB2E4."
   target: 2
   range: 32
   movePos: 0
   effect: {fileID: 6255888770589205787, guid: 9e23ed9386cd2e74a8a4d9c89b203406, type: 3}
-  thisAction: 128
+  thisAction: 64
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 9623a12749b11a345a4fcb60ef87572e, type: 3}
   condition: 8
   value: 10
   cost: 10
-  turns: 6
+  turns: 2

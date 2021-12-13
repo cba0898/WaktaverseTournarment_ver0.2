@@ -13,16 +13,18 @@ MonoBehaviour:
   m_Name: GgoseguAfterimage
   m_EditorClassIdentifier: 
   priority: 0
-  skillName: "\uC794\uC0C1\uC785\uB2C8\uB2E4\uB9CC?"
-  discription: "\uC5D0~ \uB54C\uB824\uBCF4\uB77C\uB2C8\uAE4C~?"
-  target: -1
+  skillName: "\uC794\uC0C1\uC778\uB370\uC694?"
+  discription: "1\uD134 \uB3D9\uC548 \uBAA8\uB4E0 \uACF5\uACA9 \uBB34\uD6A8\uD654
+    [\uADF8\uAC70 \uC81C \uC794\uC0C1\uC778\uB370\uC694??]"
+  target: 2
   range: 32
   movePos: 0
   effect: {fileID: 3552552085030617196, guid: 9e48fa76228cdef4390a913a6e33a76e, type: 3}
-  thisAction: 128
+  thisAction: 64
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 8521f596a00ffa04eb5286ae5387a344, type: 3}
   condition: 16
-  value: -100
+  value: 99
   cost: 25
   turns: 1

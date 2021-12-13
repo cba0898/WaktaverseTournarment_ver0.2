@@ -23,9 +23,11 @@ MonoBehaviour:
   thisAction: 4
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 7f6551c17acebd6408d9f46c93023cec, type: 3}
   condition: 2
   value: 25
   cost: 15
   turns: 0
   applyCount: 1
   isSpread: 0
+  isIdle: 0

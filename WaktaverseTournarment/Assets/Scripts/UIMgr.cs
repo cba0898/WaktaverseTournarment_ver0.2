@@ -530,7 +530,7 @@ public class UIMgr : MonoBehaviour
     }
     public void OffEndButton()
     {
-        end.SetActive(true);
+        end.SetActive(false);
     }
     public void OnToMainButton()
     {

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uC0B4\uB824\uC8FC\uC138\uC694~\u2665"
-  discription: "2\uD134 \uB3D9\uC548 \uC801\uC758 \uACF5\uACA9\uC744 \uC18C\uADF9\uC801\uC73C\uB85C
-    \uB9CC\uB4E0\uB2E4.(\uC801 \uACF5\uACA9\uB825 \uAC10\uC18C)"
+  discription: "2\uD134 \uB3D9\uC548 \uC801\uC758 \uACF5\uACA9\uB825\uC744 \uAC10\uC18C\uC2DC\uD0A8\uB2E4."
   target: 4
   range: 32
   movePos: 0
   effect: {fileID: 9019769313175145042, guid: dd3ee02104784ed4db363c27283a5a1e, type: 3}
-  thisAction: 128
+  thisAction: 64
   isUsed: 0
   MoveCount: 0
-  condition: 16
+  voiceSFX: {fileID: 8300000, guid: a683844e7def29143bfd84d43b9adaec, type: 3}
+  condition: 8
   value: -20
   cost: 10
   turns: 2

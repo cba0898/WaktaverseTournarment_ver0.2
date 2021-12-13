@@ -109,7 +109,7 @@ public class SoundMgr : MonoBehaviour
     public void OnPlayBGM(string key)
     {
         //기존 음악 정지
-        StopBGM();
+        BGM.Stop();
         // 플레이 중이라면 리턴
         if (BGM.isPlaying) return;
         BGM.clip = audioDictionary[key];
@@ -117,9 +117,18 @@ public class SoundMgr : MonoBehaviour
         if (!BGM.isPlaying) BGM.Play();
     }
 
-    public void StopBGM()
+    public void OnPlaySFX(Normal data)
     {
-        BGM.Stop();
+        SFX.Stop();
+        if (SFX.isPlaying) return;
+        SFX.clip = data.voiceSFX;
+        if (!SFX.isPlaying) SFX.Play();
+    }
+
+    public bool IsSFXPlaying()
+    {
+        if (SFX.isPlaying) return true;
+        else return false;
     }
 
     public void ToMain()

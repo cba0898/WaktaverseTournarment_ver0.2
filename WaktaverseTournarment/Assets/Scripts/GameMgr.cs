@@ -22,6 +22,9 @@ public class Buff
     public int addAtk;
     public int addDef;
     public int turn;
+    public Sprite buffImg;
+    public string buffDiscription;
+    public bool isBuff;
 
     public Buff()
     {
@@ -31,6 +34,7 @@ public class Buff
         addAtk = 0;
         addDef = 0;
         turn = 0;
+        isBuff = false;
     }
 
     public void DecsTurn()
@@ -81,6 +85,11 @@ public class GameMgr : MonoBehaviour
 
     private Coroutine StartRoundCoroutine = null;
 
+    // 버프 아이콘 
+    [SerializeField] private Sprite atkBuffImg;
+    [SerializeField] private Sprite atkDebuffImg;
+    [SerializeField] private Sprite defBuffImg;
+    [SerializeField] private Sprite defDebuffImg;
 
     // 게임 시작
     public void Start()
@@ -149,6 +158,11 @@ public class GameMgr : MonoBehaviour
     // 라운드 진행
     private IEnumerator StartRound()
     {
+        // 이전 라운드에 남아있는 버프들 활성화
+        ActiveBuff(buffList);
+        ActiveBuffIcon(Player);
+        ActiveBuffIcon(Enemy);
+
         UIMgr.Instance.ActiveNextRound(false);
         for (int i = 0; i < 3; i++)
         {
@@ -157,6 +171,7 @@ public class GameMgr : MonoBehaviour
                 break;
             else
                 DataMgr.Instance.NextTurn();
+
         }
         UIMgr.Instance.ActiveNextRound(true);
     }
@@ -255,6 +270,10 @@ public class GameMgr : MonoBehaviour
         // 해당 이펙트의 인덱스를 불러옴
         var effectIndex = DataMgr.Instance.GetEffectIndex(card.skillData);
 
+        // 대사 효과음이 있으면 해당 스킬의 대사 효과음 재생
+        //if(card.skillData.voiceSFX) SoundMgr.Instance.OnPlaySFX(card.skillData);
+        //while (SoundMgr.Instance.IsSFXPlaying()) yield return null;
+
         if (card.skillData.target == TARGET.PLAYER)  target = Player;   
         else target = Enemy;
         target = SetTarget(unit, target);
@@ -266,9 +285,16 @@ public class GameMgr : MonoBehaviour
             unit.AddMP(-1 * atk.cost);
             SetAttackTile(unit, target, card.skillData);
             yield return new WaitForSeconds(0.5f);
-            unit.unitanim.OnActionEnter();
+
+            // 가만히 있는 액션인지 검사 후 실행 코드 망함 이게뭐야 대체
+            if (atk.isArts) unit.gameObject.SetActive(false);
+            else if (atk.isIdle) unit.unitanim.OnNonActionEnter();
+            else unit.unitanim.OnActionEnter();
             yield return PlayAnim(unit, effectIndex);
-            unit.unitanim.OnActionExit();
+            if (atk.isArts) unit.gameObject.SetActive(true);
+            else if(atk.isIdle) unit.unitanim.OnNonActionExit();
+            else unit.unitanim.OnActionExit();
+
             if (target.isInArea)
             {
                 DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
@@ -291,6 +317,8 @@ public class GameMgr : MonoBehaviour
         }
         yield return new WaitForSeconds(1.0f);
         ActiveBuff(buffList);
+        ActiveBuffIcon(Player);
+        ActiveBuffIcon(Enemy);
         ResetTile();
     }
 
@@ -490,8 +518,8 @@ public class GameMgr : MonoBehaviour
                         targetTile[i].color = new Color(0.223529f, 0.298039f, 0.776471f);
                         break;
                     case Action.BUFF:
-                        // 타일의 색을 분홍색으로 변경
-                        targetTile[i].color = new Color(1.0f, 0.0f, 0.458824f);
+                        // 타일의 색을 보라색으로 변경
+                        targetTile[i].color = new Color(0.847059f, 0.0f, 1.0f);
                         break;
                 }
                 // 해당 무브타일 활성화
@@ -515,15 +543,28 @@ public class GameMgr : MonoBehaviour
                     buff.addHp = util.value;
                     break;
                 case INFLUENCE.MP:
-                    buff.addMp = util.cost; //MP는 cost 값을 가져옴
+                    buff.addMp = util.cost; //MP는 cost가 value 
                     break;
                 case INFLUENCE.ATK:
+                    buff.isBuff = true;
+                    if(0 < util.value)
+                        buff.buffImg = atkBuffImg;
+                    else
+                        buff.buffImg = atkDebuffImg;
                     buff.addAtk = util.value;
                     break;
                 case INFLUENCE.DEF:
+                    buff.isBuff = true;
+                    if (0 < util.value)
+                        buff.buffImg = defBuffImg;
+                    else
+                        buff.buffImg = defDebuffImg;
                     buff.addDef = util.value;
                     break;
             }
+            // 버프 설명 텍스트를 가져옴
+            buff.buffDiscription = util.discription;
+
             // 한 턴에 2씩 깎이기 때문에 *2
             buff.turn = util.turns * 2;
             //MP회복을 제외하고 계산 적용
@@ -533,27 +574,30 @@ public class GameMgr : MonoBehaviour
     }
 
 
-    //[SerializeField] Sprite atkBuffImg;
-    //[SerializeField] Sprite atkDebuffImg;
-    //[SerializeField] Sprite defBuffImg;
-    //[SerializeField] Sprite defDebuffImg;
-    //[SerializeField] List<Image> playerBuffIcons; //버프 아이콘 리스트
-    //[SerializeField] List<Image> enemyBuffIcons; //버프 아이콘 리스트
-    //[SerializeField] List<Text> playerBuffIconText; //버프 텍스트 리스트
-    //[SerializeField] List<Text> enemyBuffIconText; //버프 텍스트 리스트
-    //private int playerBuffCount = 0;    // 플레이어가 적용중인 버프 개수
-    //private int enemyBuffCount = 0;     // 적이 적용중인 버프 개수
-
     // 버프 아이콘 세팅
-    public void SetBuffIcon(Unit unit, Sprite sprite, string text)
+    public void SetBuffIcon(Unit unit, int index, Sprite sprite, string turn, string discription)
     {
         unit.buffIcons[unit.buffCount].sprite = sprite;
-        unit.buffIconText[unit.buffCount].text = text;
+        unit.buffTurnTexts[unit.buffCount].text = turn;
+        unit.buffDiscriptions[unit.buffCount].text = discription;
+    }
+
+    private void SetBuffIcon(Unit unit, Buff buff)
+    {
+        // 버프가 적용되지 않는 상황이거나 버프가 아니라면 리턴
+        if (1 >= buff.turn || !buff.isBuff) return;
+        unit.buffIcons[unit.buffCount].sprite = buff.buffImg;
+        unit.buffTurnTexts[unit.buffCount].text = (buff.turn / 2).ToString();
+        unit.buffDiscriptions[unit.buffCount].text = buff.buffDiscription;
+        unit.AddBuffCount();
     }
 
     // 버프 발동
     private void ActiveBuff(List<Buff> buffs)
     {
+        // 먼저 버프 아이콘 개수, 정보 초기화
+        Player.InitBuffIcon();
+        Enemy.InitBuffIcon();
         // 버프가 하나도 없을때는 작동하지 않는다.
         if (0 >= buffs.Count) return;
 
@@ -573,12 +617,12 @@ public class GameMgr : MonoBehaviour
             if (buffs[i].buffTarget == Player)
             {
                 playerBuff = AddToBuff(playerBuff, buffs[i]);
-                Player.AddBuffCount();                
+                SetBuffIcon(Player, buffs[i]);
             }
             else
             {
                 enemyBuff = AddToBuff(enemyBuff, buffs[i]);
-                Enemy.AddBuffCount();
+                SetBuffIcon(Enemy, buffs[i]);
             }
             // 지속 턴 감소
             buffs[i].DecsTurn();
@@ -589,12 +633,13 @@ public class GameMgr : MonoBehaviour
 
         BuffProcess(Player, playerBuff);
         BuffProcess(Enemy, enemyBuff);
+
     }
 
     // 버프 아이콘 활성화
     private void ActiveBuffIcon(Unit unit)
     {
-        for(int i=0;i<unit.buffCount;i++)
+        for (int i = 0; i < unit.buffCount - 1; i++)
         {
             unit.buffIcons[i].gameObject.SetActive(true);
         }
@@ -613,6 +658,7 @@ public class GameMgr : MonoBehaviour
     // 버프 처리
     private void BuffProcess(Unit target, Buff buff)
     {
+        target.AddBuffCount();
         target.AddAtk(buff.addAtk);
         target.AddDefense(buff.addDef);
         target.AddHP(buff.addHp);
@@ -623,7 +669,7 @@ public class GameMgr : MonoBehaviour
     // 데미지 처리
     private void DamageProcess(Unit target,int dmg, int addAtk, int applyCount, int targetDef)
     {
-        target.AddHP(Mathf.Min(-1 * (dmg + addAtk + targetDef) * applyCount, 0));
+        target.AddHP(Mathf.Min(-1 * (dmg + addAtk - targetDef) * applyCount, 0));
     }
     /*----------------------스킬 적용--------------------*/
 

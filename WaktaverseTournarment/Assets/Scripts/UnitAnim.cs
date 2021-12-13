@@ -50,6 +50,14 @@ public class UnitAnim : MonoBehaviour
     {
         if (anim) anim.SetBool("isAction", false);
     }
+    public void OnNonActionEnter()
+    {
+        if (anim) anim.SetBool("isNonAction", true);
+    }
+    public void OnNonActionExit()
+    {
+        if (anim) anim.SetBool("isNonAction", false);
+    }
     public void OnDieEnter()
     {
         if (anim) anim.SetBool("isDie", true);

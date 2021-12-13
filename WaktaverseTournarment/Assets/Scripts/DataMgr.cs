@@ -123,7 +123,7 @@ public class DataMgr : MonoBehaviour
             Utility util = normal as Utility;
             // sign : 부호(+1,-1)
             // mp회복의 경우 부호를 역으로 치환한다.
-            if (util.condition == INFLUENCE.MP)
+            if (util.thisAction == Action.MP)
                 sign = -sign;
             remainMana += sign * util.cost;
         }
