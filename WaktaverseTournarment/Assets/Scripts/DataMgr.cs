@@ -186,6 +186,10 @@ public class DataMgr : MonoBehaviour
     {
         return enemyIndex;
     }
+    public void ResetEnemyIndex()
+    {
+        enemyIndex = 0;
+    }
     public int GetMaxEnemy()
     {
         return enemyList.Count;
@@ -496,5 +500,6 @@ public class DataMgr : MonoBehaviour
         ClearEnemyCardList();
         ResetUniqueList();
         InitUsed();
+        ResetEnemyIndex();
     }
 }
