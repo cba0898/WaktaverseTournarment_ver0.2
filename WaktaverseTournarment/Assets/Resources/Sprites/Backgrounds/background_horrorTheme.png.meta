@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: ccf362f7e55019446b4552a6164d5f52
+guid: a5838acccdb280e489d229c1e7dce9f1
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1015734940199601207
-    second: goseguKkang_5_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -104,28 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: goseguKkang_5_0
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 88
-        width: 359
-        height: 644
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 734cc88eb8d981e00800000000000000
-      internalID: 1015734940199601207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

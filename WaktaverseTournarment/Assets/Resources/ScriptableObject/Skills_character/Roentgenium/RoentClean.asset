@@ -18,13 +18,16 @@ MonoBehaviour:
   target: 4
   range: 1008
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 9049486316491249567, guid: ffdccbd4f0af23a43815b3474d777ffd, type: 3}
   thisAction: 4
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: 0d11779d13531a64b95767d2750c7b59, type: 3}
   condition: 2
   value: 10
   cost: 15
   turns: 0
   applyCount: 2
   isSpread: 0
+  isIdle: 0
+  isArts: 0

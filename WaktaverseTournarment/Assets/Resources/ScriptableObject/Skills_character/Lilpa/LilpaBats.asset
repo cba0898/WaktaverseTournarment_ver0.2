@@ -13,18 +13,21 @@ MonoBehaviour:
   m_Name: LilpaBats
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uBC15\uC950\uB2E8\uC758 \uD589\uC9C4"
+  skillName: "\uBC15\uC950\uB2E8\uC758 \uAC15\uC2B5"
   discription: "\uB194\uBCF4\uC138\uC694 \uB9B4\uD30C\uB2D8!"
   target: 4
   range: 672
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 6493219645193700108, guid: 570afa82569712e44bf3df59fe19a0db, type: 3}
   thisAction: 4
   isUsed: 0
   MoveCount: 0
+  voiceSFX: {fileID: 8300000, guid: fda20c76c456ae44cb8c4e89da411f71, type: 3}
   condition: 2
-  value: 25
+  value: 10
   cost: 30
   turns: 0
-  applyCount: 1
+  applyCount: 4
   isSpread: 0
+  isIdle: 0
+  isArts: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   skillName: "\uC289. \uC288\uC289. \uC288\uC288\uBD95"
   discription: "\uC288\uBD95\uC774 \uADFC\uBCF8\uC785\uB2C8\uB2E4~ \uC5D0?"
   target: 4
-  range: 730
+  range: -1
   movePos: 0
   effect: {fileID: 5299185106749798743, guid: 49dfd7001aef52341bf03c92276348f0, type: 3}
   thisAction: 4
@@ -24,10 +24,10 @@ MonoBehaviour:
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: eff8adc821adb334a82638ab380585eb, type: 3}
   condition: 2
-  value: 10
-  cost: 30
+  value: 15
+  cost: 15
   turns: 0
-  applyCount: 3
+  applyCount: 1
   isSpread: 0
   isIdle: 0
   isArts: 0

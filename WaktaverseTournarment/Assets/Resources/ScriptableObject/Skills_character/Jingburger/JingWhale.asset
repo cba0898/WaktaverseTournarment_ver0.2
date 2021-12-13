@@ -21,12 +21,14 @@ MonoBehaviour:
   movePos: 0
   effect: {fileID: 3492325118334374913, guid: ec7d98c1a6fd88d4c9f0a7e000dfe4a3, type: 3}
   thisAction: 4
-  isUsed: 0
+  isUsed: 1
   MoveCount: 0
+  voiceSFX: {fileID: 0}
   condition: 2
   value: 45
-  cost: 40
+  cost: 50
   turns: 0
   applyCount: 1
   isSpread: 0
   isIdle: 0
+  isArts: 0

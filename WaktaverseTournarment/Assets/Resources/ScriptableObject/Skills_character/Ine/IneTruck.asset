@@ -25,8 +25,9 @@ MonoBehaviour:
   voiceSFX: {fileID: 8300000, guid: 3c577566d614a8744916c00f8c6cfdc5, type: 3}
   condition: 2
   value: 40
-  cost: 35
+  cost: 45
   turns: 0
   applyCount: 1
   isSpread: 0
   isIdle: 0
+  isArts: 0
