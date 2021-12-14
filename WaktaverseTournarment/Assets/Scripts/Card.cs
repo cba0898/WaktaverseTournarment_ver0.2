@@ -28,10 +28,10 @@ public class Card : MonoBehaviour
     public bool IsSelect { get; private set; }  //카드 선택 여부
     public bool isDisable { get; private set; } // 비활성화 여부
 
-    private void OnDisable()
-    {
-        ResetCardUI();
-    }
+    //private void OnDisable()
+    //{
+    //    ResetCardUI();
+    //}
 
     public void SetData(Normal data, Vector2 pos)
     {

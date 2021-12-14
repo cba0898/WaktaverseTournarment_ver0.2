@@ -28,6 +28,27 @@ public class Unit : MonoBehaviour
     [SerializeField] public List<Image> buffIcons; //버프 아이콘 리스트
     [SerializeField] public List<Text> buffTurnTexts; //버프 턴 수
     [SerializeField] public List<Text> buffDiscriptions; //버프 설명
+
+    private int damageedValue = 0;
+    private int damageedCount = 0;
+
+    public void SetDamage(int value, int count)
+    {
+        damageedValue = value;
+        damageedCount = count;
+    }
+
+    public void ApplyDamaged()
+    {
+        isInArea = false;
+        if (0 < damageedValue * damageedCount)
+        {
+            AddHP(Mathf.Min(-1 * (damageedValue - defense) * damageedCount, 0));
+            damageedValue = 0;
+            damageedCount = 0;
+        }
+    }
+
     public void AddBuffCount()
     {
         buffCount++;
@@ -103,7 +124,27 @@ public class Unit : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.tag == AttackTag)
+        {
             unitanim.OnHitEnter();
+
+            if (0 < damageedValue * damageedCount)
+            damageedValue = 0;
+            damageedCount = 0;
+        }
+    }
+
+    private IEnumerator OnDamagePop()
+    {
+        // 방어력이 존재할 경우 방어력 폰트 추가
+        if (0 < defense)
+        {
+
+        }
+        for(int i = 0; damageedCount > i; i++)
+        {
+            
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

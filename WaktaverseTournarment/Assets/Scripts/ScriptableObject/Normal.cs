@@ -37,7 +37,6 @@ public class Normal : ScriptableObject
     public LOCATION movePos;  // 이동 위치
     public GameObject effect;
     public Action thisAction;   // 해당 행동의 유형
-    public bool isUsed;   // 해당 카드가 이미 배치되었는지 확인하는 변수
     public int MoveCount;    // 행동 횟수
     public AudioClip voiceSFX;    // 대사 효과음
 

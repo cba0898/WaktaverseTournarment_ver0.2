@@ -111,8 +111,6 @@ public class GameMgr : MonoBehaviour
     {
         if (null != StartRoundCoroutine) StopCoroutine(StartRoundCoroutine);
 
-        DataMgr.Instance.InitUsed();
-
         // 턴 초기화
         DataMgr.Instance.InitTurnCount();
 
@@ -223,7 +221,6 @@ public class GameMgr : MonoBehaviour
             SetBattleCard(playerCardList[i], playerList[i].skillData);
 
             enemyNormal = enemyDatas[i];
-            enemyNormal.isUsed = true;
             SetBattleCard(enemyCardList[i], enemyNormal);
         }
     }
@@ -294,15 +291,22 @@ public class GameMgr : MonoBehaviour
             if (atk.isArts) unit.gameObject.SetActive(false);
             else if (atk.isIdle) unit.unitanim.OnNonActionEnter();
             else unit.unitanim.OnActionEnter();
+
+            if (target.isInArea)
+            {
+                target.SetDamage((atk.value + unit.addAtk), atk.applyCount);
+            }
+
             yield return PlayAnim(unit, effectIndex);
+
             if (atk.isArts) unit.gameObject.SetActive(true);
             else if(atk.isIdle) unit.unitanim.OnNonActionExit();
             else unit.unitanim.OnActionExit();
 
-            if (target.isInArea)
+            //if (target.isInArea)
             {
-                DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
-                target.isInArea = false;
+                target.ApplyDamaged();
+                //DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
             }
         }
         // 유틸 액션
@@ -394,15 +398,19 @@ public class GameMgr : MonoBehaviour
             miniMapPos = mini.GetMiniMapPlayerPos();
         else miniMapPos = mini.GetMiniMapEnemyPos();
 
+        Vector2 interval = DataMgr.Instance.tileInterval;
+        var min = minPos - interval;
+        var max = maxPos + interval;
+
         for (int i = 0; i < 9; i++)
         {
             if (arrMoveRange[i] != nullvec)
             {
                 // 유닛이 이동할 위치를 계산
-                movedPos += DataMgr.Instance.tileInterval * arrMoveRange[i] * data.MoveCount;
+                movedPos += interval * arrMoveRange[i] * data.MoveCount;
 
-                // 유닛이 이동할 위치가 맵 크기보다 클 경우 제자리 이동
-                if (movedPos.x < minPos.x || movedPos.x > maxPos.x || movedPos.y < minPos.y || movedPos.y > maxPos.y)
+                // 유닛이 이동할 위치가 맵 크기보다 크거나 같을 경우 제자리 이동
+                if (movedPos.x <= min.x || movedPos.x >= max.x || movedPos.y <= min.y || movedPos.y >= max.y)
                     movedPos = unitPos;
                 else
                 {            
@@ -456,6 +464,10 @@ public class GameMgr : MonoBehaviour
         var nullvec = new Vector2(2, 2);
         Vector2[] arrAttackRange = SkillMgr.Instance.GetLOCATION(data.range, data);
 
+        Vector2 interval = DataMgr.Instance.tileInterval;
+        var min = minPos - interval;
+        var max = maxPos + interval;
+
         // 유닛의 위치를 벡터2로 구해옴
         Vector2 unitPos = unit.transform.localPosition;
         for (int i = 0; i < 9; i++)
@@ -463,11 +475,11 @@ public class GameMgr : MonoBehaviour
             if (arrAttackRange[i] != nullvec)
             {
                 // 어택타일의 위치를 이동할 위치로 이동
-                var atkPos = unitPos + DataMgr.Instance.tileInterval * arrAttackRange[i];
+                var atkPos = unitPos + interval * arrAttackRange[i];
                 targetTile[i].transform.localPosition = atkPos;
 
-                // 유닛이 이동할 위치가 맵 크기보다 크지 않을 경우만 활성화
-                if (atkPos.x >= minPos.x && atkPos.x <= maxPos.x && atkPos.y >= minPos.y && atkPos.y <= maxPos.y)
+                // 공격 위치가 맵 크기를 초과하지 않을 경우에만 활성화
+                if (atkPos.x > min.x && atkPos.x < max.x && atkPos.y > min.y && atkPos.y < max.y)
                 {
                     // 타일의 색을 붉은색으로 변경
                     targetTile[i].color = new Color(0.690196f, 0, 0);
@@ -673,7 +685,9 @@ public class GameMgr : MonoBehaviour
     // 데미지 처리
     private void DamageProcess(Unit target,int dmg, int addAtk, int applyCount, int targetDef)
     {
-        target.AddHP(Mathf.Min(-1 * (dmg + addAtk - targetDef) * applyCount, 0));
+        //target.SetDamage((dmg + addAtk - targetDef), applyCount);
+        //target.AddHP(Mathf.Min(-1 * (dmg + addAtk - targetDef) * applyCount, 0));
+        target.ApplyDamaged();
     }
     /*----------------------스킬 적용--------------------*/
 

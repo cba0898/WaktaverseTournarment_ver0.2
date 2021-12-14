@@ -491,20 +491,15 @@ public class DataMgr : MonoBehaviour
     {
         turnCount = 0;
     }
-
-    // 적이 해당 카드를 사용했는지에 대한 정보 초기화
-    public void InitUsed()
+    [SerializeField] private Vector2 charAnimOriginPos;
+    [SerializeField] private GameObject playerAnimPos;
+    [SerializeField] private GameObject enemyAnimPos;
+    // 캐릭터 애니메이션 오브젝트 위치 초기화
+    public void ResetCharAnimPos()
     {
-        for(int i=0;i<arrEnemySkill.Length;i++)
-        {
-            arrEnemySkill[i].isUsed = false;
-        }
-        for (int i = 0; i < arrPublicSkill.Length; i++)
-        {
-            arrPublicSkill[i].isUsed = false;
-        }
+        playerAnimPos.transform.localPosition = charAnimOriginPos;
+        enemyAnimPos.transform.localPosition = charAnimOriginPos;
     }
-
     // 버프 설명 텍스트 삽입
     public void SetBuffData(string text, Normal data)
     {
@@ -531,7 +526,6 @@ public class DataMgr : MonoBehaviour
         ClearSelectCardList();
         ClearEnemyCardList();
         ResetUniqueList();
-        InitUsed();
         ResetEnemyIndex();
     }
 }

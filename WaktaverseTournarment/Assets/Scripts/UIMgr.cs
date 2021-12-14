@@ -566,6 +566,7 @@ public class UIMgr : MonoBehaviour
         CheckDisable(GameMgr.Instance.Player.mpRemain);
         DataMgr.Instance.InitTurnCount();
         ResetUniqueCardUI();
+        DataMgr.Instance.ResetCharAnimPos();
     }
 
     // 초기 씬 활성화 상태 구현

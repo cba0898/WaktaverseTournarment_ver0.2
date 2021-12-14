@@ -22,8 +22,6 @@ public class ThisAction
 // 조건에 해당하면 해당 2진수 값(키워드)를 넣어서 다같이 보냄.
 public class EnemyAI
 {
-    //[SerializeField] public Unit unit;
-
     private ThisAction rateHpHeal = new ThisAction();
     private ThisAction rateMpHeal = new ThisAction();
     private ThisAction rateBuff = new ThisAction();
@@ -71,16 +69,28 @@ public class EnemyAI
             for (int i = 0; i < list.Length; i++)
             {
                 var skill = list[i];
-                if (skill.skillName == "MoveRight")
-                    skill.isUsed = true;
+                if (skill.name == "MoveRight")
+                {
+                    skills.Remove(skill);
+                    break;
+                }
             }
         }
-        rateHpHeal.weight = 0;// (100 - enemy.hp) * hps.Count;
-        rateMpHeal.weight = 0;// 100 - enemy.mp;
+        float maxDistance = Vector2.Distance(GameMgr.Instance.maxPos, GameMgr.Instance.minPos);
+        float dist = Vector2.Distance(enemy.GetUnitPos(), player.GetUnitPos());
+
+        // 체력에 반비례한 회복 비중 * 회복 기술의 개수(0개 고려)
+        rateHpHeal.weight = (100 - enemy.hp) * hps.Count;
+        // 마나에 반비례한 회복 비중
+        rateMpHeal.weight = 100 - enemy.mp;
+        // 버프 기술의 개수(0개 고려)
         rateBuff.weight = 20 * buffs.Count;
-        rateAttack.weight = 0;// 20;
-        rateDefense.weight = 0;//(100 - enemy.hp) * 0.5f;
-        rateMove.weight = 0;// 20;
+        // 유닛 사이의 거리에 반비례한 공격 비중*0.1f
+        rateAttack.weight = (maxDistance - dist) * 0.1f;
+        // 유닛 사이의 거리에 반비례한 방어 비중*0.05f
+        rateDefense.weight = (maxDistance - dist) * 0.05f;
+        // 기본 이동 비중 + 유닛 사이의 거리에 비례한 이동 비중*0.1f
+        rateMove.weight = 10 + dist * 0.1f;
 
         // 총합
         rateSum = rateHpHeal.weight + rateMpHeal.weight + rateBuff.weight + rateAttack.weight + rateDefense.weight + rateMove.weight;
@@ -89,7 +99,6 @@ public class EnemyAI
         {
             pivotList.Add(Random.Range(0, rateSum));
         }
-
 
         bool isCheck = false;
         // 피봇의 개수만큼 행동을 지정
@@ -115,7 +124,16 @@ public class EnemyAI
                     }
                     if (isCheck)
                     {
-                        actionList.Add(Action.ATTACK);
+                        int rand = Random.Range(0, 3);
+                        switch(rand)
+                        {
+                            case 0:
+                                actionList.Add(Action.ATTACK);
+                                break;
+                            default:
+                                actionList.Add(Action.MOVE);
+                                break;
+                        }
                     }
                     else
                         actionList.Add(wieght.action);
@@ -132,21 +150,10 @@ public class EnemyAI
         List<Normal> returnList = new List<Normal>();
         for (int i = 0; i < curActions.Count; i++)
         {
-            //!returnList.Contains(data)
             var tmp = list.FindAll(data => (data.thisAction.Equals(curActions[i]) && !returnList.Contains(data)));
             var re = tmp[Random.Range(0, tmp.Count)];
             returnList.Add(re);
-            //for (int j = 0; j < tmp.Count; j++)
-            //{
-            //    var skill = tmp[j];
-            //    // 일치하는 행동인지 체크 && 중복 체크
-            //    if (!skill.isUsed)
-            //    {
-            //        normalList.Add(skill);
-            //    }
-            //}
         }
-
         return returnList;
     }
 
@@ -155,46 +162,5 @@ public class EnemyAI
         List<Action> curAction = GetEnemyAction(GameMgr.Instance.Player, GameMgr.Instance.Enemy, listCount);
 
         return AddList(curAction, skills);
-
-        //normal = normal.FindAll(data => data.thisAction.Equals(curAction[0]));
-
-
-
-
-        //AddList(curAction, DataMgr.Instance.arrPublicSkill, ref normalList);
-        //AddList(curAction, DataMgr.Instance.arrEnemySkill, ref normalList);
-        //AddList(curAction, DataMgr.Instance.enemyOwnUniqueList.ToArray(), ref normalList);
-
-
-
-        //var list = DataMgr.Instance.arrPublicSkill;
-        //// 공용스킬 세팅
-        //for (int i = 0; i < list.Length; i++)
-        //{
-        //    var skill = list[i];
-        //    // 중복 체크
-        //    if (!skill.isUsed)
-        //    {
-        //        normalList.Add(skill);
-        //    }
-        //}
-
-        //list = DataMgr.Instance.arrEnemySkill;
-        //// 캐릭터 전용스킬 세팅
-        //for (int i = 0; i < list.Length; i++)
-        //{
-        //    var skill = list[i];
-        //    // 현재 액션과 캐릭터의 액션이 동일한지 체크(?)
-        //    if (curAction == skill.thisAction && !skill.isUsed)
-        //    {
-        //        normalList.Add(skill);
-        //    }
-        //}
-        //
-        //for (int i=0;i<DataMgr.Instance.enemyOwnUniqueList.Count;i++)
-        //{
-        //    if (!DataMgr.Instance.enemyOwnUniqueList[i].isUsed)
-        //        normalList.Add(DataMgr.Instance.enemyOwnUniqueList[i]);
-        //}
     }
 }
