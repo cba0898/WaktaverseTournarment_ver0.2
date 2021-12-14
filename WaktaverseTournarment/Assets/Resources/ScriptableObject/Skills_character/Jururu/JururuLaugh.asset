@@ -19,11 +19,15 @@ MonoBehaviour:
   range: 682
   movePos: 0
   effect: {fileID: 0}
-  thisAction: 4
+  thisAction: 2
   isUsed: 0
+  MoveCount: 0
+  voiceSFX: {fileID: 0}
   condition: 2
   value: 5
   cost: 25
   turns: 0
   applyCount: 5
   isSpread: 0
+  isIdle: 0
+  isArts: 0

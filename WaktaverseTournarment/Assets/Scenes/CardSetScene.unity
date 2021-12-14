@@ -12780,7 +12780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &997938772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14924,10 +14924,10 @@ MonoBehaviour:
   - {fileID: 1641275905}
   - {fileID: 67379022}
   - {fileID: 1513564986}
-  atkBuffImg: {fileID: 21300000, guid: ce896f8b1e0931e4ba4e3c6fbb9b28ea, type: 3}
-  atkDebuffImg: {fileID: 21300000, guid: 7b18e7030f4fd3945a296d008c254677, type: 3}
-  defBuffImg: {fileID: 21300000, guid: 5743aa76a11201047aa918acd06bcd76, type: 3}
-  defDebuffImg: {fileID: 21300000, guid: 57e496e3b41faa14e8730ca8498afcc4, type: 3}
+  atkBuffImg: {fileID: 21300000, guid: 5d46c8a5e14aad64ca54ac316639b17e, type: 3}
+  atkDebuffImg: {fileID: 21300000, guid: af2c0c27186f5214ab61dec4af727ce6, type: 3}
+  defBuffImg: {fileID: 21300000, guid: 7285d295dce605445b0eae9f2d208556, type: 3}
+  defDebuffImg: {fileID: 21300000, guid: a3979b0c83ccb2d42b208d090d399644, type: 3}
 --- !u!4 &1176367961
 Transform:
   m_ObjectHideFlags: 0
@@ -28952,7 +28952,7 @@ MonoBehaviour:
   currentEnemy: 0
   enemyList: 
   playerPosRate: -1.5
-  enemyPosRate: -0.5
+  enemyPosRate: -1.5
   arrPublicSkill: []
   arrPlayerSkill: []
   arrEnemySkill: []

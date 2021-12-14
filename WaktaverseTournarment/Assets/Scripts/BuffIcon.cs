@@ -16,9 +16,9 @@ public class BuffIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         discriptionWindow.SetActive(false);
         Debug.Log("The cursor exited the selectable UI element.");
-    }  
+    }
 
-    public void InitDiscriptionWindow()
+    private void OnDisable()
     {
         discriptionWindow.SetActive(false);
     }

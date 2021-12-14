@@ -12,16 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
   m_Name: JururuFoxs
   m_EditorClassIdentifier: 
+  priority: 2
   skillName: "\uC8FC\uD3ED\uB3C4 \uD574\uBC29"
   discription: 
   target: 4
   range: 942
   movePos: 0
   effect: {fileID: 0}
-  thisAction: 4
+  thisAction: 2
+  isUsed: 0
+  MoveCount: 0
+  voiceSFX: {fileID: 0}
   condition: 2
   value: 25
   cost: 30
   turns: 0
   applyCount: 1
   isSpread: 0
+  isIdle: 0
+  isArts: 0

@@ -20,7 +20,7 @@ MonoBehaviour:
   range: 32
   movePos: 0
   effect: {fileID: 3616973772776552413, guid: 23464b4efc611d74db1198d3a5edb319, type: 3}
-  thisAction: 64
+  thisAction: 6
   isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: ce80583405df508488381eb8cc9a2b6b, type: 3}

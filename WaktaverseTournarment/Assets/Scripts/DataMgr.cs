@@ -308,9 +308,41 @@ public class DataMgr : MonoBehaviour
             skill.SetActive(false);
             skillEffectPool.Add(skill);
         }
+        enemyOwnUniqueList.Clear();
+        int[] randoms = new int[enemyIndex];
+        for (int i = 0; i < enemyIndex; i++)
+        {
+            // 초기값 설정
+            randoms[i] = -1;
+        }
+        for (int i = 0, j = 0; i < enemyIndex; j++)
+        {
+            if (j > enemyUniqueList.Count)
+            {
+                Debug.Log("can't found enemyUniqueCard");
+                break;
+            }
+            int randomNum = Random.Range(0, enemyUniqueList.Count);
+            // 중복되지 않는 카드만 넣는다.
+            if (!IsInArray(randoms, randomNum))
+            {
+                randoms[i] = randomNum;
+                enemyOwnUniqueList.Add(enemyUniqueList[randoms[i]]);
+                i++;
+            }
+        }
 
         // 플레이어는 카드를 배치
         UIMgr.Instance.ArrangeCard(arrPublicSkill, arrPlayerSkill, playerOwnUniqueList);
+    }
+    private bool IsInArray(int[] array, int value)
+    {
+        for (int j = 0; j < array.Length; j++)
+        {
+            if (array[j] == value)
+                return true;
+        }
+        return false;
     }
 
     // 특수카드 리스트 초기화
@@ -390,7 +422,7 @@ public class DataMgr : MonoBehaviour
         return (SelectCardList.Contains(card));
     }
 
-    // 카드 리스트의 개수
+    // 배틀 씬에서의 카드 리스트의 개수
     public int GetCardListCount()
     {
         return (SelectCardList.Count);

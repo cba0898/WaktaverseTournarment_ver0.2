@@ -213,12 +213,16 @@ public class GameMgr : MonoBehaviour
     {
         EnemyAI enemyAI = new EnemyAI();
         List<Card> playerList = DataMgr.Instance.GetPlayerCardList();
+        List <Normal> enemyDatas;
         Normal enemyNormal;
-        for (int i = 0; i < 3; i++)
+        int cardCount = DataMgr.Instance.GetCardListCount();
+
+        enemyDatas = enemyAI.GetEnemyCardData(cardCount);
+        for (int i = 0; i < cardCount; i++)
         {
             SetBattleCard(playerCardList[i], playerList[i].skillData);
 
-            enemyNormal = enemyAI.GetEnemyCardData();
+            enemyNormal = enemyDatas[i];
             enemyNormal.isUsed = true;
             SetBattleCard(enemyCardList[i], enemyNormal);
         }

@@ -177,14 +177,17 @@ public class UIMgr : MonoBehaviour
     private void setCard(int listIndex, Normal data)
     {
         Vector2 pos = cardPos;
-        cardList[listIndex].ResetCardUI();
-        if (7 > listIndex) pos.x = cardPos.x + ((int)cardSize.x + 10) * listIndex;
-        else
+        if (cardList.Count > listIndex)
         {
-            pos.x = cardPos.x + ((int)cardSize.x + 10) * (listIndex - 7);
-            pos.y -= (int)cardSize.y + 10;
+            cardList[listIndex].ResetCardUI();
+            if (7 > listIndex) pos.x = cardPos.x + ((int)cardSize.x + 10) * listIndex;
+            else
+            {
+                pos.x = cardPos.x + ((int)cardSize.x + 10) * (listIndex - 7);
+                pos.y -= (int)cardSize.y + 10;
+            }
+            cardList[listIndex].SetData(data, pos);
         }
-        cardList[listIndex].SetData(data, pos);
     }
 
     // 카드 슬롯 상호작용
@@ -302,11 +305,13 @@ public class UIMgr : MonoBehaviour
         int arrP = 0;
         int arrC = 0;
         int arrU = 0;
+        var publicCount = publics.Length;
+        var unitCount = publicCount + units.Length;
         // 카드리스트 개수만큼 시작
         for (int i = 0; i < cardList.Count; i++)
         {
             // 스크립터블 오브젝트가 부족할 경우 나머지 카드들 비활성화
-            if (i >= units.Length + publics.Length + uniques.Count)
+            if (i >= unitCount + uniques.Count)
             {
                 cardList[i].gameObject.SetActive(false);
                 continue;
@@ -314,12 +319,12 @@ public class UIMgr : MonoBehaviour
             else cardList[i].gameObject.SetActive(true);
 
             // 공용스킬 먼저 등록
-            if (i < publics.Length)
+            if (i < publicCount)
             {
                 setCard(i, publics[arrP++]);
             }
             // 캐릭터 스킬 등록
-            else if (i < publics.Length + units.Length) 
+            else if (i < unitCount) 
             {
                 setCard(i, units[arrC++]);
             }
@@ -355,22 +360,26 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private GameObject disable;
     private IEnumerator SelectUniqueCardAction(int index)
     {
-        uniqueCards[index].CardOpen();
-        disable.SetActive(true);
-        while (uniqueCards[index].IsCardOpened()) yield return null;
+        if (uniqueCards.Length > index)
+        {
+            uniqueCards[index].CardOpen();
+            disable.SetActive(true);
+            while (uniqueCards[index].IsCardOpened()) yield return null;
 
-        // 유니크 선택 창 비활성화
-        cardSet.OffSelectUnique();
-        disable.SetActive(false);
-        // 획득한 카드는 미획득 유니크 리스트에서 제거
-        DataMgr.Instance.playerUniqueList.Remove(uniqueCards[index].skillData);
-        // 다시 원상태로 되돌린다.
-        uniqueCards[index].ResetCardUI();
-        uniqueCards[index].BackCard();
+            // 유니크 선택 창 비활성화
+            cardSet.OffSelectUnique();
+            disable.SetActive(false);
+            // 획득한 카드는 미획득 유니크 리스트에서 제거
+            DataMgr.Instance.playerUniqueList.Remove(uniqueCards[index].skillData);
+            // 다시 원상태로 되돌린다.
+            uniqueCards[index].ResetCardUI();
+            uniqueCards[index].BackCard();
+            ResetUniqueCardUI();
 
-        // 플레이어 카드 리스트에 추가
-        DataMgr.Instance.playerOwnUniqueList.Add(uniqueCards[index].skillData);
-        ArrangeCard(DataMgr.Instance.arrPublicSkill, DataMgr.Instance.arrPlayerSkill, DataMgr.Instance.playerOwnUniqueList);
+            // 플레이어 카드 리스트에 추가
+            DataMgr.Instance.playerOwnUniqueList.Add(uniqueCards[index].skillData);
+            ArrangeCard(DataMgr.Instance.arrPublicSkill, DataMgr.Instance.arrPlayerSkill, DataMgr.Instance.playerOwnUniqueList);
+        }
     }
     // 특수카드 선택(버튼) 이벤트
     public void SelectUniqueCard(int index)
@@ -544,7 +553,7 @@ public class UIMgr : MonoBehaviour
     {
         for(int i =0;i < uniqueCards.Length;i++)
         {
-            uniqueCards[i].ResetCardUI();
+            if(uniqueCards[i]) uniqueCards[i].ResetCardUI();
         }       
     }
 

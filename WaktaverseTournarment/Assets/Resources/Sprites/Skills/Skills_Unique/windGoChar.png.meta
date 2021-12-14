@@ -1,0 +1,924 @@
+fileFormatVersion: 2
+guid: e8649660befbb554b8503d7237e79eb1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2754752049832949978
+    second: windGoChar_0
+  - first:
+      213: -4288150416473349814
+    second: windGoChar_1
+  - first:
+      213: 660179280293815618
+    second: windGoChar_2
+  - first:
+      213: 5098395032886446351
+    second: windGoChar_3
+  - first:
+      213: 1337224896822931006
+    second: windGoChar_4
+  - first:
+      213: -1403045212095110586
+    second: windGoChar_5
+  - first:
+      213: -2721553968469527368
+    second: windGoChar_6
+  - first:
+      213: 1547778464312773966
+    second: windGoChar_7
+  - first:
+      213: -1373600208842339160
+    second: windGoChar_8
+  - first:
+      213: -4173925771963290158
+    second: windGoChar_9
+  - first:
+      213: -4417767149241956596
+    second: windGoChar_10
+  - first:
+      213: -5862891169351650923
+    second: windGoChar_11
+  - first:
+      213: 9095328867056505059
+    second: windGoChar_12
+  - first:
+      213: 4773414701979774325
+    second: windGoChar_13
+  - first:
+      213: -6861023660932902214
+    second: windGoChar_14
+  - first:
+      213: -2534197137853718075
+    second: windGoChar_15
+  - first:
+      213: -1044642141102056185
+    second: windGoChar_16
+  - first:
+      213: -5234744842434987932
+    second: windGoChar_17
+  - first:
+      213: -8304066170570140061
+    second: windGoChar_18
+  - first:
+      213: 4942710574984882338
+    second: windGoChar_19
+  - first:
+      213: 6473632336487966597
+    second: windGoChar_20
+  - first:
+      213: -8510651038693511557
+    second: windGoChar_21
+  - first:
+      213: -8921898584465937673
+    second: windGoChar_22
+  - first:
+      213: -9188339910037602200
+    second: windGoChar_23
+  - first:
+      213: -3969555231606564885
+    second: windGoChar_24
+  - first:
+      213: -4664745690128902349
+    second: windGoChar_25
+  - first:
+      213: 636304526411006419
+    second: windGoChar_26
+  - first:
+      213: 750956350471042443
+    second: windGoChar_27
+  - first:
+      213: -6147957975619405772
+    second: windGoChar_28
+  - first:
+      213: 5700316416189614
+    second: windGoChar_29
+  - first:
+      213: -542829890474593701
+    second: windGoChar_30
+  - first:
+      213: -8822564434848092035
+    second: windGoChar_31
+  - first:
+      213: 8959457895296433598
+    second: windGoChar_32
+  - first:
+      213: -5717459807136514781
+    second: windGoChar_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: windGoChar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8729ed468da3620800000000000000
+      internalID: 2754752049832949978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_1
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41a9a27aed6d74c0800000000000000
+      internalID: -4288150416473349814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2456cf1ce8d692900800000000000000
+      internalID: 660179280293815618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_3
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0900db154321c640800000000000000
+      internalID: 5098395032886446351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_4
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e60ff65f6ce8210800000000000000
+      internalID: 1337224896822931006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_5
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642224130d1678ce0800000000000000
+      internalID: -1403045212095110586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_6
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4b158c5191b3ad0800000000000000
+      internalID: -2721553968469527368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_7
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dcc541050da7510800000000000000
+      internalID: 1547778464312773966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_8
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8accc8043edffece0800000000000000
+      internalID: -1373600208842339160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_9
+      rect:
+        serializedVersion: 2
+        x: 2754
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dda743ff9c3316c0800000000000000
+      internalID: -4173925771963290158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_10
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c070b012f20f0b2c0800000000000000
+      internalID: -4417767149241956596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_11
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591350e5b83d2aea0800000000000000
+      internalID: -5862891169351650923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_12
+      rect:
+        serializedVersion: 2
+        x: 3672
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0524c5a69193e70800000000000000
+      internalID: 9095328867056505059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_13
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57da12d71639e3240800000000000000
+      internalID: 4773414701979774325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_14
+      rect:
+        serializedVersion: 2
+        x: 4284
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab25b86e45fb8c0a0800000000000000
+      internalID: -6861023660932902214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_15
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1ea6f3129b4dcd0800000000000000
+      internalID: -2534197137853718075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_16
+      rect:
+        serializedVersion: 2
+        x: 4896
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d5536e18fa081f0800000000000000
+      internalID: -1044642141102056185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_17
+      rect:
+        serializedVersion: 2
+        x: 5202
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468bad8fc437a57b0800000000000000
+      internalID: -5234744842434987932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_18
+      rect:
+        serializedVersion: 2
+        x: 5508
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36614df80d702cc80800000000000000
+      internalID: -8304066170570140061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_19
+      rect:
+        serializedVersion: 2
+        x: 5814
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a86a819419089440800000000000000
+      internalID: 4942710574984882338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_20
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587e8deaf46f6d950800000000000000
+      internalID: 6473632336487966597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_21
+      rect:
+        serializedVersion: 2
+        x: 6426
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e2d5fb8f714e980800000000000000
+      internalID: -8510651038693511557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_22
+      rect:
+        serializedVersion: 2
+        x: 6732
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fae8d6f18c0f2480800000000000000
+      internalID: -8921898584465937673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_23
+      rect:
+        serializedVersion: 2
+        x: 7038
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8600aa2a8857c7080800000000000000
+      internalID: -9188339910037602200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_24
+      rect:
+        serializedVersion: 2
+        x: 7344
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be71cc76c8e49e8c0800000000000000
+      internalID: -3969555231606564885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_25
+      rect:
+        serializedVersion: 2
+        x: 7650
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337155c728e734fb0800000000000000
+      internalID: -4664745690128902349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_26
+      rect:
+        serializedVersion: 2
+        x: 7956
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d183b1789b94d800800000000000000
+      internalID: 636304526411006419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_27
+      rect:
+        serializedVersion: 2
+        x: 8262
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8576af62deeb6a00800000000000000
+      internalID: 750956350471042443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_28
+      rect:
+        serializedVersion: 2
+        x: 8568
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438fc216bc01eaaa0800000000000000
+      internalID: -6147957975619405772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_29
+      rect:
+        serializedVersion: 2
+        x: 8874
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea428175860441000800000000000000
+      internalID: 5700316416189614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_30
+      rect:
+        serializedVersion: 2
+        x: 9180
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b523cc4371b7778f0800000000000000
+      internalID: -542829890474593701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_31
+      rect:
+        serializedVersion: 2
+        x: 9486
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7072e4f364ff8580800000000000000
+      internalID: -8822564434848092035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_32
+      rect:
+        serializedVersion: 2
+        x: 9792
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd763d8c73665c70800000000000000
+      internalID: 8959457895296433598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: windGoChar_33
+      rect:
+        serializedVersion: 2
+        x: 10098
+        y: 0
+        width: 306
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dfd0a099087a0b0800000000000000
+      internalID: -5717459807136514781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a4a889c6dbdbbef40b9d868050a77634
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
