@@ -90,7 +90,7 @@ public class SoundMgr : MonoBehaviour
 
     public void LoadAudio()
     {
-        audioDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Audios/BGM");
+        audioDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Sounds/BGM");
         BGM.loop = true;
         SFX.loop = false;
     }

@@ -10,7 +10,7 @@ public class SelectCharacter : MonoBehaviour
     public void OnSelect()
     {
         DataMgr.Instance.CurrentPlayer = character;
-        DataMgr.Instance.SetEnemy();
+
 
         var start = FindObjectOfType<Button>();
         start.interactable = true;

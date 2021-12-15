@@ -64,9 +64,11 @@ public class UIMgr : MonoBehaviour
 
 
     //--------------화면 리스트-------------
+    [Header("화면 리스트")]
     [SerializeField] private List<GameObject> sceneList;  // 씬 리스트
 
     //--------------카드 선택 화면-----------
+    [Header("카드 선택 화면")]
     [SerializeField] private List<Card> cardList;  //카드 리스트
 
     [SerializeField] private Vector2 cardPos;    // 카드의 위치
@@ -81,11 +83,16 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Card[] uniqueCards;    // 특수카드 배열
 
     [SerializeField] public CardSet cardSet;    // 카드 선택 화면 스크립트
-    [SerializeField] public MiniMap miniMap;    // 미니맵
+    [SerializeField] private MiniMap miniMap;    // 미니맵
+    public MiniMap GetMiniMap()
+    {
+        return miniMap;
+    }
     //--------------카드 선택 화면-----------
 
 
     //--------------상단 체력 바 UI----------
+    [Header("상단 체력 바")]
     [SerializeField] private Image playerIcon;    // 플레이어 이미지
     [SerializeField] private Image enemyIcon;     // 적 이미지
     [SerializeField] private Text PlayerName;     // 플레이어 이름
@@ -94,6 +101,7 @@ public class UIMgr : MonoBehaviour
 
 
     //--------------캐릭터 매칭 화면----------
+    [Header("캐릭터 매칭 화면")]
     [SerializeField] private CharMatch charMatch;
     //[SerializeField] private Image PlayerMatchImg;  // 플레이어 이미지
     //[SerializeField] private Image[] enemyMatchImg;  // 적 이미지
@@ -101,13 +109,56 @@ public class UIMgr : MonoBehaviour
 
 
     //--------------전투 화면------------    
+    [Header("전투 화면")]
     [SerializeField] private Button nextRound;  // 다음 라운드 버튼
 
-    [SerializeField] public GameObject BattleObj;
+    [SerializeField] private GameObject EffectField;    // 이펙트가 존재하는 필드
+    public GameObject GetEffectField()
+    {
+        return EffectField;
+    }
+
+    [SerializeField] private DamageText DamageTextPrefab;   // 데미지 텍스트 프리팹
+    [SerializeField] private Transform textField;
+    private Queue<DamageText> damageTextQueue = new Queue<DamageText>();
+
+    public DamageText GetDamageText()
+    {
+        if (DamageTextPrefab && textField)
+        {
+            if (0 >= damageTextQueue.Count)
+            {
+                damageTextQueue.Enqueue(CreateTextObj());
+            }
+
+            return damageTextQueue.Dequeue();
+        }
+
+        return null;
+    }
+
+    private DamageText CreateTextObj()
+    {
+        DamageText newObj = Instantiate(DamageTextPrefab, textField);
+        newObj.gameObject.SetActive(false);
+        return newObj;
+    }
+
+    private void Start()
+    {
+        if (DamageTextPrefab && textField)
+        {
+            for (int i = 0; 10 > i; i++)
+            {
+                damageTextQueue.Enqueue(CreateTextObj());
+            }
+        }
+    }
     //--------------전투 화면------------    
 
 
     //--------------게임 오버 화면-------------
+    [Header("게임 오버 화면")]
     [SerializeField] private Text mainText;
     [SerializeField] private Text subText;
     [SerializeField] private Reward reward;
@@ -116,8 +167,9 @@ public class UIMgr : MonoBehaviour
     //--------------게임 오버 화면-------------
 
     //-------------옵션--------------
+    [Header("옵션")]
     [SerializeField] private Option option;
-    //-------------옵션--------------
+
     public void ToggleOptionWindow()
     {
         // 옵션창이 열려있을 경우 다시 닫음
@@ -131,6 +183,8 @@ public class UIMgr : MonoBehaviour
     {
         option.ResetOption();
     }
+    //-------------옵션--------------
+
 
     // 다음 라운드 버튼 활성화
     public void ActiveNextRound(bool value)
@@ -415,6 +469,7 @@ public class UIMgr : MonoBehaviour
                 MoveScene(SCENE.Main, SCENE.CharSelect);
                 break;
             case BUTTON.CharSelect_Select:
+                DataMgr.Instance.SetEnemy();
                 InitMatchScene();
                 MoveScene(SCENE.CharSelect, SCENE.CharMatch);
                 break;
@@ -497,7 +552,7 @@ public class UIMgr : MonoBehaviour
     // 시합 종료 UI 활성화
     public void OnGameSetUI()
     {
-        if(!gameSet.activeSelf) gameSet.SetActive(true);
+        if (!gameSet.activeSelf) gameSet.SetActive(true);
     }
     // 시합 종료 비활성화 및 게임 결과창으로 이동
     public void OffGameSetUI()
@@ -511,7 +566,7 @@ public class UIMgr : MonoBehaviour
         MoveScene(SCENE.Play, SCENE.GameOver);
     }
     // 전투 창에서 결과 창으로
-    public void GameOverUI(RESULTSCENE result)
+    public void SetGameOverUI(RESULTSCENE result)
     {
         switch (result)
         {
@@ -569,7 +624,6 @@ public class UIMgr : MonoBehaviour
         CheckDisable(GameMgr.Instance.Player.mpRemain);
         DataMgr.Instance.InitTurnCount();
         ResetUniqueCardUI();
-        DataMgr.Instance.ResetCharAnimPos();
     }
 
     // 초기 씬 활성화 상태 구현

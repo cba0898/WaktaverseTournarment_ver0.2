@@ -117,7 +117,7 @@ public class GameMgr : MonoBehaviour
         // 얘는 따로 어디 가야댐
         if (1 == DataMgr.Instance.Round)
         {
-            UIMgr.Instance.miniMap.InitMiniMapPos();
+            UIMgr.Instance.GetMiniMap().InitMiniMapPos();
             InitCharPos();
         }
 
@@ -140,7 +140,7 @@ public class GameMgr : MonoBehaviour
         // 캐릭터 위치 초기화
         InitCharPos();
         FaceUnit(Player.gameObject, Enemy.gameObject);
-        UIMgr.Instance.miniMap.InitMiniMapPos();
+        UIMgr.Instance.GetMiniMap().InitMiniMapPos();
         // 배틀을 처음 시작한 경우에만 초기 위치를 저장
         if (DataMgr.Instance.IsFirstEnemy())
         {
@@ -304,7 +304,10 @@ public class GameMgr : MonoBehaviour
             else if(atk.isIdle) unit.unitanim.OnNonActionExit();
             else unit.unitanim.OnActionExit();
 
+            // 데미지 실적용
             target.ApplyDamaged();
+            // 데미지 초기화
+            target.ResetDamage();
 
             //if (target.isInArea)
             //{
@@ -395,7 +398,7 @@ public class GameMgr : MonoBehaviour
         // 유닛의 위치를 벡터2로 구해옴
         Vector2 unitPos = unit.transform.localPosition;
         Vector2 movedPos = unitPos;
-        MiniMap mini = UIMgr.Instance.miniMap;
+        MiniMap mini = UIMgr.Instance.GetMiniMap();
         Vector2 miniMapPos = new Vector2();
         if (unit == Player)
             miniMapPos = mini.GetMiniMapPlayerPos();
@@ -685,14 +688,36 @@ public class GameMgr : MonoBehaviour
     }
     /*-------------버프---------------*/
 
-    // 데미지 처리
-    private void DamageProcess(Unit target,int dmg, int addAtk, int applyCount, int targetDef)
-    {
-        //target.SetDamage((dmg + addAtk - targetDef), applyCount);
-        //target.AddHP(Mathf.Min(-1 * (dmg + addAtk - targetDef) * applyCount, 0));
-        target.ApplyDamaged();
-    }
     /*----------------------스킬 적용--------------------*/
+
+    public IEnumerator OnDie(RESULTSCENE result)
+    {
+        switch (result)
+        {
+            case RESULTSCENE.Draw:
+                Player.unitanim.OnDieEnter();
+                Player.unitanim.OnDyingEnter();
+                Enemy.unitanim.OnDieEnter();
+                Enemy.unitanim.OnDyingEnter();
+                break;
+            case RESULTSCENE.Win:
+                Enemy.unitanim.OnDieEnter();
+                Enemy.unitanim.OnDyingEnter();
+                break;
+            case RESULTSCENE.Lose:
+                Player.unitanim.OnDieEnter();
+                Player.unitanim.OnDyingEnter();
+                break;
+        }
+
+        // 유닛 죽음이 끝날 때 까지 대기
+        while(Player.unitanim.IsDiying() || Enemy.unitanim.IsDiying()) yield return null;
+
+        // 죽음이 끝나면 게임 셋 화면 활성화
+        UIMgr.Instance.OnGameSetUI();
+        // 게임 결과화면 세팅
+        UIMgr.Instance.SetGameOverUI(result);
+    }
 
     private bool WinCheck(Unit player, Unit enemy)
     {
@@ -701,31 +726,25 @@ public class GameMgr : MonoBehaviour
         {
             return false;
         }
-        // 결판이 났을 경우 데이터 초기화 + 시합 종료 UI 활성화
+        // 결판이 났을 경우 데이터 초기화
         else
         {
             // 나중에 인스턴스별로 묶어서 함수 만들자
             DataMgr.Instance.InitRound();
             DataMgr.Instance.ClearSelectCardList();
-            // 시합 종료 UI 활성화
-            UIMgr.Instance.OnGameSetUI();
         }
 
         if (player.hp == 0 && enemy.hp == 0)
         {
-            player.unitanim.OnDieEnter();
-            enemy.unitanim.OnDieEnter();
-            UIMgr.Instance.GameOverUI(RESULTSCENE.Draw);
+            StartCoroutine(OnDie(RESULTSCENE.Draw));
         }
         else if (player.hp == 0)
         {
-            player.unitanim.OnDieEnter();
-            UIMgr.Instance.GameOverUI(RESULTSCENE.Lose);
+            StartCoroutine(OnDie(RESULTSCENE.Lose));
         }
         else if (enemy.hp == 0)
         {
-            enemy.unitanim.OnDieEnter();
-            UIMgr.Instance.GameOverUI(RESULTSCENE.Win);
+            StartCoroutine(OnDie(RESULTSCENE.Win));
             // 전원을 다 처치하지 않았다면 다음 적으로 넘어감
             if (!DataMgr.Instance.IsAllClear())
             {

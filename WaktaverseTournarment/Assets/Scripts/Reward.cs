@@ -10,6 +10,7 @@ public class Reward : MonoBehaviour
     [SerializeField] private Sprite[] rewardEffects;   // 승리 보상 효과 종류 배열
 
     [SerializeField] private Image FinalReward; // 마지막 보상
+    [SerializeField] private Image Frame; // 보상 틀
     [SerializeField] private Sprite FinalEffects; // 마지막 효과
 
     
@@ -47,11 +48,18 @@ public class Reward : MonoBehaviour
         }
         effect.gameObject.SetActive(false);
         FinalReward.gameObject.SetActive(false);
+        Frame.gameObject.SetActive(true);
     }
 
     // 엔딩 연출
     public void SetFinalReward()
     {
+        // 이전의 보상 비활성화 
+        for(int i=0;i< rewards.Length;i++)
+        {
+            rewards[i].gameObject.SetActive(false);
+        }
+        Frame.gameObject.SetActive(false);
         UIMgr.Instance.SetResultSubText("완성된 디스크에는 [2021 연말공모전 출품작]이라고 쓰여 있었다. 왁물원에 올려두면 다시는 잃어버리지 않겠지?");
         effect.gameObject.SetActive(false);
         FinalReward.gameObject.SetActive(true);

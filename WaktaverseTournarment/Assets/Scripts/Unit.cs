@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 //[RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class Unit : MonoBehaviour
@@ -29,6 +30,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public List<Text> buffTurnTexts; //버프 턴 수
     [SerializeField] public List<Text> buffDiscriptions; //버프 설명
 
+
     private int damageedValue = 0;
     private int damageedCount = 0;
 
@@ -38,15 +40,21 @@ public class Unit : MonoBehaviour
         damageedCount = count;
     }
 
+    // 데미지 실적용
     public void ApplyDamaged()
     {
         isInArea = false;
         if (0 < damageedValue * damageedCount)
         {
             AddHP(Mathf.Min(-1 * (damageedValue - defense) * damageedCount, 0));
-            damageedValue = 0;
-            damageedCount = 0;
+            ResetDamage();
         }
+    }
+
+    public void ResetDamage()
+    {
+        damageedValue = 0;
+        damageedCount = 0;
     }
 
     public void AddBuffCount()
@@ -126,24 +134,40 @@ public class Unit : MonoBehaviour
         if (collision.transform.tag == AttackTag)
         {
             unitanim.OnHitEnter();
-
-            //if (0 < damageedValue * damageedCount)
-            //damageedValue = 0;
-            //damageedCount = 0;
+            StartCoroutine(OnDamagePop());  
         }
+    }
+
+    public int GetDamageValue()
+    {
+        return damageedValue;
+
+    }
+    public int GetDamageCountValue()
+    {
+        return damageedCount;
     }
 
     private IEnumerator OnDamagePop()
     {
-        // 방어력이 존재할 경우 방어력 폰트 추가
-        if (0 < defense)
+        var offset = -transform.localScale.x * Vector3.right;
+        for (int i = 0; damageedCount > i; i++)
         {
+            var posX = 0.0f;
+            // 방어력이 존재할 경우 방어력 폰트 추가
+            if (0 < defense)
+            {
+                posX = 0.3f + Random.value * 0.2f;
+                var def = UIMgr.Instance.GetDamageText();
+                //+ new Vector3(Random.RandomRange(0, 10) * 0.1f, 0, 0)
+                if (def) def.SetDamage(defense, DamageTextType.Defense, transform.position + offset + new Vector3(-posX * offset.x, 1f, 0));
+                //yield return new WaitForSeconds(0.3f);
+            }
 
-        }
-        for(int i = 0; damageedCount > i; i++)
-        {
-            
-            yield return new WaitForSeconds(0.1f);
+            var atk = UIMgr.Instance.GetDamageText();
+            //+ new Vector3(Random.RandomRange(0, 10) * 0.1f, 0, 0)
+            if (atk) atk.SetDamage(damageedValue, DamageTextType.Attack, transform.position + offset + new Vector3(posX * offset.x, 1f, 0));
+            yield return new WaitForSeconds(0.3f);
         }
     }
 

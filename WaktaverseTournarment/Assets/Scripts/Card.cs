@@ -163,6 +163,7 @@ public class Card : MonoBehaviour
         atkBuff.SetActive(false);
         defBuff.SetActive(false);
         movePos.SetActive(false);
+        dashPos.SetActive(false);
     }
 
     public void SetLocalPos(Vector2 pos)

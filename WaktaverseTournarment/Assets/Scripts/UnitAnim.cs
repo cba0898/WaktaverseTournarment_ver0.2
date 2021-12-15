@@ -62,4 +62,21 @@ public class UnitAnim : MonoBehaviour
     {
         if (anim) anim.SetBool("isDie", true);
     }
+    public void OnDieExit()
+    {
+        if (anim) anim.SetBool("isDie", false);
+    }
+    // 죽는 시늉하는 시간을 측정
+    public void OnDyingEnter()
+    {
+        if (anim) anim.SetBool("isDying", true);
+    }
+    public void OnDyingExit()
+    {
+        if (anim) anim.SetBool("isDying", false);
+    }
+    public bool IsDiying()
+    {
+        return (anim.GetBool("isDying"));
+    }
 }

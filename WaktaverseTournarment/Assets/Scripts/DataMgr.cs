@@ -304,7 +304,7 @@ public class DataMgr : MonoBehaviour
 
         for (int i = 0; i < skillEffects.Length; i++)
         {
-            var skill = Instantiate(skillEffects[i], new Vector3(0, 0, 0), Quaternion.identity, UIMgr.Instance.BattleObj.transform);
+            var skill = Instantiate(skillEffects[i], new Vector3(0, 0, 0), Quaternion.identity, UIMgr.Instance.GetEffectField().transform);
             skill.SetActive(false);
             skillEffectPool.Add(skill);
         }
@@ -491,15 +491,7 @@ public class DataMgr : MonoBehaviour
     {
         turnCount = 0;
     }
-    [SerializeField] private Vector2 charAnimOriginPos;
-    [SerializeField] private GameObject playerAnimPos;
-    [SerializeField] private GameObject enemyAnimPos;
-    // 캐릭터 애니메이션 오브젝트 위치 초기화
-    public void ResetCharAnimPos()
-    {
-        playerAnimPos.transform.localPosition = charAnimOriginPos;
-        enemyAnimPos.transform.localPosition = charAnimOriginPos;
-    }
+
     // 버프 설명 텍스트 삽입
     public void SetBuffData(string text, Normal data)
     {
@@ -519,7 +511,7 @@ public class DataMgr : MonoBehaviour
     // DataMgr가 관리하는 변동 정보 제거
     public void ResetData()
     {
-        CurrentPlayer = Character.start;
+        //CurrentPlayer = Character.start;
         CurrentEnemy = Character.start;
         InitRound();
         InitTurnCount();
