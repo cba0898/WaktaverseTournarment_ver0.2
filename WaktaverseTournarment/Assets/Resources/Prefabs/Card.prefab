@@ -653,6 +653,7 @@ MonoBehaviour:
   back: {fileID: 6896612306920613262}
   disable: {fileID: 7327399610090723522}
   anim: {fileID: 3420325277201151627}
+  openAudio: {fileID: 8300000, guid: 2a502db9de1347944a80b29d35f447b9, type: 3}
 --- !u!111 &3420325277201151627
 Animation:
   m_ObjectHideFlags: 0

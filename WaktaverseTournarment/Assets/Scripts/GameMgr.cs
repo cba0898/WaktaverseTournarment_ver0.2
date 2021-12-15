@@ -183,6 +183,7 @@ public class GameMgr : MonoBehaviour
         var playerCard = playerCardList[DataMgr.Instance.turnCount];
         var enemyCard = enemyCardList[DataMgr.Instance.turnCount];
 
+        SoundMgr.Instance.OnPlaySFX(playerCard.openAudio);
         // 첫 번째 카드가 뒤집히는 애니메이션 실행
         playerCard.CardOpen();
         enemyCard.CardOpen();
@@ -272,7 +273,7 @@ public class GameMgr : MonoBehaviour
         var effectIndex = DataMgr.Instance.GetEffectIndex(card.skillData);
 
         // 대사 효과음이 있으면 해당 스킬의 대사 효과음 재생
-        //if(card.skillData.voiceSFX) SoundMgr.Instance.OnPlaySFX(card.skillData);
+        //if(card.skillData.voiceSFX) SoundMgr.Instance.OnPlaySFX(card.skillData.voiceSFX);
         //while (SoundMgr.Instance.IsSFXPlaying()) yield return null;
 
         if (card.skillData.target == TARGET.PLAYER)  target = Player;   
@@ -303,11 +304,13 @@ public class GameMgr : MonoBehaviour
             else if(atk.isIdle) unit.unitanim.OnNonActionExit();
             else unit.unitanim.OnActionExit();
 
+            target.ApplyDamaged();
+
             //if (target.isInArea)
-            {
-                target.ApplyDamaged();
-                //DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
-            }
+            //{
+            //    target.ApplyDamaged();
+            //    //DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
+            //}
         }
         // 유틸 액션
         else if (card.skillData is Utility)

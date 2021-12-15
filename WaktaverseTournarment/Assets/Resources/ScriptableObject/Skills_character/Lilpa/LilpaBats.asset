@@ -16,11 +16,10 @@ MonoBehaviour:
   skillName: "\uBC15\uC950\uB2E8\uC758 \uAC15\uC2B5"
   discription: "\uB194\uBCF4\uC138\uC694 \uB9B4\uD30C\uB2D8!"
   target: 4
-  range: 672
+  range: 640
   movePos: 0
   effect: {fileID: 6493219645193700108, guid: 570afa82569712e44bf3df59fe19a0db, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: fda20c76c456ae44cb8c4e89da411f71, type: 3}
   condition: 2

@@ -424,10 +424,13 @@ public class UIMgr : MonoBehaviour
                 break;
             case BUTTON.CharMatch_Start:
                 CharMatchStart();
-                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
+                // 첫 라운드에만 재생
+                if (DataMgr.Instance.Round == 1)
+                    SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
             case BUTTON.CardSet_Start:
                 CardSetStart();
+                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyBattle);
                 break;
             case BUTTON.CardSet_Clear:
                 ClearSlot();

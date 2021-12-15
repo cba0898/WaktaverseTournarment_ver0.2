@@ -127,9 +127,9 @@ public class Unit : MonoBehaviour
         {
             unitanim.OnHitEnter();
 
-            if (0 < damageedValue * damageedCount)
-            damageedValue = 0;
-            damageedCount = 0;
+            //if (0 < damageedValue * damageedCount)
+            //damageedValue = 0;
+            //damageedCount = 0;
         }
     }
 

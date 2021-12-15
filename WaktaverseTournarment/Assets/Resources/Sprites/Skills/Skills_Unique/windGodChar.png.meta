@@ -104,6 +104,108 @@ TextureImporter:
   - first:
       213: -5717459807136514781
     second: windGoChar_33
+  - first:
+      213: 3083054360994848144
+    second: windGodChar_0
+  - first:
+      213: 3623180559258779216
+    second: windGodChar_1
+  - first:
+      213: -9209046109151575471
+    second: windGodChar_2
+  - first:
+      213: 3670329008726888616
+    second: windGodChar_3
+  - first:
+      213: -4061314402499349577
+    second: windGodChar_4
+  - first:
+      213: -664368811283425009
+    second: windGodChar_5
+  - first:
+      213: 7229288594246808355
+    second: windGodChar_6
+  - first:
+      213: 3386555626396738977
+    second: windGodChar_7
+  - first:
+      213: -2231558251178519200
+    second: windGodChar_8
+  - first:
+      213: -662831247268407022
+    second: windGodChar_9
+  - first:
+      213: 3525927840832162958
+    second: windGodChar_10
+  - first:
+      213: -4277908666676797510
+    second: windGodChar_11
+  - first:
+      213: 8419149373294163199
+    second: windGodChar_12
+  - first:
+      213: 5808103296326509108
+    second: windGodChar_13
+  - first:
+      213: 6672939501953978518
+    second: windGodChar_14
+  - first:
+      213: 1850212839140039736
+    second: windGodChar_15
+  - first:
+      213: 6934853343468407015
+    second: windGodChar_16
+  - first:
+      213: 347888182148125500
+    second: windGodChar_17
+  - first:
+      213: 6832456238086194199
+    second: windGodChar_18
+  - first:
+      213: -6162191417820777884
+    second: windGodChar_19
+  - first:
+      213: -2791557425695244227
+    second: windGodChar_20
+  - first:
+      213: 767938982633857423
+    second: windGodChar_21
+  - first:
+      213: -4944461475700030904
+    second: windGodChar_22
+  - first:
+      213: 534515002446196814
+    second: windGodChar_23
+  - first:
+      213: 6611133676735810215
+    second: windGodChar_24
+  - first:
+      213: -2607064984145724602
+    second: windGodChar_25
+  - first:
+      213: 2451064877510316992
+    second: windGodChar_26
+  - first:
+      213: 6996473154142119327
+    second: windGodChar_27
+  - first:
+      213: -5968465493114902347
+    second: windGodChar_28
+  - first:
+      213: -8525877360539975393
+    second: windGodChar_29
+  - first:
+      213: -1089543793858808791
+    second: windGodChar_30
+  - first:
+      213: -7708939870254622285
+    second: windGodChar_31
+  - first:
+      213: 5942807027239540392
+    second: windGodChar_32
+  - first:
+      213: 6638276953975179726
+    second: windGodChar_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -134,7 +236,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -179,6 +281,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -193,7 +307,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: windGoChar_0
+      name: windGodChar_0
       rect:
         serializedVersion: 2
         x: 0
@@ -201,20 +315,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad8729ed468da3620800000000000000
-      internalID: 2754752049832949978
+      spriteID: 09d115a4b9539ca20800000000000000
+      internalID: 3083054360994848144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_1
+      name: windGodChar_1
       rect:
         serializedVersion: 2
         x: 306
@@ -222,20 +336,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a41a9a27aed6d74c0800000000000000
-      internalID: -4288150416473349814
+      spriteID: 05e78bfa58f184230800000000000000
+      internalID: 3623180559258779216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_2
+      name: windGodChar_2
       rect:
         serializedVersion: 2
         x: 612
@@ -243,20 +357,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2456cf1ce8d692900800000000000000
-      internalID: 660179280293815618
+      spriteID: 152c3d7fa55e23080800000000000000
+      internalID: -9209046109151575471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_3
+      name: windGodChar_3
       rect:
         serializedVersion: 2
         x: 918
@@ -264,20 +378,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0900db154321c640800000000000000
-      internalID: 5098395032886446351
+      spriteID: 8a05af589c0afe230800000000000000
+      internalID: 3670329008726888616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_4
+      name: windGodChar_4
       rect:
         serializedVersion: 2
         x: 1224
@@ -285,20 +399,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3e60ff65f6ce8210800000000000000
-      internalID: 1337224896822931006
+      spriteID: 7b339d5911053a7c0800000000000000
+      internalID: -4061314402499349577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_5
+      name: windGodChar_5
       rect:
         serializedVersion: 2
         x: 1530
@@ -306,20 +420,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642224130d1678ce0800000000000000
-      internalID: -1403045212095110586
+      spriteID: f095a9b0610b7c6f0800000000000000
+      internalID: -664368811283425009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_6
+      name: windGodChar_6
       rect:
         serializedVersion: 2
         x: 1836
@@ -327,62 +441,62 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4b158c5191b3ad0800000000000000
-      internalID: -2721553968469527368
+      spriteID: 3233dde8ca7935460800000000000000
+      internalID: 7229288594246808355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_7
+      name: windGodChar_7
       rect:
         serializedVersion: 2
         x: 2142
         y: 0
-        width: 306
+        width: 301
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4dcc541050da7510800000000000000
-      internalID: 1547778464312773966
+      spriteID: 1a56a7346667ffe20800000000000000
+      internalID: 3386555626396738977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_8
+      name: windGodChar_8
       rect:
         serializedVersion: 2
-        x: 2448
+        x: 2443
         y: 0
-        width: 306
+        width: 311
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8accc8043edffece0800000000000000
-      internalID: -1373600208842339160
+      spriteID: 06599e60899e701e0800000000000000
+      internalID: -2231558251178519200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_9
+      name: windGodChar_9
       rect:
         serializedVersion: 2
         x: 2754
@@ -390,20 +504,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dda743ff9c3316c0800000000000000
-      internalID: -4173925771963290158
+      spriteID: 21999801e762dc6f0800000000000000
+      internalID: -662831247268407022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_10
+      name: windGodChar_10
       rect:
         serializedVersion: 2
         x: 3060
@@ -411,20 +525,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c070b012f20f0b2c0800000000000000
-      internalID: -4417767149241956596
+      spriteID: e8c0678a0bc9ee030800000000000000
+      internalID: 3525927840832162958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_11
+      name: windGodChar_11
       rect:
         serializedVersion: 2
         x: 3366
@@ -432,20 +546,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591350e5b83d2aea0800000000000000
-      internalID: -5862891169351650923
+      spriteID: abf1a25abb0d1a4c0800000000000000
+      internalID: -4277908666676797510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_12
+      name: windGodChar_12
       rect:
         serializedVersion: 2
         x: 3672
@@ -453,20 +567,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0524c5a69193e70800000000000000
-      internalID: 9095328867056505059
+      spriteID: ff4b62a9fb3d6d470800000000000000
+      internalID: 8419149373294163199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_13
+      name: windGodChar_13
       rect:
         serializedVersion: 2
         x: 3978
@@ -474,20 +588,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57da12d71639e3240800000000000000
-      internalID: 4773414701979774325
+      spriteID: 4322154ec278a9050800000000000000
+      internalID: 5808103296326509108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_14
+      name: windGodChar_14
       rect:
         serializedVersion: 2
         x: 4284
@@ -495,41 +609,41 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab25b86e45fb8c0a0800000000000000
-      internalID: -6861023660932902214
+      spriteID: 69093ad4f1b0b9c50800000000000000
+      internalID: 6672939501953978518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_15
+      name: windGodChar_15
       rect:
         serializedVersion: 2
-        x: 4590
+        x: 3677
         y: 0
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c1ea6f3129b4dcd0800000000000000
-      internalID: -2534197137853718075
+      spriteID: 83c1fcb36c64da910800000000000000
+      internalID: 1850212839140039736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_16
+      name: windGodChar_16
       rect:
         serializedVersion: 2
         x: 4896
@@ -537,20 +651,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70d5536e18fa081f0800000000000000
-      internalID: -1044642141102056185
+      spriteID: 7e84dda9f5c8d3060800000000000000
+      internalID: 6934853343468407015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_17
+      name: windGodChar_17
       rect:
         serializedVersion: 2
         x: 5202
@@ -558,20 +672,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468bad8fc437a57b0800000000000000
-      internalID: -5234744842434987932
+      spriteID: c33de7e5572f3d400800000000000000
+      internalID: 347888182148125500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_18
+      name: windGodChar_18
       rect:
         serializedVersion: 2
         x: 5508
@@ -579,20 +693,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36614df80d702cc80800000000000000
-      internalID: -8304066170570140061
+      spriteID: 7148786afb2c1de50800000000000000
+      internalID: 6832456238086194199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_19
+      name: windGodChar_19
       rect:
         serializedVersion: 2
         x: 5814
@@ -600,20 +714,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a86a819419089440800000000000000
-      internalID: 4942710574984882338
+      spriteID: 462f4dedd8f7b7aa0800000000000000
+      internalID: -6162191417820777884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_20
+      name: windGodChar_20
       rect:
         serializedVersion: 2
         x: 6120
@@ -621,20 +735,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587e8deaf46f6d950800000000000000
-      internalID: 6473632336487966597
+      spriteID: d30c457cf456249d0800000000000000
+      internalID: -2791557425695244227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_21
+      name: windGodChar_21
       rect:
         serializedVersion: 2
         x: 6426
@@ -642,20 +756,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7e2d5fb8f714e980800000000000000
-      internalID: -8510651038693511557
+      spriteID: f81e01d9f6448aa00800000000000000
+      internalID: 767938982633857423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_22
+      name: windGodChar_22
       rect:
         serializedVersion: 2
         x: 6732
@@ -663,20 +777,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fae8d6f18c0f2480800000000000000
-      internalID: -8921898584465937673
+      spriteID: 842cb471c7eb16bb0800000000000000
+      internalID: -4944461475700030904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_23
+      name: windGodChar_23
       rect:
         serializedVersion: 2
         x: 7038
@@ -684,20 +798,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8600aa2a8857c7080800000000000000
-      internalID: -9188339910037602200
+      spriteID: e403cef009afa6700800000000000000
+      internalID: 534515002446196814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_24
+      name: windGodChar_24
       rect:
         serializedVersion: 2
         x: 7344
@@ -705,20 +819,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be71cc76c8e49e8c0800000000000000
-      internalID: -3969555231606564885
+      spriteID: 7aac57c3d077fbb50800000000000000
+      internalID: 6611133676735810215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_25
+      name: windGodChar_25
       rect:
         serializedVersion: 2
         x: 7650
@@ -726,20 +840,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 337155c728e734fb0800000000000000
-      internalID: -4664745690128902349
+      spriteID: 64b72a1b538d1dbd0800000000000000
+      internalID: -2607064984145724602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_26
+      name: windGodChar_26
       rect:
         serializedVersion: 2
         x: 7956
@@ -747,20 +861,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d183b1789b94d800800000000000000
-      internalID: 636304526411006419
+      spriteID: 0c35071158ee30220800000000000000
+      internalID: 2451064877510316992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_27
+      name: windGodChar_27
       rect:
         serializedVersion: 2
         x: 8262
@@ -768,20 +882,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8576af62deeb6a00800000000000000
-      internalID: 750956350471042443
+      spriteID: f95a239c347781160800000000000000
+      internalID: 6996473154142119327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_28
+      name: windGodChar_28
       rect:
         serializedVersion: 2
         x: 8568
@@ -789,20 +903,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438fc216bc01eaaa0800000000000000
-      internalID: -6147957975619405772
+      spriteID: 5b8a5bc9140cb2da0800000000000000
+      internalID: -5968465493114902347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_29
+      name: windGodChar_29
       rect:
         serializedVersion: 2
         x: 8874
@@ -810,20 +924,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea428175860441000800000000000000
-      internalID: 5700316416189614
+      spriteID: f11487e66bffda980800000000000000
+      internalID: -8525877360539975393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_30
+      name: windGodChar_30
       rect:
         serializedVersion: 2
         x: 9180
@@ -831,20 +945,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b523cc4371b7778f0800000000000000
-      internalID: -542829890474593701
+      spriteID: 92470df21b921e0f0800000000000000
+      internalID: -1089543793858808791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_31
+      name: windGodChar_31
       rect:
         serializedVersion: 2
         x: 9486
@@ -852,20 +966,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7072e4f364ff8580800000000000000
-      internalID: -8822564434848092035
+      spriteID: 3b990ae1808540590800000000000000
+      internalID: -7708939870254622285
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_32
+      name: windGodChar_32
       rect:
         serializedVersion: 2
         x: 9792
@@ -873,20 +987,20 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd763d8c73665c70800000000000000
-      internalID: 8959457895296433598
+      spriteID: 8a6de434187197250800000000000000
+      internalID: 5942807027239540392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGoChar_33
+      name: windGodChar_33
       rect:
         serializedVersion: 2
         x: 10098
@@ -894,14 +1008,14 @@ TextureImporter:
         width: 306
         height: 264
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32dfd0a099087a0b0800000000000000
-      internalID: -5717459807136514781
+      spriteID: ec94a52f7b5ef1c50800000000000000
+      internalID: 6638276953975179726
       vertices: []
       indices: 
       edges: []

@@ -117,11 +117,11 @@ public class SoundMgr : MonoBehaviour
         if (!BGM.isPlaying) BGM.Play();
     }
 
-    public void OnPlaySFX(Normal data)
+    public void OnPlaySFX(AudioClip audioClip)
     {
         SFX.Stop();
         if (SFX.isPlaying) return;
-        SFX.clip = data.voiceSFX;
+        SFX.clip = audioClip;
         if (!SFX.isPlaying) SFX.Play();
     }
 
