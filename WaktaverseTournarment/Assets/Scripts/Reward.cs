@@ -62,9 +62,11 @@ public class Reward : MonoBehaviour
         Frame.gameObject.SetActive(false);
         UIMgr.Instance.SetResultSubText("완성된 디스크에는 [2021 연말공모전 출품작]이라고 쓰여 있었다. 왁물원에 올려두면 다시는 잃어버리지 않겠지?");
         effect.gameObject.SetActive(false);
-        FinalReward.gameObject.SetActive(true);
         effect.sprite = FinalEffects;
         effect.gameObject.SetActive(true);
+
+        FinalReward.gameObject.SetActive(true);
+
 
         UIMgr.Instance.OffEndButton();
         UIMgr.Instance.OnToMainButton();

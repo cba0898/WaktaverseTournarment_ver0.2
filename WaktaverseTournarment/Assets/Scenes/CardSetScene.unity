@@ -4850,7 +4850,6 @@ GameObject:
   - component: {fileID: 362147504}
   - component: {fileID: 362147506}
   - component: {fileID: 362147505}
-  - component: {fileID: 362147507}
   m_Layer: 0
   m_Name: Final
   m_TagString: Untagged
@@ -4915,22 +4914,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362147503}
   m_CullTransparentMesh: 1
---- !u!111 &362147507
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362147503}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: a38b886212ce4db439a30839e81f5ea5, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: a38b886212ce4db439a30839e81f5ea5, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &365159569
 GameObject:
   m_ObjectHideFlags: 0
@@ -18056,7 +18039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1404556554
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22842,7 +22825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698022011
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27973,7 +27956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8247859416093063550, guid: 16cd77d0cda7254408f51126c8002b04, type: 3}
+  m_Sprite: {fileID: -4109750255433534555, guid: 16cd77d0cda7254408f51126c8002b04, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

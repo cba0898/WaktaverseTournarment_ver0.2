@@ -21,7 +21,6 @@ MonoBehaviour:
   movePos: 0
   effect: {fileID: 4476660309944672042, guid: 225f0c4208e59614f897da82d9205880, type: 3}
   thisAction: 4
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
