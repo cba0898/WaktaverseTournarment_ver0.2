@@ -20,5 +20,5 @@ MonoBehaviour:
   movePos: 4
   effect: {fileID: 0}
   thisAction: 1
-  MoveCount: 2
+  MoveCount: 1
   voiceSFX: {fileID: 0}

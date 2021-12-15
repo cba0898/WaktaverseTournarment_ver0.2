@@ -13,19 +13,18 @@ MonoBehaviour:
   m_Name: JururuFoxs
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uC8FC\uD3ED\uB3C4 \uD574\uBC29"
+  skillName: "\uC8FC\uD3ED\uB3C4"
   discription: 
   target: 4
-  range: 942
+  range: 762
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 6567740882152867554, guid: 24cb240d31973c0409a225badf7a4203, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
-  value: 25
-  cost: 30
+  value: 40
+  cost: 50
   turns: 0
   applyCount: 1
   isSpread: 0

@@ -16,16 +16,15 @@ MonoBehaviour:
   skillName: "\uCB48\uB974\uB974 \uB9E4\uD639"
   discription: 
   target: 4
-  range: 762
+  range: 372
   movePos: 0
   effect: {fileID: 0}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
-  value: 40
-  cost: 50
+  value: 25
+  cost: 30
   turns: 0
   applyCount: 1
   isSpread: 0

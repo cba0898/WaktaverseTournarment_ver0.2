@@ -1,109 +1,106 @@
 fileFormatVersion: 2
-guid: 99b474502d197fe46b6ef0ab46e471ca
+guid: e0e724dd3c7bba54b915448554d1ad98
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3083054360994848144
-    second: windGodChar_0
+      213: 1156823364449549307
+    second: 1639579340564_0
   - first:
-      213: 3623180559258779216
-    second: windGodChar_1
+      213: -4181914454811177934
+    second: 1639579340564_1
   - first:
-      213: -9209046109151575471
-    second: windGodChar_2
+      213: -6218906420579306311
+    second: 1639579340564_2
   - first:
-      213: 3670329008726888616
-    second: windGodChar_3
+      213: 4089717293246929054
+    second: 1639579340564_3
   - first:
-      213: -4061314402499349577
-    second: windGodChar_4
+      213: 890631345328485938
+    second: 1639579340564_4
   - first:
-      213: -664368811283425009
-    second: windGodChar_5
+      213: 2242983666739455818
+    second: 1639579340564_5
   - first:
-      213: 7229288594246808355
-    second: windGodChar_6
+      213: 2841534096729406377
+    second: 1639579340564_6
   - first:
-      213: 3386555626396738977
-    second: windGodChar_7
+      213: 2611546398671307739
+    second: 1639579340564_7
   - first:
-      213: -2231558251178519200
-    second: windGodChar_8
+      213: 4251785486148057641
+    second: 1639579340564_8
   - first:
-      213: -662831247268407022
-    second: windGodChar_9
+      213: 1382745744663301141
+    second: 1639579340564_9
   - first:
-      213: 3525927840832162958
-    second: windGodChar_10
+      213: -1256386368855906557
+    second: 1639579340564_10
   - first:
-      213: -4277908666676797510
-    second: windGodChar_11
+      213: 8431186544741884654
+    second: 1639579340564_11
   - first:
-      213: 8419149373294163199
-    second: windGodChar_12
+      213: 140019016194651958
+    second: 1639579340564_12
   - first:
-      213: 5808103296326509108
-    second: windGodChar_13
+      213: -2771447213898843451
+    second: 1639579340564_13
   - first:
-      213: 6672939501953978518
-    second: windGodChar_14
+      213: 4796624840981155237
+    second: 1639579340564_14
   - first:
-      213: 1850212839140039736
-    second: windGodChar_15
+      213: -7004039655100811920
+    second: 1639579340564_15
   - first:
-      213: 6934853343468407015
-    second: windGodChar_16
+      213: 6266726597641900709
+    second: 1639579340564_16
   - first:
-      213: 347888182148125500
-    second: windGodChar_17
+      213: 7539869296209915226
+    second: 1639579340564_17
   - first:
-      213: 6832456238086194199
-    second: windGodChar_18
+      213: 4313270135825597249
+    second: 1639579340564_18
   - first:
-      213: -6162191417820777884
-    second: windGodChar_19
+      213: 3094593727221095018
+    second: 1639579340564_19
   - first:
-      213: -2791557425695244227
-    second: windGodChar_20
+      213: 4074277501651201350
+    second: 1639579340564_20
   - first:
-      213: 767938982633857423
-    second: windGodChar_21
+      213: -7083232392731764020
+    second: 1639579340564_21
   - first:
-      213: -4944461475700030904
-    second: windGodChar_22
+      213: -1330051250245208418
+    second: 1639579340564_22
   - first:
-      213: 534515002446196814
-    second: windGodChar_23
+      213: 3603622780656796138
+    second: 1639579340564_23
   - first:
-      213: 6611133676735810215
-    second: windGodChar_24
+      213: 8029708437581597073
+    second: 1639579340564_24
   - first:
-      213: -2607064984145724602
-    second: windGodChar_25
+      213: 1944941089236929492
+    second: 1639579340564_25
   - first:
-      213: 2451064877510316992
-    second: windGodChar_26
+      213: 3026289595426236006
+    second: 1639579340564_26
   - first:
-      213: 6996473154142119327
-    second: windGodChar_27
+      213: 2159242101964353435
+    second: 1639579340564_27
   - first:
-      213: -5968465493114902347
-    second: windGodChar_28
+      213: 2058267524881841396
+    second: 1639579340564_28
   - first:
-      213: -8525877360539975393
-    second: windGodChar_29
+      213: 789044359751837958
+    second: 1639579340564_29
   - first:
-      213: -1089543793858808791
-    second: windGodChar_30
+      213: 6490480582931191837
+    second: 1639579340564_30
   - first:
-      213: -7708939870254622285
-    second: windGodChar_31
+      213: 8166498069454550620
+    second: 1639579340564_31
   - first:
-      213: 5942807027239540392
-    second: windGodChar_32
-  - first:
-      213: 6638276953975179726
-    second: windGodChar_33
+      213: -3709483414853094167
+    second: 1639579340564_32
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -205,13 +202,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: windGodChar_0
+      name: 1639579340564_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09d115a4b9539ca20800000000000000
-      internalID: 3083054360994848144
+      spriteID: bfb33e988bcdd0010800000000000000
+      internalID: 1156823364449549307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_1
+      name: 1639579340564_1
       rect:
         serializedVersion: 2
-        x: 306
+        x: 450
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05e78bfa58f184230800000000000000
-      internalID: 3623180559258779216
+      spriteID: 23c88e7c5fad6f5c0800000000000000
+      internalID: -4181914454811177934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_2
+      name: 1639579340564_2
       rect:
         serializedVersion: 2
-        x: 612
+        x: 900
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 152c3d7fa55e23080800000000000000
-      internalID: -9209046109151575471
+      spriteID: 9b479f54f8102b9a0800000000000000
+      internalID: -6218906420579306311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_3
+      name: 1639579340564_3
       rect:
         serializedVersion: 2
-        x: 918
+        x: 1350
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a05af589c0afe230800000000000000
-      internalID: 3670329008726888616
+      spriteID: e9851cfb53891c830800000000000000
+      internalID: 4089717293246929054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_4
+      name: 1639579340564_4
       rect:
         serializedVersion: 2
-        x: 1224
+        x: 1800
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b339d5911053a7c0800000000000000
-      internalID: -4061314402499349577
+      spriteID: 236f1246d782c5c00800000000000000
+      internalID: 890631345328485938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_5
+      name: 1639579340564_5
       rect:
         serializedVersion: 2
-        x: 1530
+        x: 2250
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f095a9b0610b7c6f0800000000000000
-      internalID: -664368811283425009
+      spriteID: a472205d2cda02f10800000000000000
+      internalID: 2242983666739455818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_6
+      name: 1639579340564_6
       rect:
         serializedVersion: 2
-        x: 1836
+        x: 2700
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3233dde8ca7935460800000000000000
-      internalID: 7229288594246808355
+      spriteID: 9ab77b4b4382f6720800000000000000
+      internalID: 2841534096729406377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_7
+      name: 1639579340564_7
       rect:
         serializedVersion: 2
-        x: 2142
+        x: 3150
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a56a7346667ffe20800000000000000
-      internalID: 3386555626396738977
+      spriteID: bd3014fec931e3420800000000000000
+      internalID: 2611546398671307739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_8
+      name: 1639579340564_8
       rect:
         serializedVersion: 2
-        x: 2448
+        x: 3600
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -387,20 +384,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06599e60899e701e0800000000000000
-      internalID: -2231558251178519200
+      spriteID: 92a340b6f50610b30800000000000000
+      internalID: 4251785486148057641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_9
+      name: 1639579340564_9
       rect:
         serializedVersion: 2
-        x: 2754
+        x: 4050
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21999801e762dc6f0800000000000000
-      internalID: -662831247268407022
+      spriteID: 51cc65dbdef703310800000000000000
+      internalID: 1382745744663301141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_10
+      name: 1639579340564_10
       rect:
         serializedVersion: 2
-        x: 3060
+        x: 4500
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c0678a0bc9ee030800000000000000
-      internalID: 3525927840832162958
+      spriteID: 30763bf014b609ee0800000000000000
+      internalID: -1256386368855906557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_11
+      name: 1639579340564_11
       rect:
         serializedVersion: 2
-        x: 3366
+        x: 4950
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf1a25abb0d1a4c0800000000000000
-      internalID: -4277908666676797510
+      spriteID: ee2a46afd77910570800000000000000
+      internalID: 8431186544741884654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_12
+      name: 1639579340564_12
       rect:
         serializedVersion: 2
-        x: 3672
+        x: 5400
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,20 +468,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff4b62a9fb3d6d470800000000000000
-      internalID: 8419149373294163199
+      spriteID: 637f41aad8271f100800000000000000
+      internalID: 140019016194651958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_13
+      name: 1639579340564_13
       rect:
         serializedVersion: 2
-        x: 3978
+        x: 5850
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4322154ec278a9050800000000000000
-      internalID: 5808103296326509108
+      spriteID: 5ca30d55177d989d0800000000000000
+      internalID: -2771447213898843451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_14
+      name: 1639579340564_14
       rect:
         serializedVersion: 2
-        x: 4284
+        x: 6300
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -513,20 +510,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69093ad4f1b0b9c50800000000000000
-      internalID: 6672939501953978518
+      spriteID: 5ad0f7711e8019240800000000000000
+      internalID: 4796624840981155237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_15
+      name: 1639579340564_15
       rect:
         serializedVersion: 2
-        x: 4590
+        x: 6750
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c1fcb36c64da910800000000000000
-      internalID: 1850212839140039736
+      spriteID: 07577fcea07acce90800000000000000
+      internalID: -7004039655100811920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_16
+      name: 1639579340564_16
       rect:
         serializedVersion: 2
-        x: 4896
+        x: 7200
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,188 +552,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e84dda9f5c8d3060800000000000000
-      internalID: 6934853343468407015
+      spriteID: 5a210f453a2e7f650800000000000000
+      internalID: 6266726597641900709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_17
-      rect:
-        serializedVersion: 2
-        x: 5202
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c33de7e5572f3d400800000000000000
-      internalID: 347888182148125500
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_18
-      rect:
-        serializedVersion: 2
-        x: 5508
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7148786afb2c1de50800000000000000
-      internalID: 6832456238086194199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_19
-      rect:
-        serializedVersion: 2
-        x: 5814
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 462f4dedd8f7b7aa0800000000000000
-      internalID: -6162191417820777884
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_20
-      rect:
-        serializedVersion: 2
-        x: 6120
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d30c457cf456249d0800000000000000
-      internalID: -2791557425695244227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_21
-      rect:
-        serializedVersion: 2
-        x: 6426
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f81e01d9f6448aa00800000000000000
-      internalID: 767938982633857423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_22
-      rect:
-        serializedVersion: 2
-        x: 6732
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 842cb471c7eb16bb0800000000000000
-      internalID: -4944461475700030904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_23
-      rect:
-        serializedVersion: 2
-        x: 7038
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e403cef009afa6700800000000000000
-      internalID: 534515002446196814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_24
-      rect:
-        serializedVersion: 2
-        x: 7344
-        y: 0
-        width: 306
-        height: 264
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7aac57c3d077fbb50800000000000000
-      internalID: 6611133676735810215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: windGodChar_25
+      name: 1639579340564_17
       rect:
         serializedVersion: 2
         x: 7650
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -744,20 +573,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64b72a1b538d1dbd0800000000000000
-      internalID: -2607064984145724602
+      spriteID: a5d677d4d2ff2a860800000000000000
+      internalID: 7539869296209915226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_26
+      name: 1639579340564_18
       rect:
         serializedVersion: 2
-        x: 7956
+        x: 8100
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,20 +594,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c35071158ee30220800000000000000
-      internalID: 2451064877510316992
+      spriteID: 1438f2af550dbdb30800000000000000
+      internalID: 4313270135825597249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_27
+      name: 1639579340564_19
       rect:
         serializedVersion: 2
-        x: 8262
+        x: 8550
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -786,20 +615,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f95a239c347781160800000000000000
-      internalID: 6996473154142119327
+      spriteID: a6a5a2b599432fa20800000000000000
+      internalID: 3094593727221095018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_28
+      name: 1639579340564_20
       rect:
         serializedVersion: 2
-        x: 8568
+        x: 9000
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -807,20 +636,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8a5bc9140cb2da0800000000000000
-      internalID: -5968465493114902347
+      spriteID: 64d29422dcdba8830800000000000000
+      internalID: 4074277501651201350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_29
+      name: 1639579340564_21
       rect:
         serializedVersion: 2
-        x: 8874
+        x: 9450
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,20 +657,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f11487e66bffda980800000000000000
-      internalID: -8525877360539975393
+      spriteID: ccadea9daad43bd90800000000000000
+      internalID: -7083232392731764020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_30
+      name: 1639579340564_22
       rect:
         serializedVersion: 2
-        x: 9180
+        x: 9900
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -849,20 +678,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92470df21b921e0f0800000000000000
-      internalID: -1089543793858808791
+      spriteID: e96f1105f65ba8de0800000000000000
+      internalID: -1330051250245208418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_31
+      name: 1639579340564_23
       rect:
         serializedVersion: 2
-        x: 9486
+        x: 10350
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -870,20 +699,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b990ae1808540590800000000000000
-      internalID: -7708939870254622285
+      spriteID: ae1cd8183d3a20230800000000000000
+      internalID: 3603622780656796138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_32
+      name: 1639579340564_24
       rect:
         serializedVersion: 2
-        x: 9792
+        x: 10800
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -891,20 +720,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6de434187197250800000000000000
-      internalID: 5942807027239540392
+      spriteID: 1990200e7414f6f60800000000000000
+      internalID: 8029708437581597073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: windGodChar_33
+      name: 1639579340564_25
       rect:
         serializedVersion: 2
-        x: 10098
+        x: 11250
         y: 0
-        width: 306
-        height: 264
+        width: 450
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -912,8 +741,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec94a52f7b5ef1c50800000000000000
-      internalID: 6638276953975179726
+      spriteID: 4db470dad91ddfa10800000000000000
+      internalID: 1944941089236929492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_26
+      rect:
+        serializedVersion: 2
+        x: 11700
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66667d26a5a8ff920800000000000000
+      internalID: 3026289595426236006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_27
+      rect:
+        serializedVersion: 2
+        x: 12150
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f27a7604b27fd10800000000000000
+      internalID: 2159242101964353435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_28
+      rect:
+        serializedVersion: 2
+        x: 12600
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcfd41a86f609c10800000000000000
+      internalID: 2058267524881841396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_29
+      rect:
+        serializedVersion: 2
+        x: 13050
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609a8072aaf33fa00800000000000000
+      internalID: 789044359751837958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_30
+      rect:
+        serializedVersion: 2
+        x: 13500
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d181f2fb3b1d21a50800000000000000
+      internalID: 6490480582931191837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_31
+      rect:
+        serializedVersion: 2
+        x: 13950
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5670c8e9ba355170800000000000000
+      internalID: 8166498069454550620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1639579340564_32
+      rect:
+        serializedVersion: 2
+        x: 14400
+        y: 0
+        width: 450
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e47a75ec74458cc0800000000000000
+      internalID: -3709483414853094167
       vertices: []
       indices: 
       edges: []
@@ -921,7 +897,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 98ea7351af1375844bea679a49ef5d64
+    spriteID: 68d0fdf3f08a1914592bc841ca1c5a97
     internalID: 0
     vertices: []
     indices: 

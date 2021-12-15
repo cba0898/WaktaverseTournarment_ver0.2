@@ -16,11 +16,10 @@ MonoBehaviour:
   skillName: "\uACE0\uB77C\uB2C8!"
   discription: "\uC724\uBC24\uBE44! \uACE0\uB77C\uB2C8! \uC7A1\uC544!"
   target: 4
-  range: 116
+  range: 928
   movePos: 0
   effect: {fileID: 6914082195930760282, guid: 7fbf0a3529aa68545ade45fb1637e223, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: 00f93a7e63c64a545b1bfc55a3edd8a0, type: 3}
   condition: 2

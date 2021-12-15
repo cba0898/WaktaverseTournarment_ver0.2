@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4e0071ae9ac068c4080e25ca0897cfe4
+guid: bbc2ebea22af1f6448eadad9be0bc58b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8457791374467663849
-    second: Stamp_lighting14_0
+      213: 809515146864169080
+    second: Stamp_lighting14-removebg-preview_0
   - first:
-      213: -7361992907205715484
-    second: Stamp_lighting14_1
+      213: -7195097987488591844
+    second: Stamp_lighting14-removebg-preview_1
   - first:
-      213: 2504593944524201441
-    second: Stamp_lighting14_2
+      213: 3788836513881320383
+    second: Stamp_lighting14-removebg-preview_2
   - first:
-      213: -5018624004286594619
-    second: Stamp_lighting14_3
+      213: -2881411524907965109
+    second: Stamp_lighting14-removebg-preview_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stamp_lighting14_0
+      name: Stamp_lighting14-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 718fd746e83ef9a80800000000000000
-      internalID: -8457791374467663849
+      spriteID: 8701321bcb9fb3b00800000000000000
+      internalID: 809515146864169080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_lighting14_1
+      name: Stamp_lighting14-removebg-preview_1
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e9de07d472f4d990800000000000000
-      internalID: -7361992907205715484
+      spriteID: c105d9b6080e52c90800000000000000
+      internalID: -7195097987488591844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_lighting14_2
+      name: Stamp_lighting14-removebg-preview_2
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ed95f13cea12c220800000000000000
-      internalID: 2504593944524201441
+      spriteID: fbbece93cb6a49430800000000000000
+      internalID: 3788836513881320383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_lighting14_3
+      name: Stamp_lighting14-removebg-preview_3
       rect:
         serializedVersion: 2
         x: 0
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c1cf33de044a5ab0800000000000000
-      internalID: -5018624004286594619
+      spriteID: b45e4260c7b2308d0800000000000000
+      internalID: -2881411524907965109
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8816163d02c2d8f4bb58a2b063e34592
     internalID: 0
     vertices: []
     indices: 

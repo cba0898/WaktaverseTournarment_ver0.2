@@ -16,18 +16,17 @@ MonoBehaviour:
   skillName: "\uC560\uAE30\uBE91\uB760 \uD380\uCE58"
   discription: "\uBE91\uB760\uBEC9\uB760!"
   target: 4
-  range: 112
+  range: 80
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 7908881082591325934, guid: 484145b73ce1a604db54e6ec0b3a554a, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
   value: 10
   cost: 15
   turns: 0
-  applyCount: 2
+  applyCount: 3
   isSpread: 0
   isIdle: 0
   isArts: 0

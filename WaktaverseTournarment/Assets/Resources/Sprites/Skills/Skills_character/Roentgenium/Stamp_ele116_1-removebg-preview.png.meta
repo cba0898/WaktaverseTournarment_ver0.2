@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: d93be657222a8e646a98a059baa187f9
+guid: a2736b207062f9447822ab572b64c1c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 600684878133270662
-    second: Stamp_ele116_0
+      213: -5356742047531097106
+    second: Stamp_ele116_1-removebg-preview_0
   - first:
-      213: -8192511735405792052
-    second: Stamp_ele116_1
+      213: 5781892522695661793
+    second: Stamp_ele116_1-removebg-preview_1
   - first:
-      213: -964105387750144911
-    second: Stamp_ele116_2
+      213: -6872999477554068708
+    second: Stamp_ele116_1-removebg-preview_2
   - first:
-      213: 968643523934768470
-    second: Stamp_ele116_3
+      213: 905409199138741004
+    second: Stamp_ele116_1-removebg-preview_3
   - first:
-      213: 3283193712529073818
-    second: Stamp_ele116_4
+      213: 6107295143115959851
+    second: Stamp_ele116_1-removebg-preview_4
   - first:
-      213: -2382118035796007356
-    second: Stamp_ele116_5
+      213: -7578641013043331096
+    second: Stamp_ele116_1-removebg-preview_5
   - first:
-      213: 8267379314493204019
-    second: Stamp_ele116_6
+      213: -8577814641956370079
+    second: Stamp_ele116_1-removebg-preview_6
   - first:
-      213: 2217366118203482608
-    second: Stamp_ele116_7
+      213: -739939756795905239
+    second: Stamp_ele116_1-removebg-preview_7
   - first:
-      213: -8476383021154087443
-    second: Stamp_ele116_8
+      213: 9082616351484466444
+    second: Stamp_ele116_1-removebg-preview_8
   - first:
-      213: -6710539030955898567
-    second: Stamp_ele116_9
+      213: -8774111745427200898
+    second: Stamp_ele116_1-removebg-preview_9
   - first:
-      213: 5647044817657241594
-    second: Stamp_ele116_10
+      213: 9034380162444268087
+    second: Stamp_ele116_1-removebg-preview_10
   - first:
-      213: 8586037136090880102
-    second: Stamp_ele116_11
+      213: -9176616773789007993
+    second: Stamp_ele116_1-removebg-preview_11
   - first:
-      213: -1137057504076644015
-    second: Stamp_ele116_12
+      213: 6335219676738226618
+    second: Stamp_ele116_1-removebg-preview_12
   - first:
-      213: -4713407509152509853
-    second: Stamp_ele116_13
+      213: 572841847898441098
+    second: Stamp_ele116_1-removebg-preview_13
   - first:
-      213: 8688392163313521949
-    second: Stamp_ele116_14
+      213: -1768825651227708723
+    second: Stamp_ele116_1-removebg-preview_14
   - first:
-      213: 7330214155342984311
-    second: Stamp_ele116_15
+      213: -5189760243199519200
+    second: Stamp_ele116_1-removebg-preview_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stamp_ele116_0
+      name: Stamp_ele116_1-removebg-preview_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3840
-        width: 256
-        height: 256
+        y: 1875
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 688151fc6bf065800800000000000000
-      internalID: 600684878133270662
+      spriteID: ee3a28f2d7709a5b0800000000000000
+      internalID: -5356742047531097106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1
+      name: Stamp_ele116_1-removebg-preview_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 3584
-        width: 256
-        height: 256
+        y: 1750
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc43be08bf95e4e80800000000000000
-      internalID: -8192511735405792052
+      spriteID: 1e813c89d986d3050800000000000000
+      internalID: 5781892522695661793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_2
+      name: Stamp_ele116_1-removebg-preview_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 3328
-        width: 256
-        height: 256
+        y: 1625
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 174cc15024fce92f0800000000000000
-      internalID: -964105387750144911
+      spriteID: c13c1fec3633e90a0800000000000000
+      internalID: -6872999477554068708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_3
+      name: Stamp_ele116_1-removebg-preview_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 3072
-        width: 256
-        height: 256
+        y: 1500
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d4d162720517d00800000000000000
-      internalID: 968643523934768470
+      spriteID: c0b190b9ed8a09c00800000000000000
+      internalID: 905409199138741004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_4
+      name: Stamp_ele116_1-removebg-preview_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 2816
-        width: 256
-        height: 256
+        y: 1375
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a966714594f309d20800000000000000
-      internalID: 3283193712529073818
+      spriteID: b2e25e7239871c450800000000000000
+      internalID: 6107295143115959851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_5
+      name: Stamp_ele116_1-removebg-preview_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 2560
-        width: 256
-        height: 256
+        y: 1250
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 446e357744401fed0800000000000000
-      internalID: -2382118035796007356
+      spriteID: 8ef7859e62243d690800000000000000
+      internalID: -7578641013043331096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_6
+      name: Stamp_ele116_1-removebg-preview_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 2304
-        width: 256
-        height: 256
+        y: 1125
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 336a7cf1fa1abb270800000000000000
-      internalID: 8267379314493204019
+      spriteID: 169cb05c70b75f880800000000000000
+      internalID: -8577814641956370079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_7
+      name: Stamp_ele116_1-removebg-preview_7
       rect:
         serializedVersion: 2
         x: 0
-        y: 2048
-        width: 256
-        height: 256
+        y: 1000
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,20 +312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f161848cbaa5ce10800000000000000
-      internalID: 2217366118203482608
+      spriteID: 92bbdf826b43bb5f0800000000000000
+      internalID: -739939756795905239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_8
+      name: Stamp_ele116_1-removebg-preview_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 1792
-        width: 256
-        height: 256
+        y: 875
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ded45f35d86dd5a80800000000000000
-      internalID: -8476383021154087443
+      spriteID: c05d26d237feb0e70800000000000000
+      internalID: 9082616351484466444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_9
+      name: Stamp_ele116_1-removebg-preview_9
       rect:
         serializedVersion: 2
         x: 0
-        y: 1536
-        width: 256
-        height: 256
+        y: 750
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,20 +354,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939ca782e406fd2a0800000000000000
-      internalID: -6710539030955898567
+      spriteID: e74aa32dad71c3680800000000000000
+      internalID: -8774111745427200898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_10
+      name: Stamp_ele116_1-removebg-preview_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 1280
-        width: 256
-        height: 256
+        y: 625
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,20 +375,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aff9b23a7555e5e40800000000000000
-      internalID: 5647044817657241594
+      spriteID: 732935c34e0906d70800000000000000
+      internalID: 9034380162444268087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_11
+      name: Stamp_ele116_1-removebg-preview_11
       rect:
         serializedVersion: 2
         x: 0
-        y: 1024
-        width: 256
-        height: 256
+        y: 500
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +396,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6685205d84bb72770800000000000000
-      internalID: 8586037136090880102
+      spriteID: 78f3a6ef9ab16a080800000000000000
+      internalID: -9176616773789007993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_12
+      name: Stamp_ele116_1-removebg-preview_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 768
-        width: 256
-        height: 256
+        y: 375
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,20 +417,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 151c154793c5830f0800000000000000
-      internalID: -1137057504076644015
+      spriteID: ab90c060bb83be750800000000000000
+      internalID: 6335219676738226618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_13
+      name: Stamp_ele116_1-removebg-preview_13
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 256
-        height: 256
+        y: 250
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,20 +438,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3605e47d7dc969eb0800000000000000
-      internalID: -4713407509152509853
+      spriteID: a85077820a423f700800000000000000
+      internalID: 572841847898441098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_14
+      name: Stamp_ele116_1-removebg-preview_14
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 256
-        height: 256
+        y: 125
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d151793b3ae539870800000000000000
-      internalID: 8688392163313521949
+      spriteID: dc239fc117ed377e0800000000000000
+      internalID: -1768825651227708723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_15
+      name: Stamp_ele116_1-removebg-preview_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 125
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,8 +480,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77432c8efe62ab560800000000000000
-      internalID: 7330214155342984311
+      spriteID: 026d5aa2e844af7b0800000000000000
+      internalID: -5189760243199519200
       vertices: []
       indices: 
       edges: []
@@ -489,7 +489,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 6e26bfbc003cbad4fa6b06a7292a2098
     internalID: 0
     vertices: []
     indices: 
