@@ -10,24 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
-  m_Name: DarongSwallow
+  m_Name: RoentDarong
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uC7A1\uC544\uBA39\uAE30"
-  discription: "\uB2E4\uB871\uC774\uB2E4\uB871~"
+  skillName: "\uB2E4\uB871\uC774\uB2E4\uB871~"
+  discription: 
   target: 4
-  range: 36
+  range: 90
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 4445190453514948564, guid: 1b28593737249154da767c2be6d80a35, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
   value: 60
-  cost: 50
+  cost: 70
   turns: 0
   applyCount: 1
   isSpread: 0
   isIdle: 0
-  isArts: 0
+  isArts: 1

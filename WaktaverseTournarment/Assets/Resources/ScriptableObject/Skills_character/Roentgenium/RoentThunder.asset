@@ -16,16 +16,15 @@ MonoBehaviour:
   skillName: "\uB1CC\uC808"
   discription: "\uB1CC\uC808\uC758 \uC544\uC774\uCF58"
   target: 4
-  range: 80
+  range: 682
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 1096923792370518426, guid: 9d7a38f2d50395046b09f6db1d67f012, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
   condition: 2
-  value: 60
-  cost: 70
+  value: 25
+  cost: 20
   turns: 0
   applyCount: 1
   isSpread: 0

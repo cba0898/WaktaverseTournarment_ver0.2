@@ -101,6 +101,105 @@ TextureImporter:
   - first:
       213: -3709483414853094167
     second: 1639579340564_32
+  - first:
+      213: -3748843620256502524
+    second: Roentgenium_Darong_0
+  - first:
+      213: 5942458610438490954
+    second: Roentgenium_Darong_1
+  - first:
+      213: 8062122770558587981
+    second: Roentgenium_Darong_2
+  - first:
+      213: 6828167151022010785
+    second: Roentgenium_Darong_3
+  - first:
+      213: 3784159135446656568
+    second: Roentgenium_Darong_4
+  - first:
+      213: -2481845381302416935
+    second: Roentgenium_Darong_5
+  - first:
+      213: -4626660286878308879
+    second: Roentgenium_Darong_6
+  - first:
+      213: -7744303514112843890
+    second: Roentgenium_Darong_7
+  - first:
+      213: 6338564272019739458
+    second: Roentgenium_Darong_8
+  - first:
+      213: -993741202772874922
+    second: Roentgenium_Darong_9
+  - first:
+      213: 5183253804248124768
+    second: Roentgenium_Darong_10
+  - first:
+      213: 709724612124085742
+    second: Roentgenium_Darong_11
+  - first:
+      213: 238953264274343310
+    second: Roentgenium_Darong_12
+  - first:
+      213: 7245972849625218936
+    second: Roentgenium_Darong_13
+  - first:
+      213: 4763784638357204296
+    second: Roentgenium_Darong_14
+  - first:
+      213: 8847898632433952190
+    second: Roentgenium_Darong_15
+  - first:
+      213: 2285204085023051997
+    second: Roentgenium_Darong_16
+  - first:
+      213: -2775448612320399628
+    second: Roentgenium_Darong_17
+  - first:
+      213: -2765534860131173438
+    second: Roentgenium_Darong_18
+  - first:
+      213: 8826637043632708078
+    second: Roentgenium_Darong_19
+  - first:
+      213: -3726618059425177216
+    second: Roentgenium_Darong_20
+  - first:
+      213: -3735007002617465015
+    second: Roentgenium_Darong_21
+  - first:
+      213: 1591009789496135975
+    second: Roentgenium_Darong_22
+  - first:
+      213: -5881975373119602064
+    second: Roentgenium_Darong_23
+  - first:
+      213: -631882004676985127
+    second: Roentgenium_Darong_24
+  - first:
+      213: 7510404625794903910
+    second: Roentgenium_Darong_25
+  - first:
+      213: -6658931333251359388
+    second: Roentgenium_Darong_26
+  - first:
+      213: -6938377323564034337
+    second: Roentgenium_Darong_27
+  - first:
+      213: 310721012432786663
+    second: Roentgenium_Darong_28
+  - first:
+      213: -464592754804696734
+    second: Roentgenium_Darong_29
+  - first:
+      213: 588928149051176865
+    second: Roentgenium_Darong_30
+  - first:
+      213: -6061334470098115668
+    second: Roentgenium_Darong_31
+  - first:
+      213: -4008838438471872980
+    second: Roentgenium_Darong_32
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -202,7 +301,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1639579340564_0
+      name: Roentgenium_Darong_0
       rect:
         serializedVersion: 2
         x: 0
@@ -216,14 +315,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb33e988bcdd0010800000000000000
-      internalID: 1156823364449549307
+      spriteID: 40d2f10f69e69fbc0800000000000000
+      internalID: -3748843620256502524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_1
+      name: Roentgenium_Darong_1
       rect:
         serializedVersion: 2
         x: 450
@@ -237,14 +336,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23c88e7c5fad6f5c0800000000000000
-      internalID: -4181914454811177934
+      spriteID: a4bc5a72f9ad77250800000000000000
+      internalID: 5942458610438490954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_2
+      name: Roentgenium_Darong_2
       rect:
         serializedVersion: 2
         x: 900
@@ -258,14 +357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b479f54f8102b9a0800000000000000
-      internalID: -6218906420579306311
+      spriteID: d449bb2e1f962ef60800000000000000
+      internalID: 8062122770558587981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_3
+      name: Roentgenium_Darong_3
       rect:
         serializedVersion: 2
         x: 1350
@@ -279,14 +378,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9851cfb53891c830800000000000000
-      internalID: 4089717293246929054
+      spriteID: 1a178afb8d582ce50800000000000000
+      internalID: 6828167151022010785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_4
+      name: Roentgenium_Darong_4
       rect:
         serializedVersion: 2
         x: 1800
@@ -300,14 +399,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 236f1246d782c5c00800000000000000
-      internalID: 890631345328485938
+      spriteID: 836e8d13fa8048430800000000000000
+      internalID: 3784159135446656568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_5
+      name: Roentgenium_Darong_5
       rect:
         serializedVersion: 2
         x: 2250
@@ -321,14 +420,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a472205d2cda02f10800000000000000
-      internalID: 2242983666739455818
+      spriteID: 9d9860c66c6be8dd0800000000000000
+      internalID: -2481845381302416935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_6
+      name: Roentgenium_Darong_6
       rect:
         serializedVersion: 2
         x: 2700
@@ -342,14 +441,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab77b4b4382f6720800000000000000
-      internalID: 2841534096729406377
+      spriteID: 1f526307bfccacfb0800000000000000
+      internalID: -4626660286878308879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_7
+      name: Roentgenium_Darong_7
       rect:
         serializedVersion: 2
         x: 3150
@@ -363,14 +462,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd3014fec931e3420800000000000000
-      internalID: 2611546398671307739
+      spriteID: e8f9e782cf4b68490800000000000000
+      internalID: -7744303514112843890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_8
+      name: Roentgenium_Darong_8
       rect:
         serializedVersion: 2
         x: 3600
@@ -384,14 +483,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92a340b6f50610b30800000000000000
-      internalID: 4251785486148057641
+      spriteID: 24318bb4f9a17f750800000000000000
+      internalID: 6338564272019739458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_9
+      name: Roentgenium_Darong_9
       rect:
         serializedVersion: 2
         x: 4050
@@ -405,14 +504,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51cc65dbdef703310800000000000000
-      internalID: 1382745744663301141
+      spriteID: 659ad0224a58532f0800000000000000
+      internalID: -993741202772874922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_10
+      name: Roentgenium_Darong_10
       rect:
         serializedVersion: 2
         x: 4500
@@ -426,14 +525,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30763bf014b609ee0800000000000000
-      internalID: -1256386368855906557
+      spriteID: 06dc6e67fdd9ee740800000000000000
+      internalID: 5183253804248124768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_11
+      name: Roentgenium_Darong_11
       rect:
         serializedVersion: 2
         x: 4950
@@ -447,14 +546,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee2a46afd77910570800000000000000
-      internalID: 8431186544741884654
+      spriteID: eed020246c279d900800000000000000
+      internalID: 709724612124085742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_12
+      name: Roentgenium_Darong_12
       rect:
         serializedVersion: 2
         x: 5400
@@ -468,14 +567,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 637f41aad8271f100800000000000000
-      internalID: 140019016194651958
+      spriteID: e850ef25abee05300800000000000000
+      internalID: 238953264274343310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_13
+      name: Roentgenium_Darong_13
       rect:
         serializedVersion: 2
         x: 5850
@@ -489,14 +588,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ca30d55177d989d0800000000000000
-      internalID: -2771447213898843451
+      spriteID: 87f390a7aedde8460800000000000000
+      internalID: 7245972849625218936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_14
+      name: Roentgenium_Darong_14
       rect:
         serializedVersion: 2
         x: 6300
@@ -510,14 +609,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ad0f7711e8019240800000000000000
-      internalID: 4796624840981155237
+      spriteID: 84d6eb393ec5c1240800000000000000
+      internalID: 4763784638357204296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_15
+      name: Roentgenium_Darong_15
       rect:
         serializedVersion: 2
         x: 6750
@@ -531,14 +630,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07577fcea07acce90800000000000000
-      internalID: -7004039655100811920
+      spriteID: eb5e3e29dec0aca70800000000000000
+      internalID: 8847898632433952190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_16
+      name: Roentgenium_Darong_16
       rect:
         serializedVersion: 2
         x: 7200
@@ -552,14 +651,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a210f453a2e7f650800000000000000
-      internalID: 6266726597641900709
+      spriteID: dd0121ff10da6bf10800000000000000
+      internalID: 2285204085023051997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_17
+      name: Roentgenium_Darong_17
       rect:
         serializedVersion: 2
         x: 7650
@@ -573,14 +672,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5d677d4d2ff2a860800000000000000
-      internalID: 7539869296209915226
+      spriteID: 4feaa4a2130ab79d0800000000000000
+      internalID: -2775448612320399628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_18
+      name: Roentgenium_Darong_18
       rect:
         serializedVersion: 2
         x: 8100
@@ -594,14 +693,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1438f2af550dbdb30800000000000000
-      internalID: 4313270135825597249
+      spriteID: 2cbfbe772b8de99d0800000000000000
+      internalID: -2765534860131173438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_19
+      name: Roentgenium_Darong_19
       rect:
         serializedVersion: 2
         x: 8550
@@ -615,14 +714,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6a5a2b599432fa20800000000000000
-      internalID: 3094593727221095018
+      spriteID: ee9180b20a38e7a70800000000000000
+      internalID: 8826637043632708078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_20
+      name: Roentgenium_Darong_20
       rect:
         serializedVersion: 2
         x: 9000
@@ -636,14 +735,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64d29422dcdba8830800000000000000
-      internalID: 4074277501651201350
+      spriteID: 08128629e94684cc0800000000000000
+      internalID: -3726618059425177216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_21
+      name: Roentgenium_Darong_21
       rect:
         serializedVersion: 2
         x: 9450
@@ -657,14 +756,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccadea9daad43bd90800000000000000
-      internalID: -7083232392731764020
+      spriteID: 947b3678be69a2cc0800000000000000
+      internalID: -3735007002617465015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_22
+      name: Roentgenium_Darong_22
       rect:
         serializedVersion: 2
         x: 9900
@@ -678,14 +777,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e96f1105f65ba8de0800000000000000
-      internalID: -1330051250245208418
+      spriteID: 721161959f6641610800000000000000
+      internalID: 1591009789496135975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_23
+      name: Roentgenium_Darong_23
       rect:
         serializedVersion: 2
         x: 10350
@@ -699,14 +798,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae1cd8183d3a20230800000000000000
-      internalID: 3603622780656796138
+      spriteID: 0724c9bef860f5ea0800000000000000
+      internalID: -5881975373119602064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_24
+      name: Roentgenium_Darong_24
       rect:
         serializedVersion: 2
         x: 10800
@@ -720,14 +819,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1990200e7414f6f60800000000000000
-      internalID: 8029708437581597073
+      spriteID: 9de34432aaa1b37f0800000000000000
+      internalID: -631882004676985127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_25
+      name: Roentgenium_Darong_25
       rect:
         serializedVersion: 2
         x: 11250
@@ -741,14 +840,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4db470dad91ddfa10800000000000000
-      internalID: 1944941089236929492
+      spriteID: 66fa4ff17315a3860800000000000000
+      internalID: 7510404625794903910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_26
+      name: Roentgenium_Darong_26
       rect:
         serializedVersion: 2
         x: 11700
@@ -762,14 +861,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66667d26a5a8ff920800000000000000
-      internalID: 3026289595426236006
+      spriteID: 46d95d1ab39b693a0800000000000000
+      internalID: -6658931333251359388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_27
+      name: Roentgenium_Darong_27
       rect:
         serializedVersion: 2
         x: 12150
@@ -783,14 +882,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9f27a7604b27fd10800000000000000
-      internalID: 2159242101964353435
+      spriteID: fd61757d59ee5bf90800000000000000
+      internalID: -6938377323564034337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_28
+      name: Roentgenium_Darong_28
       rect:
         serializedVersion: 2
         x: 12600
@@ -804,14 +903,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fcfd41a86f609c10800000000000000
-      internalID: 2058267524881841396
+      spriteID: 7e45e425d17ef4400800000000000000
+      internalID: 310721012432786663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_29
+      name: Roentgenium_Darong_29
       rect:
         serializedVersion: 2
         x: 13050
@@ -825,14 +924,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 609a8072aaf33fa00800000000000000
-      internalID: 789044359751837958
+      spriteID: 26955acd95f6d89f0800000000000000
+      internalID: -464592754804696734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_30
+      name: Roentgenium_Darong_30
       rect:
         serializedVersion: 2
         x: 13500
@@ -846,14 +945,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d181f2fb3b1d21a50800000000000000
-      internalID: 6490480582931191837
+      spriteID: 1a77c62080b4c2800800000000000000
+      internalID: 588928149051176865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_31
+      name: Roentgenium_Darong_31
       rect:
         serializedVersion: 2
         x: 13950
@@ -867,14 +966,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5670c8e9ba355170800000000000000
-      internalID: 8166498069454550620
+      spriteID: ca3a8fce960d1eba0800000000000000
+      internalID: -6061334470098115668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 1639579340564_32
+      name: Roentgenium_Darong_32
       rect:
         serializedVersion: 2
         x: 14400
@@ -888,8 +987,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e47a75ec74458cc0800000000000000
-      internalID: -3709483414853094167
+      spriteID: c2ec3f01eaebd58c0800000000000000
+      internalID: -4008838438471872980
       vertices: []
       indices: 
       edges: []

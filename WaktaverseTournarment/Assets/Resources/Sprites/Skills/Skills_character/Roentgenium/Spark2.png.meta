@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: a2736b207062f9447822ab572b64c1c9
+guid: 4900464e03f6432448765c6e392b6bc3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5356742047531097106
-    second: Stamp_ele116_1-removebg-preview_0
+      213: -8349053243284381493
+    second: Spark2_0
   - first:
-      213: 5781892522695661793
-    second: Stamp_ele116_1-removebg-preview_1
+      213: -7164366969947716120
+    second: Spark2_1
   - first:
-      213: -6872999477554068708
-    second: Stamp_ele116_1-removebg-preview_2
+      213: 6116940136723055169
+    second: Spark2_2
   - first:
-      213: 905409199138741004
-    second: Stamp_ele116_1-removebg-preview_3
+      213: 4462101253505895877
+    second: Spark2_3
   - first:
-      213: 6107295143115959851
-    second: Stamp_ele116_1-removebg-preview_4
+      213: 8031000359511309260
+    second: Spark2_4
   - first:
-      213: -7578641013043331096
-    second: Stamp_ele116_1-removebg-preview_5
+      213: -3404745393026774523
+    second: Spark2_5
   - first:
-      213: -8577814641956370079
-    second: Stamp_ele116_1-removebg-preview_6
+      213: -2354657470617821410
+    second: Spark2_6
   - first:
-      213: -739939756795905239
-    second: Stamp_ele116_1-removebg-preview_7
+      213: 4669823581353616500
+    second: Spark2_7
   - first:
-      213: 9082616351484466444
-    second: Stamp_ele116_1-removebg-preview_8
+      213: -8753132976167996797
+    second: Spark2_8
   - first:
-      213: -8774111745427200898
-    second: Stamp_ele116_1-removebg-preview_9
+      213: -1618361052677126531
+    second: Spark2_9
   - first:
-      213: 9034380162444268087
-    second: Stamp_ele116_1-removebg-preview_10
+      213: -6521740937380189770
+    second: Spark2_10
   - first:
-      213: -9176616773789007993
-    second: Stamp_ele116_1-removebg-preview_11
+      213: 3971977314307912668
+    second: Spark2_11
   - first:
-      213: 6335219676738226618
-    second: Stamp_ele116_1-removebg-preview_12
+      213: -2652161295615645577
+    second: Spark2_12
   - first:
-      213: 572841847898441098
-    second: Stamp_ele116_1-removebg-preview_13
+      213: 7720457826260345154
+    second: Spark2_13
   - first:
-      213: -1768825651227708723
-    second: Stamp_ele116_1-removebg-preview_14
+      213: 100368729627292669
+    second: Spark2_14
   - first:
-      213: -5189760243199519200
-    second: Stamp_ele116_1-removebg-preview_15
+      213: 3849490291035259388
+    second: Spark2_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -151,7 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_0
+      name: Spark2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -165,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee3a28f2d7709a5b0800000000000000
-      internalID: -5356742047531097106
+      spriteID: bc026377f44322c80800000000000000
+      internalID: -8349053243284381493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_1
+      name: Spark2_1
       rect:
         serializedVersion: 2
         x: 0
@@ -186,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e813c89d986d3050800000000000000
-      internalID: 5781892522695661793
+      spriteID: 8e589b3033e039c90800000000000000
+      internalID: -7164366969947716120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_2
+      name: Spark2_2
       rect:
         serializedVersion: 2
         x: 0
@@ -207,14 +207,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c13c1fec3633e90a0800000000000000
-      internalID: -6872999477554068708
+      spriteID: 14205b935acb3e450800000000000000
+      internalID: 6116940136723055169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_3
+      name: Spark2_3
       rect:
         serializedVersion: 2
         x: 0
@@ -228,14 +228,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0b190b9ed8a09c00800000000000000
-      internalID: 905409199138741004
+      spriteID: 5cd4b07e2719ced30800000000000000
+      internalID: 4462101253505895877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_4
+      name: Spark2_4
       rect:
         serializedVersion: 2
         x: 0
@@ -249,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e25e7239871c450800000000000000
-      internalID: 6107295143115959851
+      spriteID: ccbb4b3e648d37f60800000000000000
+      internalID: 8031000359511309260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_5
+      name: Spark2_5
       rect:
         serializedVersion: 2
         x: 0
@@ -270,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ef7859e62243d690800000000000000
-      internalID: -7578641013043331096
+      spriteID: 50acdf9aa1aefb0d0800000000000000
+      internalID: -3404745393026774523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_6
+      name: Spark2_6
       rect:
         serializedVersion: 2
         x: 0
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 169cb05c70b75f880800000000000000
-      internalID: -8577814641956370079
+      spriteID: e1fda188183925fd0800000000000000
+      internalID: -2354657470617821410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_7
+      name: Spark2_7
       rect:
         serializedVersion: 2
         x: 0
@@ -312,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bbdf826b43bb5f0800000000000000
-      internalID: -739939756795905239
+      spriteID: 47423523ecb8ec040800000000000000
+      internalID: 4669823581353616500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_8
+      name: Spark2_8
       rect:
         serializedVersion: 2
         x: 0
@@ -333,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05d26d237feb0e70800000000000000
-      internalID: 9082616351484466444
+      spriteID: 382bfbb2fef968680800000000000000
+      internalID: -8753132976167996797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_9
+      name: Spark2_9
       rect:
         serializedVersion: 2
         x: 0
@@ -354,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e74aa32dad71c3680800000000000000
-      internalID: -8774111745427200898
+      spriteID: d764ad0723d6a89e0800000000000000
+      internalID: -1618361052677126531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_10
+      name: Spark2_10
       rect:
         serializedVersion: 2
         x: 0
@@ -375,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 732935c34e0906d70800000000000000
-      internalID: 9034380162444268087
+      spriteID: 6b9a45ecb2f1e75a0800000000000000
+      internalID: -6521740937380189770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_11
+      name: Spark2_11
       rect:
         serializedVersion: 2
         x: 0
@@ -396,14 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f3a6ef9ab16a080800000000000000
-      internalID: -9176616773789007993
+      spriteID: cd3bb3ba25c4f1730800000000000000
+      internalID: 3971977314307912668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_12
+      name: Spark2_12
       rect:
         serializedVersion: 2
         x: 0
@@ -417,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab90c060bb83be750800000000000000
-      internalID: 6335219676738226618
+      spriteID: 7782ac77a51a13bd0800000000000000
+      internalID: -2652161295615645577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_13
+      name: Spark2_13
       rect:
         serializedVersion: 2
         x: 0
@@ -438,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a85077820a423f700800000000000000
-      internalID: 572841847898441098
+      spriteID: 241e1adfc73942b60800000000000000
+      internalID: 7720457826260345154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_14
+      name: Spark2_14
       rect:
         serializedVersion: 2
         x: 0
@@ -459,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc239fc117ed377e0800000000000000
-      internalID: -1768825651227708723
+      spriteID: df3fdfbe3d4946100800000000000000
+      internalID: 100368729627292669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stamp_ele116_1-removebg-preview_15
+      name: Spark2_15
       rect:
         serializedVersion: 2
         x: 0
@@ -480,8 +480,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026d5aa2e844af7b0800000000000000
-      internalID: -5189760243199519200
+      spriteID: cf1c87336032c6530800000000000000
+      internalID: 3849490291035259388
       vertices: []
       indices: 
       edges: []
@@ -489,7 +489,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6e26bfbc003cbad4fa6b06a7292a2098
+    spriteID: b279df710aa002e49b923268499b8e1c
     internalID: 0
     vertices: []
     indices: 
