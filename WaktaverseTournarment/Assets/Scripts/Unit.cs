@@ -77,7 +77,7 @@ public class Unit : MonoBehaviour
 
     public void AddHP(int value)
     {
-        hp = Mathf.Clamp(hp + value, 0, 100);
+         hp = Mathf.Clamp(hp + value, 0, 100);
         //hpSlider.value = hp;
         StartCoroutine(BarSlideEffect());
         hpText.text = string.Format("HP {0}", hp);
@@ -121,7 +121,7 @@ public class Unit : MonoBehaviour
 
     public void InitUnit()
     {
-        hp = 100;
+        hp = 50;
         hpMax = 100;
         mp = 100;
         mpMax = 100;

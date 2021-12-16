@@ -580,7 +580,9 @@ public class GameMgr : MonoBehaviour
             switch (util.condition)
             {
                 case INFLUENCE.HP:
-                    buff.addHp = util.value;
+                    // 회복은 한 번만 바로 적용시킨다.
+                    unit.AddHP(util.value);
+                    //buff.addHp = util.value;
                     break;
                 case INFLUENCE.MP:
                     buff.addMp = util.cost; //MP는 cost가 value 

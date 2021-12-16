@@ -270,7 +270,6 @@ public class UIMgr : MonoBehaviour
 
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
-                CheckDisable(GameMgr.Instance.Player.mpRemain);
 
                 break;
 
@@ -292,10 +291,10 @@ public class UIMgr : MonoBehaviour
 
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, 1));
-                CheckDisable(GameMgr.Instance.Player.mpRemain);
 
                 break;
         }
+        CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
 
     // 현재 마나보다 비용이 높은 카드를 비활성화
