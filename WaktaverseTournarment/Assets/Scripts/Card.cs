@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-    [SerializeField] private Image skillImg;            // 스킬 이미지
+    [SerializeField] private Button cardButton;         // 카드 버튼
     [SerializeField] private GameObject[] attackArea;   // 스킬 유효 범위 이미지
     [SerializeField] private GameObject movePos;        // 이동 방향 이미지
     [SerializeField] private GameObject dashPos;        // 대시 방향 이미지
@@ -229,11 +229,13 @@ public class Card : MonoBehaviour
     {
         isDisable = true;
         disable.SetActive(true);
+        cardButton.interactable = false;
     }
     public void AbleCard()
     {
         isDisable = false;
         disable.SetActive(false);
+        cardButton.interactable = true;
     }
 
     public void CardOpen()

@@ -97,6 +97,12 @@ public class GameMgr : MonoBehaviour
         UIMgr.Instance.ResetUIData();
         SoundMgr.Instance.LoadAudio();
         SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyMain);
+        // 초기 전투 카드 위치 지정
+        for (int i = 0; i < 3; i++)
+        {
+            playerCardList[i].InitOriginPos();
+            enemyCardList[i].InitOriginPos();
+        }
     }
 
     public void Update()
@@ -142,14 +148,14 @@ public class GameMgr : MonoBehaviour
         FaceUnit(Player.gameObject, Enemy.gameObject);
         UIMgr.Instance.GetMiniMap().InitMiniMapPos();
         // 배틀을 처음 시작한 경우에만 초기 위치를 저장
-        if (DataMgr.Instance.IsFirstEnemy())
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                playerCardList[i].InitOriginPos();
-                enemyCardList[i].InitOriginPos();
-            }
-        }
+        //if (DataMgr.Instance.IsFirstEnemy())
+        //{
+        //    for (int i = 0; i < 3; i++)
+        //    {
+        //        playerCardList[i].InitOriginPos();
+        //        enemyCardList[i].InitOriginPos();
+        //    }
+        //}
     }
 
     /*----------------------전투--------------------*/
@@ -219,8 +225,11 @@ public class GameMgr : MonoBehaviour
         List<Card> playerList = DataMgr.Instance.GetPlayerCardList();
         List <Normal> enemyDatas;
         Normal enemyNormal;
+
+        // 전투에 사용될 카드의 개수를 반환
         int cardCount = DataMgr.Instance.GetCardListCount();
 
+        // 사용할 카드의 개수만큼 적의 카드를 선택
         enemyDatas = enemyAI.GetEnemyCardData(cardCount);
         for (int i = 0; i < cardCount; i++)
         {
@@ -265,7 +274,7 @@ public class GameMgr : MonoBehaviour
             DataMgr.Instance.PlayAnim(unit, index);
             // 이펙트 실행이 끝날때까지 대기
             var anim = DataMgr.Instance.GetSkillAnimator(index);
-            while (DataMgr.Instance.IsEndAnim(anim)) yield return null;
+            while (DataMgr.Instance.IsEndAnim(anim) || !anim.gameObject.activeInHierarchy) yield return null;
             DataMgr.Instance.EndAnim(index);
         }
     }
@@ -403,12 +412,7 @@ public class GameMgr : MonoBehaviour
         // 유닛의 위치를 벡터2로 구해옴
         Vector2 unitPos = unit.transform.localPosition;
         Vector2 movedPos = unitPos;
-        MiniMap mini = UIMgr.Instance.GetMiniMap();
-        Vector2 miniMapPos = new Vector2();
-        if (unit == Player)
-            miniMapPos = mini.GetMiniMapPlayerPos();
-        else miniMapPos = mini.GetMiniMapEnemyPos();
-        int miniMapMoveCount;
+
         Vector2 interval = DataMgr.Instance.tileInterval;
         var min = minPos - interval;
         var max = maxPos + interval;
@@ -419,25 +423,17 @@ public class GameMgr : MonoBehaviour
             {
                 // 유닛이 이동할 위치를 계산
                 movedPos += interval * arrMoveRange[i] * data.MoveCount;
-                miniMapMoveCount = data.MoveCount;
+
                 // 유닛이 이동할 위치가 맵 크기보다 크거나 같을 경우 먼저 이동횟수를 감소
                 if (movedPos.x <= min.x || movedPos.x >= max.x || movedPos.y <= min.y || movedPos.y >= max.y)
                 {
                     movedPos -= interval * arrMoveRange[i] * (data.MoveCount - 1);
-                    miniMapMoveCount--;
                 }
                 // 그래도 이동할 위치가 맵 크기보다 크거나 같을 경우 제자리 이동
                 if (movedPos.x <= min.x || movedPos.x >= max.x || movedPos.y <= min.y || movedPos.y >= max.y)
                 {
                     movedPos = unitPos;
-                    miniMapMoveCount--;
                 }
-                // 미니맵 캐릭터의 위치를 계산
-                miniMapPos += mini.miniMapInterval * arrMoveRange[i] * miniMapMoveCount;
-                
-                // 미니맵 위치 적용
-                mini.SetMiniMapPos(unit, miniMapPos);
-
                 // 무브타일의 위치를 이동할 위치로 이동
                 targetTile[i].transform.localPosition = movedPos;
                 // 타일의 색을 녹색으로 변경
@@ -449,6 +445,13 @@ public class GameMgr : MonoBehaviour
                 StartCoroutine(MoveCorutine(unit, movedPos, arrMoveRange[i]));
             }
         }
+
+        MiniMap mini = UIMgr.Instance.GetMiniMap();
+        // 미니맵 위치를 비율에 맞춰서 적용
+        Vector2 miniMapPos = movedPos / interval * mini.miniMapInterval;
+
+        // 미니맵 위치 적용
+        mini.SetMiniMapPos(unit, miniMapPos);
         return movedPos;
     }
 
@@ -727,6 +730,7 @@ public class GameMgr : MonoBehaviour
 
         // 죽음이 끝나면 게임 셋 화면 활성화
         UIMgr.Instance.OnGameSetUI();
+        ResetBuffList();
     }
 
     private bool WinCheck(Unit player, Unit enemy)
@@ -783,13 +787,18 @@ public class GameMgr : MonoBehaviour
         ResetTile();
         Player.InitUnit();
         Enemy.InitUnit();
-        buffList.Clear();
+        ResetBuffList();
         // 플레이어와 적 카드 리스트 개수는 같다.
-        for(int i=0;i< playerCardList.Count;i++)
+        for (int i=0;i< playerCardList.Count;i++)
         {
             playerCardList[i].ResetCardUI();
             enemyCardList[i].ResetCardUI();
         }
+    }
+
+    public void ResetBuffList()
+    {
+        buffList.Clear();
     }
 
     // 게임의 모든 변동정보 초기화

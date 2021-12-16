@@ -153,6 +153,7 @@ public class UIMgr : MonoBehaviour
                 damageTextQueue.Enqueue(CreateTextObj());
             }
         }
+
     }
     //--------------전투 화면------------    
 

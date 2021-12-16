@@ -9,11 +9,11 @@ using UnityEngine.UI;
 public class Unit : MonoBehaviour
 {
     private Rigidbody2D unitRigid2D;
-    [SerializeField] public int hp { get; private set; }        // 체력   
-    [SerializeField] public int hpMax { get; private set; }     // 체력   
-    [SerializeField] public int mp { get; private set; }        // 마나
+    [SerializeField] public int hp { get; private set; }        // 현재 체력   
+    [SerializeField] public int hpMax { get; private set; }     // 최대 체력   
+    [SerializeField] public int mp { get; private set; }        // 현재 마나
     [SerializeField] public int mpMax { get; private set; }     // 최대 마나
-    [SerializeField] public int mpRemain { get; private set; }          // 남게되는 마나
+    [SerializeField] public int mpRemain { get; private set; }  // 남게되는 마나
     [SerializeField] public int addAtk { get; private set; }    // 추가 데미지
     [SerializeField] public int defense { get; private set; }   // 방어력. 받는 데미지 가/감
 
@@ -78,8 +78,22 @@ public class Unit : MonoBehaviour
     public void AddHP(int value)
     {
         hp = Mathf.Clamp(hp + value, 0, 100);
-        hpSlider.value = hp;
+        //hpSlider.value = hp;
+        StartCoroutine(BarSlideEffect());
         hpText.text = string.Format("HP {0}", hp);
+    }
+
+    private IEnumerator BarSlideEffect()
+    {
+        float t = 0;
+        while (t < 1)
+        {
+            t = Time.deltaTime * 5f;
+            hpSlider.value = Mathf.Lerp(hpSlider.value, hp, t);
+            //t += 0.01f;
+            yield return new WaitForSeconds(0.0167f);
+        }
+
     }
 
     public void AddMP(int value)

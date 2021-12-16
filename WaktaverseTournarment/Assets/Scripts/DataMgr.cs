@@ -228,9 +228,10 @@ public class DataMgr : MonoBehaviour
     // 애니메이션 활성화
     public void PlayAnim(Unit unit, int index)
     {
-        skillEffectPool[index].transform.localPosition = unit.GetUnitPos();
-        skillEffectPool[index].transform.localScale = unit.transform.localScale;
-        skillEffectPool[index].SetActive(true);
+        var skillObj = skillEffectPool[index];
+        skillObj.transform.localPosition = unit.GetUnitPos();
+        skillObj.transform.localScale = unit.transform.localScale;
+        skillObj.SetActive(UIMgr.Instance.GetEffectField().activeInHierarchy);
     }
 
     // 애니메이션 비황성화

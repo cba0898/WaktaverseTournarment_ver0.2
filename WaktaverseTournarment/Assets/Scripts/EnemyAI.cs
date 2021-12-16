@@ -51,18 +51,59 @@ public class EnemyAI
         weightList.Add(rateDefense);
         weightList.Add(rateMove);
     }
+
+    //적이 현재 사용가능한 카드를 체크
+    private void CheckEnemyCost(Unit enemy)
+    {
+        // 현재 마나 값을 알아옴
+        var enemyMp = enemy.mp;
+        var enemyRemainMp = enemy.mpRemain;
+
+        // 전체 카드 검사
+        for (int i = 0; i < skills.Count; i++)
+        {
+            // 코스트가 있는 경우에만 동작
+            if (skills[i] is Utility)
+            {
+                Utility util = skills[i] as Utility;
+                // 현재 사용하려는 카드의 비용이 현재 마나량보다 적을 경우 비활성화
+                if (enemyMp < util.cost)
+                    skills.RemoveAt(i);
+            }
+        }
+    }
+
     // 원하는 개수만큼의 Action이 들어있는 리스트 반환
     public List<Action> GetEnemyAction(Unit player, Unit enemy, int listCount)
     {
         skills.AddRange(DataMgr.Instance.arrPublicSkill);
         skills.AddRange(DataMgr.Instance.arrEnemySkill);
-        skills.AddRange(DataMgr.Instance.enemyOwnUniqueList); List<Action> actionList = new List<Action>();
+        skills.AddRange(DataMgr.Instance.enemyOwnUniqueList); 
+        List<Action> actionList = new List<Action>();
 
         var hps = skills.FindAll(data => (data.thisAction.Equals(Action.HP)));
         var buffs = skills.FindAll(data => (data.thisAction.Equals(Action.BUFF)));
 
         List<float> pivotList = new List<float>();
 
+        // 현재 마나 값을 알아옴
+        //var enemyMp = enemy.mp;
+        //var enemyRemainMp = enemy.mpRemain;
+        //
+        //// 전체 카드 검사
+        //for (int i = 0; i < skills.Count; i++)
+        //{
+        //    // 코스트가 있는 경우에만 동작
+        //    if (skills[i] is Utility)
+        //    {
+        //        Utility util = skills[i] as Utility;
+        //        // 현재 사용하려는 카드의 비용이 현재 마나량보다 적을 경우 비활성화
+        //        if (enemyMp < util.cost)
+        //            skills.RemoveAt(i);
+        //    }
+        //}
+        //GameMgr.Instance.Enemy.SetRemainCost(DataMgr.Instance.GetRemainMana(skills, 1));
+        
         var list = DataMgr.Instance.arrPublicSkill;
         if (GameMgr.Instance.maxPos.x <= enemy.GetUnitPos().x)
         {

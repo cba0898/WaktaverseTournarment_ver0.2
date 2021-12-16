@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00057beda9196e54fafc958d4ee661ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillImg: {fileID: 3240674119495043316}
+  cardButton: {fileID: 3240674119212640850}
   attackArea:
   - {fileID: 3240674119904928541}
   - {fileID: 3240674120318260035}

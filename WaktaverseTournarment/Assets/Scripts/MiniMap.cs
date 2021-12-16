@@ -15,6 +15,7 @@ public class MiniMap : MonoBehaviour
     {
         miniMapPlayer.transform.localPosition = DataMgr.Instance.SetUnitPos(miniMapInterval.x, DataMgr.Instance.playerPosRate);
         miniMapEnemy.transform.localPosition = DataMgr.Instance.SetUnitPos(miniMapInterval.x, DataMgr.Instance.enemyPosRate);
+        GameMgr.Instance.FaceUnit(miniMapPlayer, miniMapEnemy);
     }
 
     public void SetMiniMapPos(Unit unit, Vector2 pos)

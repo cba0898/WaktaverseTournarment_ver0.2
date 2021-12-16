@@ -13,4 +13,9 @@ public class SkillSoundController : MonoBehaviour
             audioSource.volume = SoundMgr.Instance.SFXSoundVolume;
         }
     }
+
+    private void OnDisable()
+    {
+        gameObject.SetActive(false);
+    }
 }

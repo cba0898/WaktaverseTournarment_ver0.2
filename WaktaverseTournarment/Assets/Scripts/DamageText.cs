@@ -30,8 +30,8 @@ public class DamageText : MonoBehaviour
                 damageText.color = Color.red;
                 break;
             case DamageTextType.Defense:
-                damageText.text = string.Format("+{0:D}", value);
-                damageText.color = Color.green;
+                damageText.text = string.Format("가드+{0:D}", value);
+                damageText.color = new Color(0.54902f, 0.54902f, 0.54902f); // 회색
                 break;
             case DamageTextType.HpHeal:
                 damageText.text = string.Format("+{0:D}", value);
