@@ -147,7 +147,7 @@ public class Unit : MonoBehaviour
     {
         if (collision.transform.tag == AttackTag)
         {
-            unitanim.OnHitEnter();
+
             StartCoroutine(OnDamagePop());  
         }
     }
@@ -168,7 +168,7 @@ public class Unit : MonoBehaviour
         for (int i = 0; damageedCount > i; i++)
         {
             var posX = 0.0f;
-            // 방어력이 존재할 경우 방어력 폰트 추가
+            // 방어력이 존재할 경우 방어 폰트 추가 + 방어 애니메이션 실행
             if (0 < defense)
             {
                 posX = 0.3f + Random.value * 0.2f;
@@ -176,7 +176,10 @@ public class Unit : MonoBehaviour
                 //+ new Vector3(Random.RandomRange(0, 10) * 0.1f, 0, 0)
                 if (def) def.SetDamage(defense, DamageTextType.Defense, transform.position + offset + new Vector3(-posX * offset.x, 1f, 0));
                 //yield return new WaitForSeconds(0.3f);
+                unitanim.OnGuardEnter();
             }
+            else
+                unitanim.OnHitEnter();
 
             var atk = UIMgr.Instance.GetDamageText();
             //+ new Vector3(Random.RandomRange(0, 10) * 0.1f, 0, 0)

@@ -26,4 +26,4 @@ MonoBehaviour:
   condition: 8
   value: -10
   cost: 20
-  turns: 4
+  turns: 2

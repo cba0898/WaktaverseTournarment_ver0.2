@@ -193,20 +193,22 @@ public class Card : MonoBehaviour
         }
     }
 
+    // 카드 버튼 함수
     public void OnSelectCard()
     {
         IsSelect = !IsSelect;
+        // 슬롯이 꽉 찼을 경우 카드를 빼는것만 가능하도록 설정
+        if (UIMgr.Instance.IsSlotFull()) IsSelect = false;
 
         UIMgr.Instance.OnSlot(this);
-
-        //Debug.Log(DataMgr.Instance.IsOnCardList(this));
-
     }
 
+    // 카드의 초기 위치 설정
     public void InitOriginPos()
     {
         OriginPos = transform.position;
     }
+    // 카드를 초기 위치로 지정
     public void SetOriginPos()
     {
         SetPos(OriginPos);

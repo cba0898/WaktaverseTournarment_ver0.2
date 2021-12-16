@@ -34,6 +34,14 @@ public class UnitAnim : MonoBehaviour
     {
         if (anim) anim.SetBool("isHit", false);
     }
+    public void OnGuardEnter()
+    {
+        if (anim) anim.SetBool("isGuard", false);
+    }
+    public void OnGuardExit()
+    {
+        if (anim) anim.SetBool("isGuard", false);
+    }
     public void OnBackEnter()
     {
         if (anim) anim.SetBool("isBack", true);

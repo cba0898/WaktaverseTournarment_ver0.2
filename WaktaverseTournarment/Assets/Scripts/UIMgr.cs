@@ -245,6 +245,11 @@ public class UIMgr : MonoBehaviour
         }
     }
 
+    public bool IsSlotFull()
+    {
+        return (slotList.Count <= DataMgr.Instance.GetCardListCount());
+    }
+
     // 카드 슬롯 상호작용
     public void OnSlot(Card card)
     {
@@ -253,7 +258,7 @@ public class UIMgr : MonoBehaviour
             // 카드를 슬롯에 넣는(카드를 누르는) 경우
             case true:
                 // 슬롯이 꽉 찼을 경우 혹은 카드가 비활성화일 경우 실행하지 않는다.
-                if (slotList.Count <= DataMgr.Instance.GetCardListCount() || card.isDisable)
+                if (IsSlotFull() || card.isDisable)
                     return;
 
                 card.SetPos(selectSlotPos);

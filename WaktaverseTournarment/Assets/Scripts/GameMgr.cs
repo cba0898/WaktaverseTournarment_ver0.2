@@ -216,6 +216,43 @@ public class GameMgr : MonoBehaviour
         // 스킬 실행이 끝나면 비활성화
         playerCard.gameObject.SetActive(false);
         enemyCard.gameObject.SetActive(false);
+
+
+        // 턴 감소
+        while (1 > buffList.Count)
+        {
+            int i = 0;
+            buffList[i].DecsTurn();
+
+            Debug.Log(buffList[i].turn);
+            // 버프 지속시간이 만료된 경우 해당 버프 제거
+            if (0 >= buffList[i].turn)
+            {
+                buffList.RemoveAt(i);
+                Debug.Log("buff end");
+                continue;
+            }
+            else
+                i++;
+        }
+        //for(int i=0;i<buffList.Count;)
+        //{
+        //    buffList[i].DecsTurn();
+        //
+        //    Debug.Log(buffList[i].turn);
+        //}
+        //for (int i = 0; i < buffList.Count;)
+        //{
+        //    // 버프 지속시간이 만료된 경우 해당 버프 제거
+        //    if (0 >= buffList[i].turn)
+        //    {
+        //        buffList.RemoveAt(i);
+        //        Debug.Log("buff end");
+        //        continue;
+        //    }
+        //    else
+        //        i++;
+        //}
     }
 
     // 전투 화면에 선택한 카드들을 세팅
@@ -322,12 +359,6 @@ public class GameMgr : MonoBehaviour
             target.ApplyDamaged();
             // 데미지 초기화
             target.ResetDamage();
-
-            //if (target.isInArea)
-            //{
-            //    target.ApplyDamaged();
-            //    //DamageProcess(target, atk.value, unit.addAtk, atk.applyCount, target.defense);
-            //}
         }
         // 유틸 액션
         else if (card.skillData is Utility)
@@ -344,10 +375,13 @@ public class GameMgr : MonoBehaviour
             FaceUnit(Player.gameObject, Enemy.gameObject);
         }
         yield return new WaitForSeconds(1.0f);
+
+        ResetTile();
+
+        // 버프 실행
         ActiveBuff(buffList);
         ActiveBuffIcon(Player);
         ActiveBuffIcon(Enemy);
-        ResetTile();
     }
 
 
@@ -600,7 +634,7 @@ public class GameMgr : MonoBehaviour
                     break;
             }
             // 버프 설명 텍스트를 가져옴
-            buff.buffDiscription = util.discription;
+            buff.buffDiscription = string.Format("{0}\n{1}", util.discription, util.value);
 
             buff.turn = util.turns;
 
@@ -622,9 +656,9 @@ public class GameMgr : MonoBehaviour
     private void SetBuffIcon(Unit unit, Buff buff)
     {
         // 버프가 적용되지 않는 상황이거나 버프가 아니라면 리턴
-        if (1 >= buff.turn || !buff.isBuff) return;
+        if (1 > buff.turn || !buff.isBuff) return;
         unit.buffIcons[unit.buffCount].sprite = buff.buffImg;
-        unit.buffTurnTexts[unit.buffCount].text = (buff.turn / 2).ToString();
+        unit.buffTurnTexts[unit.buffCount].text = buff.turn.ToString();
         unit.buffDiscriptions[unit.buffCount].text = buff.buffDiscription;
         unit.AddBuffCount();
     }
@@ -643,12 +677,12 @@ public class GameMgr : MonoBehaviour
         for (int i = 0; i < buffs.Count;)
         {
             // 버프 지속시간이 만료된 경우 해당 버프 제거
-            if (0 >= buffs[i].turn)
-            {
-                buffs.RemoveAt(i);
-                Debug.Log("buff end");
-                continue;
-            }
+            //if (0 >= buffs[i].turn)
+            //{
+            //    buffs.RemoveAt(i);
+            //    Debug.Log("buff end");
+            //    continue;
+            //}
 
             // 타겟이 플레이어일 경우
             if (buffs[i].buffTarget == Player)
@@ -662,9 +696,9 @@ public class GameMgr : MonoBehaviour
                 SetBuffIcon(Enemy, buffs[i]);
             }
             // 지속 턴 감소
-            buffs[i].DecsTurn();
+            //buffs[i].DecsTurn();
             Debug.Log("buff active");
-            Debug.Log(buffs[i].turn);
+            //Debug.Log(buffs[i].turn);
             i++;
         }
 
