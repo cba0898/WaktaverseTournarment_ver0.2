@@ -115,9 +115,9 @@ public class DataMgr : MonoBehaviour
     }
 
     // 현재 마나에서 슬롯에 있는 카드들의 마나 총량을 감소한 값을 반환
-    public int GetRemainMana(Normal normal, int sign)
+    public int GetRemainMana(Normal normal,Unit unit ,int sign)
     {
-        int remainMana = GameMgr.Instance.Player.mpRemain;
+        int remainMana = unit.mpRemain;
         if (normal is Utility)
         {
             Utility util = normal as Utility;

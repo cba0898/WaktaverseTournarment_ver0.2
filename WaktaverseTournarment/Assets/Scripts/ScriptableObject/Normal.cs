@@ -39,6 +39,7 @@ public class Normal : ScriptableObject
     public Action thisAction;   // 해당 행동의 유형
     public int MoveCount;    // 행동 횟수
     public AudioClip voiceSFX;    // 대사 효과음
+    public int cost = 0;
 
     public Normal() { priority = 1; }
 }

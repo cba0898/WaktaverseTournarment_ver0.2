@@ -220,8 +220,9 @@ public class UIMgr : MonoBehaviour
         SetCharImg(GameMgr.Instance.enemyImg, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
         SetCharImg(miniMap.enemyMiniMapIcon, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
     }
-    [SerializeField] Image background;
-    [SerializeField] Sprite[] backgroundSprites;
+
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite[] backgroundSprites;
     // 전투 화면 백그라운드 설정
     private void InitBattleBackground()
     {
@@ -268,7 +269,7 @@ public class UIMgr : MonoBehaviour
                 DataMgr.Instance.AddCardList(card);
 
                 // 수정 필요
-                GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, -1));
+                GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
                 CheckDisable(GameMgr.Instance.Player.mpRemain);
 
                 break;
@@ -290,7 +291,7 @@ public class UIMgr : MonoBehaviour
                 DataMgr.Instance.RemoveCardList(card);
 
                 // 수정 필요
-                GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, 1));
+                GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, 1));
                 CheckDisable(GameMgr.Instance.Player.mpRemain);
 
                 break;
@@ -332,12 +333,12 @@ public class UIMgr : MonoBehaviour
             slotList[i].isOn = true;
             if (slotList[i])
             {
-                Debug.Log("found currentSlot");
+                //Debug.Log("found currentSlot");
                 return i;
             }
         }
 
-        Debug.Log("Can't found currentSlot");
+        //Debug.Log("Can't found currentSlot");
         return 0;   //현재 슬롯을 찾을 수 없는경우 현재 슬롯을 1번 슬롯으로 지정
     }
 
@@ -547,7 +548,7 @@ public class UIMgr : MonoBehaviour
     {
         // 카드 세 장이 배치가 끝나기 전에는 리턴
         if (3 != DataMgr.Instance.GetCardListCount()) return;
-        Debug.Log("CardSetStart");
+        //Debug.Log("CardSetStart");
 
         MoveScene(SCENE.CardSet, SCENE.Battle);
 
