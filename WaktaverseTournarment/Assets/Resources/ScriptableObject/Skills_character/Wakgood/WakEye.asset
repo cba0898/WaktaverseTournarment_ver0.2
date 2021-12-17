@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uAC1D\uAD00\uC548 \uC628"
-  discription: "2\uD134 \uB3D9\uC548 \uD0C0\uACA9 \uB2F9 \uACF5\uACA9\uB825\uC774
+  discription: "\uB2E4\uC74C \uD134 \uACF5\uACA9\uC758 \uD0C0\uACA9 \uB2F9 \uACF5\uACA9\uB825\uC774
     \uC99D\uAC00\uD55C\uB2E4."
   target: 2
   range: 32
@@ -25,5 +25,5 @@ MonoBehaviour:
   voiceSFX: {fileID: 8300000, guid: 9623a12749b11a345a4fcb60ef87572e, type: 3}
   cost: 10
   condition: 8
-  value: 5
+  value: 10
   turns: 2

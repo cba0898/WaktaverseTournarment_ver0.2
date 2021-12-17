@@ -326,6 +326,9 @@ public class GameMgr : MonoBehaviour
             else if(atk.isIdle) unit.unitanim.OnNonActionExit();
             else unit.unitanim.OnActionExit();
 
+            // 자신에게도 데미지를 주는 경우
+            if (atk.isSelf)
+                unit.AddHP(-atk.value);
             // 데미지 실적용
             target.ApplyDamaged();
             // 데미지 초기화

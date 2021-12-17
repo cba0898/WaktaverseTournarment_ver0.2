@@ -121,7 +121,7 @@ public class Unit : MonoBehaviour
 
     public void InitUnit()
     {
-        hp = 50;
+        hp = 100;
         hpMax = 100;
         mp = 100;
         mpMax = 100;

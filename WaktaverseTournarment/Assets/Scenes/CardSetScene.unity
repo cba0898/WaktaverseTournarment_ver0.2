@@ -29034,7 +29034,7 @@ MonoBehaviour:
   currentEnemy: 0
   enemyList: 
   playerPosRate: -1.5
-  enemyPosRate: -0.5
+  enemyPosRate: 1.5
   arrPublicSkill: []
   arrPlayerSkill: []
   arrEnemySkill: []
