@@ -19,7 +19,9 @@ public class Unit : MonoBehaviour
 
     [SerializeField] public UnitAnim unitanim;  // 애니메이션
     [SerializeField] private Slider hpSlider;   // hp바
+    [SerializeField] private Slider hpBackSlider;   // hp바
     [SerializeField] private Slider mpSlider;   // mp바
+    [SerializeField] private Slider mpBackSlider;   // mp바
     [SerializeField] private Text hpText;   // Hp바
     [SerializeField] private Text mpText;   // mp바
 
@@ -77,29 +79,39 @@ public class Unit : MonoBehaviour
 
     public void AddHP(int value)
     {
-         hp = Mathf.Clamp(hp + value, 0, 100);
+        hp = Mathf.Clamp(hp + value, 0, 100);
         //hpSlider.value = hp;
-        StartCoroutine(BarSlideEffect());
+        StartCoroutine(BarSlideEffect(hpSlider, hpBackSlider, hp));
         hpText.text = string.Format("HP {0}", hp);
     }
 
-    private IEnumerator BarSlideEffect()
+    private IEnumerator BarSlideEffect(Slider slider, Slider backSlider,int value)
     {
-        float t = 0;
-        while (t < 1)
+        var prevHp = slider.value;
+        Slider hardSlider = slider, softSlider = backSlider;
+
+        if (!(value < slider.value))
         {
-            t = Time.deltaTime * 5f;
-            hpSlider.value = Mathf.Lerp(hpSlider.value, hp, t);
+            hardSlider = backSlider;
+            softSlider = slider;
+        }
+        if(hardSlider) hardSlider.value = value;
+
+        float t = 0;
+        while (softSlider &&  t < 1)
+        {
+            t += Time.deltaTime * 2.5f;
+            softSlider.value = Mathf.Lerp(prevHp, value, t);
             //t += 0.01f;
             yield return new WaitForSeconds(0.0167f);
         }
-
     }
 
     public void AddMP(int value)
     {
         mp = Mathf.Clamp(mp + value, 0, 100);
-        mpSlider.value = mp;
+        //mpSlider.value = mp;
+        StartCoroutine(BarSlideEffect(mpSlider, mpBackSlider, mp));
         SetRemainCost(mp);
         mpText.text = string.Format("MP {0}", mp);
     }
@@ -193,4 +205,6 @@ public class Unit : MonoBehaviour
         if (collision.transform.tag == AttackTag)
             unitanim.OnHitExit();
     }
+
+
 }

@@ -88,6 +88,8 @@ public class UIMgr : MonoBehaviour
     {
         return miniMap;
     }
+
+    [SerializeField] private Button battleStartButton; // 배틀 시작 버튼
     //--------------카드 선택 화면-----------
 
 
@@ -153,7 +155,7 @@ public class UIMgr : MonoBehaviour
                 damageTextQueue.Enqueue(CreateTextObj());
             }
         }
-
+        battleStartButton.interactable = false;
     }
     //--------------전투 화면------------    
 
@@ -271,6 +273,8 @@ public class UIMgr : MonoBehaviour
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
 
+                if(IsSlotFull()) battleStartButton.interactable = true;
+
                 break;
 
             // 슬롯에 있는 카드를 다시 빼는 경우
@@ -292,6 +296,7 @@ public class UIMgr : MonoBehaviour
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, 1));
 
+                battleStartButton.interactable = false;
                 break;
         }
         CheckDisable(GameMgr.Instance.Player.mpRemain);
@@ -409,6 +414,9 @@ public class UIMgr : MonoBehaviour
         // 남게되는 마나 초기화, disable 항목 초기화
         GameMgr.Instance.Player.SetRemainCost(GameMgr.Instance.Player.mp);
         CheckDisable(GameMgr.Instance.Player.mpRemain);
+
+        // 스타트 버튼 비활성화
+        battleStartButton.interactable = false;
     }
 
     // 특수카드 정보 세팅(카드 셔플)
@@ -548,7 +556,7 @@ public class UIMgr : MonoBehaviour
         // 카드 세 장이 배치가 끝나기 전에는 리턴
         if (3 != DataMgr.Instance.GetCardListCount()) return;
         //Debug.Log("CardSetStart");
-
+        battleStartButton.interactable = false;
         MoveScene(SCENE.CardSet, SCENE.Battle);
 
         GameMgr.Instance.OnPlay();
@@ -630,6 +638,7 @@ public class UIMgr : MonoBehaviour
         CheckDisable(GameMgr.Instance.Player.mpRemain);
         DataMgr.Instance.InitTurnCount();
         ResetUniqueCardUI();
+        battleStartButton.interactable = false;
     }
 
     // 초기 씬 활성화 상태 구현
@@ -647,6 +656,7 @@ public class UIMgr : MonoBehaviour
         reward.InitReward();
         OffEndButton();
         OffToMainButton();
+        battleStartButton.interactable = false;
     }
 
     // 씬 전환

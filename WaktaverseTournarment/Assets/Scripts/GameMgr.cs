@@ -223,6 +223,9 @@ public class GameMgr : MonoBehaviour
 
         // 버프 실행
         ActiveBuff(buffList);
+        // 지속되는 피격모션이 있다면 중지
+        Player.unitanim.OnHitExit();
+        Enemy.unitanim.OnHitExit();
     }
 
     // 전투 화면에 선택한 카드들을 세팅

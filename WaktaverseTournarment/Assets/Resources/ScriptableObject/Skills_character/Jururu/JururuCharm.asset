@@ -18,15 +18,15 @@ MonoBehaviour:
   target: 4
   range: 372
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 1990397573056267985, guid: 3168f90b24ca0ad469a243d2b00626e9, type: 3}
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 0}
+  cost: 30
   condition: 2
   value: 25
-  cost: 30
   turns: 0
   applyCount: 1
-  isSpread: 0
+  isSelf: 0
   isIdle: 0
   isArts: 0
