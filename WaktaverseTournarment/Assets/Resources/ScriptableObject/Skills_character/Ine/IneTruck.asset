@@ -16,18 +16,17 @@ MonoBehaviour:
   skillName: "\uD584\uC774\uB124 \uD2B8\uB7ED"
   discription: "\uC57C\uB784! \uC57C\uB784! \uD584\uC774\uB124\uB77C\uB124~"
   target: 4
-  range: 126
+  range: 112
   movePos: 0
   effect: {fileID: 3429731784906049575, guid: bd4800b1eaba6c94f88a85a7926ff46c, type: 3}
   thisAction: 2
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: 3c577566d614a8744916c00f8c6cfdc5, type: 3}
+  cost: 45
   condition: 2
   value: 40
-  cost: 45
   turns: 0
   applyCount: 1
-  isSpread: 0
+  isSelf: 0
   isIdle: 0
   isArts: 0

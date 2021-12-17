@@ -115,6 +115,11 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Button nextRound;  // 다음 라운드 버튼
 
     [SerializeField] private GameObject EffectField;    // 이펙트가 존재하는 필드
+    [SerializeField] private GameObject frontEffectField;    // 이펙트가 존재하는 필드
+    public GameObject GetFrontEffectField()
+    {
+        return EffectField;
+    }
     public GameObject GetEffectField()
     {
         return EffectField;

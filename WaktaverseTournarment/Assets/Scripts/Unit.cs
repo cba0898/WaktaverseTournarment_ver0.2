@@ -110,8 +110,8 @@ public class Unit : MonoBehaviour
     public void AddMP(int value)
     {
         mp = Mathf.Clamp(mp + value, 0, 100);
-        //mpSlider.value = mp;
-        StartCoroutine(BarSlideEffect(mpSlider, mpBackSlider, mp));
+        mpSlider.value = mp;
+        //StartCoroutine(BarSlideEffect(mpSlider, mpBackSlider, mp));
         SetRemainCost(mp);
         mpText.text = string.Format("MP {0}", mp);
     }
