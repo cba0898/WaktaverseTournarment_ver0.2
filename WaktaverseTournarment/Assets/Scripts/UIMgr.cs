@@ -279,6 +279,8 @@ public class UIMgr : MonoBehaviour
                 // 슬롯 정보 변경
                 setSlot(SLOT.add);
 
+                SoundMgr.Instance.OnPlaySFX("6.slot click");
+
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
 
@@ -301,6 +303,8 @@ public class UIMgr : MonoBehaviour
 
                 // 해당 카드 정보를 카드 리스트에서 제거
                 DataMgr.Instance.RemoveCardList(card);
+
+                SoundMgr.Instance.OnPlaySFX("8.card cancle");
 
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, 1));
@@ -329,6 +333,7 @@ public class UIMgr : MonoBehaviour
     // 현재 슬롯을 반환
     public void setCurrentSlot(int value)
     {
+        SoundMgr.Instance.OnPlaySFX("7.card click");
         currentSlotIndex = value;
     }
 
@@ -495,22 +500,27 @@ public class UIMgr : MonoBehaviour
                 DataMgr.Instance.SetEnemy();
                 InitMatchScene();
                 MoveScene(SCENE.CharSelect, SCENE.CharMatch);
+                SoundMgr.Instance.OnPlaySFX("character accept");                
                 break;
             case BUTTON.CharMatch_Change:
                 if (DataMgr.Instance.IsFirstEnemy())
                     MoveScene(SCENE.CharMatch, SCENE.CharSelect);
+                SoundMgr.Instance.OnPlaySFX("character change");
                 break;
             case BUTTON.CharMatch_Start:
                 CharMatchStart();
+                SoundMgr.Instance.OnPlaySFX("main start");                
                 // 첫 라운드에만 재생
                 if (DataMgr.Instance.Round == 1)
                     SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
             case BUTTON.CardSet_Start:
                 CardSetStart();
+                SoundMgr.Instance.OnPlaySFX("match start");
                 SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyBattle);
                 break;
             case BUTTON.CardSet_Clear:
+                SoundMgr.Instance.OnPlaySFX("9.card clear");
                 ClearSlot();
                 break;
             case BUTTON.NextRound:

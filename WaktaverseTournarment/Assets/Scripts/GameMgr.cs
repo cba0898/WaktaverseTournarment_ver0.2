@@ -184,7 +184,7 @@ public class GameMgr : MonoBehaviour
         var playerCard = playerCardList[DataMgr.Instance.turnCount];
         var enemyCard = enemyCardList[DataMgr.Instance.turnCount];
 
-        SoundMgr.Instance.OnPlaySFX(playerCard.openAudio);
+        SoundMgr.Instance.OnPlaySFX(playerCard.openAudio.name);
         // 첫 번째 카드가 뒤집히는 애니메이션 실행
         playerCard.CardOpen();
         enemyCard.CardOpen();

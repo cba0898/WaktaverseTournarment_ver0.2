@@ -28,7 +28,8 @@ public class SoundMgr : MonoBehaviour
     }
     #endregion
 
-    private Dictionary<string, AudioClip> audioDictionary;   // 리소스에 불러온 오디오 클립을 저장할 딕셔너리
+    private Dictionary<string, AudioClip> BGMDictionary;   // 리소스에 불러온 오디오 클립을 저장할 딕셔너리
+    private Dictionary<string, AudioClip> SFXDictionary;   // 리소스에 불러온 오디오 클립을 저장할 딕셔너리
     [SerializeField] private AudioSource BGM;    // BGM
     [SerializeField] private AudioSource SFX;    // SFX
 
@@ -90,7 +91,8 @@ public class SoundMgr : MonoBehaviour
 
     public void LoadAudio()
     {
-        audioDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Sounds/BGM");
+        BGMDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Sounds/BGM");
+        SFXDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Sounds/SFX");
         BGM.loop = true;
         SFX.loop = false;
     }
@@ -112,16 +114,16 @@ public class SoundMgr : MonoBehaviour
         BGM.Stop();
         // 플레이 중이라면 리턴
         if (BGM.isPlaying) return;
-        BGM.clip = audioDictionary[key];
+        BGM.clip = BGMDictionary[key];
         // 배경음이 없을 경우에만 재생
         if (!BGM.isPlaying) BGM.Play();
     }
 
-    public void OnPlaySFX(AudioClip audioClip)
+    public void OnPlaySFX(string clipName)
     {
         SFX.Stop();
         if (SFX.isPlaying) return;
-        SFX.clip = audioClip;
+        SFX.clip = SFXDictionary[clipName];
         if (!SFX.isPlaying) SFX.Play();
     }
 

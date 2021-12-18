@@ -16,8 +16,8 @@ public class CharMatch : MonoBehaviour
     // 매치 이미지 세팅
     public void SetMatchImg(int matchIndex)
     {
-        UIMgr.Instance.SetCharImg(player3DImg, DataMgr.Instance.CurrentPlayer, "Sprites/Characters/3D/3D_total", "3D");
-        UIMgr.Instance.SetCharImg(enemy3DImg, DataMgr.Instance.CurrentEnemy, "Sprites/Characters/3D/3D_total", "3D");
+        UIMgr.Instance.SetCharImg(player3DImg, DataMgr.Instance.CurrentPlayer, "Sprites/Characters/3D/3D_Total", "3D");
+        UIMgr.Instance.SetCharImg(enemy3DImg, DataMgr.Instance.CurrentEnemy, "Sprites/Characters/3D/3D_Total", "3D");
         if (0 != matchIndex)
             charChangeButton.gameObject.SetActive(false);
         else
