@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 9a26aa4fe949d4b4d801cdb2717472f0
+guid: aca9e4b5bfe22004e98509639cb8d3c0
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 8989766211903632395
-    second: lilpa_Pa_beam_0
-  - first:
-      213: 5764037644361214538
-    second: lilpa_Pa_beam_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -107,53 +101,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: lilpa_Pa_beam_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 10
-        width: 296
-        height: 88
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b04335a6db012cc70800000000000000
-      internalID: 8989766211903632395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lilpa_Pa_beam_1
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 38
-        width: 21
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4a2128c2b9fdff40800000000000000
-      internalID: 5764037644361214538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b342b4b946241ca4abb4fc25d9614080
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a371e5ca5c1d7c6439dfa0c12da6cce9, type: 3}
-  m_Name: LilpaBadass
+  m_Name: LilpaMangSang
   m_EditorClassIdentifier: 
   priority: 0
-  skillName: "\uC545\uC9C8\uB2E8 \uC218\uC7A5\uC758 \uB355\uC9C8"
-  discription: "\uB8B4\uB974\uB974\uB97C \uBCF4\uACE0 \uAE30\uB825\uC744 \uBCF4\uCDA9\uD55C\uB2E4."
+  skillName: "\uC545\uC9C8\uB2E8 \uC218\uC7A5\uC758 \uB9DD\uC0C1"
+  discription: "\uB8B4\uB974\uB974\uB97C \uC0DD\uAC01\uD558\uBA70 \uAE30\uB825\uC744
+    \uBCF4\uCDA9\uD55C\uB2E4."
   target: 2
   range: 48
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 378874989969329590, guid: 959746e00a5b8b74f9734ce75e812c55, type: 3}
   thisAction: 5
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
+  cost: 20
+  effectivePos: 0
   condition: 4
   value: 0
-  cost: 20
   turns: 1
