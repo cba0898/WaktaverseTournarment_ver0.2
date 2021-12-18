@@ -23,7 +23,8 @@ MonoBehaviour:
   thisAction: 3
   MoveCount: 0
   voiceSFX: {fileID: 0}
+  cost: 15
+  effectivePos: 5
   condition: 16
   value: 50
-  cost: 15
   turns: 1

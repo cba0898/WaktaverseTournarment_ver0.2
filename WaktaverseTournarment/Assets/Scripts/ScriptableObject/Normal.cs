@@ -25,6 +25,15 @@ public enum LOCATION
     CENTER_BOTTOM = 1 << 8,
     RIGHT_BOTTOM = 1 << 9
 };
+public enum EffectivePos
+{
+    Default,
+    Up,
+    Down,
+    Left,
+    Right,
+    Center
+}
 
 [CreateAssetMenu(fileName = "Normal", menuName = "Skill/Normal", order = 1)]
 public class Normal : ScriptableObject
@@ -40,6 +49,6 @@ public class Normal : ScriptableObject
     public int MoveCount;    // 행동 횟수
     public AudioClip voiceSFX;    // 대사 효과음
     public int cost = 0;
-
+    public EffectivePos effectivePos;   // 영향을 주는 범위 (적 AI 전용)
     public Normal() { priority = 1; }
 }

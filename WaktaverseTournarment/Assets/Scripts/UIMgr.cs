@@ -99,6 +99,7 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Image enemyIcon;     // 적 이미지
     [SerializeField] private Text PlayerName;     // 플레이어 이름
     [SerializeField] private Text EnemyName;     // 적 이름
+    [SerializeField] public Round roundImg;
     //--------------상단 체력 바 UI----------
 
 
@@ -269,11 +270,14 @@ public class UIMgr : MonoBehaviour
                 if (IsSlotFull() || card.isDisable)
                     return;
 
+                // 해당 카드를 슬롯으로 이동
                 card.SetPos(selectSlotPos);
-                setSlot(SLOT.add);
 
                 // 해당 카드 정보를 카드 리스트에 추가
-                DataMgr.Instance.AddCardList(card);
+                DataMgr.Instance.AddCardList(currentSlotIndex, card);
+
+                // 슬롯 정보 변경
+                setSlot(SLOT.add);
 
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
@@ -642,6 +646,7 @@ public class UIMgr : MonoBehaviour
         GameMgr.Instance.ResetGameData();
         CheckDisable(GameMgr.Instance.Player.mpRemain);
         DataMgr.Instance.InitTurnCount();
+        roundImg.InitReoundImg();
         ResetUniqueCardUI();
         battleStartButton.interactable = false;
     }

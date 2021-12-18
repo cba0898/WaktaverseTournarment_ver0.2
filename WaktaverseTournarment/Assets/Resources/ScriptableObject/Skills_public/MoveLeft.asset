@@ -22,3 +22,5 @@ MonoBehaviour:
   thisAction: 1
   MoveCount: 1
   voiceSFX: {fileID: 0}
+  cost: 0
+  effectivePos: 3

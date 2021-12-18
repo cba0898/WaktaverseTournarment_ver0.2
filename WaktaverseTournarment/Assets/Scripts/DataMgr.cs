@@ -389,9 +389,11 @@ public class DataMgr : MonoBehaviour
     }
 
     // 카드리스트에 추가
-    public void AddCardList(Card card)
+    public void AddCardList(int index, Card card)
     {
-        SelectCardList.Add(card);
+        if (index < SelectCardList.Count)
+            SelectCardList.Insert(index, card);
+        else SelectCardList.Add(card);
     }
     public void AddEnemyCardList(Card card)
     {

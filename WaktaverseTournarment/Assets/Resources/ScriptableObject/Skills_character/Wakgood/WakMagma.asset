@@ -30,3 +30,4 @@ MonoBehaviour:
   isSelf: 1
   isIdle: 0
   isArts: 1
+  attackPos: 3

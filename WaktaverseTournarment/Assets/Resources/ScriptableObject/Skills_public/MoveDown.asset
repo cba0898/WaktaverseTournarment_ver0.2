@@ -20,6 +20,7 @@ MonoBehaviour:
   movePos: 256
   effect: {fileID: 0}
   thisAction: 1
-  isUsed: 0
   MoveCount: 1
   voiceSFX: {fileID: 0}
+  cost: 0
+  effectivePos: 2

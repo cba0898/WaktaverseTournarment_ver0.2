@@ -20,10 +20,10 @@ MonoBehaviour:
   movePos: 0
   effect: {fileID: 8772763151921774844, guid: 0d3bb3fff97188341808fb7215610480, type: 3}
   thisAction: 5
-  isUsed: 0
   MoveCount: 0
   voiceSFX: {fileID: 0}
+  cost: 15
+  effectivePos: 0
   condition: 4
   value: 0
-  cost: 15
   turns: 1

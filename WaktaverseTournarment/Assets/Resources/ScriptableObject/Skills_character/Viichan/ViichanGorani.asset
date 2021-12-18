@@ -22,11 +22,12 @@ MonoBehaviour:
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: 00f93a7e63c64a545b1bfc55a3edd8a0, type: 3}
+  cost: 15
   condition: 2
   value: 25
-  cost: 15
   turns: 0
   applyCount: 1
-  isSpread: 0
+  isSelf: 0
   isIdle: 0
   isArts: 0
+  attackPos: 3

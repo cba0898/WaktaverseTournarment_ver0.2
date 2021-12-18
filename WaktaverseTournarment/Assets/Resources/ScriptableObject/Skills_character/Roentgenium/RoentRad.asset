@@ -27,6 +27,7 @@ MonoBehaviour:
   value: 40
   turns: 0
   applyCount: 1
-  isSpread: 0
+  isSelf: 0
   isIdle: 0
   isArts: 1
+  attackPos: 3

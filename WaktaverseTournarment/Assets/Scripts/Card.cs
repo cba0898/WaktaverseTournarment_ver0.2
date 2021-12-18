@@ -21,7 +21,6 @@ public class Card : MonoBehaviour
     [SerializeField] private GameObject disable;        // 카드 사용 불과 효과
     [SerializeField] private Animation anim;            // 카드 애니메이션
     [SerializeField] public AudioClip openAudio;       // 오디오 오픈 클립
-
     public bool isPlayAnimation { get { return (anim) ? anim.isPlaying : false; } }
 
     public Normal skillData { get; private set; }

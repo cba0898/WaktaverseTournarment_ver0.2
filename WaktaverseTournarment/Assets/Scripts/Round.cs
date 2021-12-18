@@ -23,7 +23,13 @@ public class Round : MonoBehaviour
         int remainder = round % 10;
         int front = (int)(round * 0.1f);
 
-        leftright[1].sprite = Numbers[remainder];
         leftright[0].sprite = Numbers[front];
+        leftright[1].sprite = Numbers[remainder];
+    }
+
+    public void InitReoundImg()
+    {
+        leftright[0].sprite = Numbers[0];
+        leftright[1].sprite = Numbers[1];
     }
 }
