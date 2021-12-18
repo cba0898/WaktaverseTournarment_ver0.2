@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: 1199912040243620080
     second: "\uC74C\uD45C_2"
+  - first:
+      213: -4804127591642748990
+    second: Ine_sing_0
+  - first:
+      213: -2953999135065056383
+    second: Ine_sing_1
+  - first:
+      213: -6428082978140127702
+    second: Ine_sing_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC74C\uD45C_0"
+      name: Ine_sing_0
       rect:
         serializedVersion: 2
         x: 21
@@ -126,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3604eef832bbc4f0800000000000000
-      internalID: -807355750318602694
+      spriteID: 2c72b74a86f445db0800000000000000
+      internalID: -4804127591642748990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC74C\uD45C_1"
+      name: Ine_sing_1
       rect:
         serializedVersion: 2
         x: 84
@@ -147,14 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95f0c0f4f203fa6d0800000000000000
-      internalID: -2977107848920821927
+      spriteID: 18bd2a700794107d0800000000000000
+      internalID: -2953999135065056383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC74C\uD45C_2"
+      name: Ine_sing_2
       rect:
         serializedVersion: 2
         x: 189
@@ -168,8 +177,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f86f68a4a1f6a010800000000000000
-      internalID: 1199912040243620080
+      spriteID: a2ef83db69cdac6a0800000000000000
+      internalID: -6428082978140127702
       vertices: []
       indices: 
       edges: []

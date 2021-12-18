@@ -19,11 +19,12 @@ MonoBehaviour:
   target: 2
   range: 32
   movePos: 0
-  effect: {fileID: 4476660309944672042, guid: 225f0c4208e59614f897da82d9205880, type: 3}
+  effect: {fileID: 5571510285133734596, guid: aaef66f453f2bd9439cae0a7a3732c81, type: 3}
   thisAction: 4
   MoveCount: 0
   voiceSFX: {fileID: 0}
+  cost: 25
+  effectivePos: 0
   condition: 2
   value: 20
-  cost: 25
   turns: 1

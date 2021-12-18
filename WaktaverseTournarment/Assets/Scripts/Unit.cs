@@ -31,6 +31,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public List<Image> buffIcons; //버프 아이콘 리스트
     [SerializeField] public List<Text> buffTurnTexts; //버프 턴 수
     [SerializeField] public List<Text> buffDiscriptions; //버프 설명
+    [SerializeField] public List<Text> valueTexts; //버프 수치값 설명
 
 
     private int damageedValue = 0;
@@ -100,7 +101,7 @@ public class Unit : MonoBehaviour
         float t = 0;
         while (softSlider &&  t < 1)
         {
-            t += Time.deltaTime * 2.5f;
+            t += Mathf.Max(Time.deltaTime * 2.5f, 0.01f);
             softSlider.value = Mathf.Lerp(prevHp, value, t);
             //t += 0.01f;
             yield return new WaitForSeconds(0.0167f);

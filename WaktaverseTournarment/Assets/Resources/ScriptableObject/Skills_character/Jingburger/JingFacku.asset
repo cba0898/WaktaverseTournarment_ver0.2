@@ -18,11 +18,12 @@ MonoBehaviour:
   target: 4
   range: 928
   movePos: 0
-  effect: {fileID: 0}
+  effect: {fileID: 6356537162020760699, guid: cf504eed571e0af48aeb2b68b882cdad, type: 3}
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 0}
   cost: 20
+  effectivePos: 0
   condition: 2
   value: 25
   turns: 0
@@ -30,4 +31,3 @@ MonoBehaviour:
   isSelf: 0
   isIdle: 0
   isArts: 0
-  attackPos: 3

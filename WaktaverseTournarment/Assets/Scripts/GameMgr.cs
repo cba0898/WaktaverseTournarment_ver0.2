@@ -24,6 +24,7 @@ public class Buff
     public int turn;
     public Sprite buffImg;
     public string buffDiscription;
+    public string buffValue;
     public bool isBuff;
 
     public Buff()
@@ -595,23 +596,36 @@ public class GameMgr : MonoBehaviour
                     break;
                 case INFLUENCE.ATK:
                     buff.isBuff = true;
-                    if(0 < util.value)
+                    if (0 < util.value)
+                    {
                         buff.buffImg = atkBuffImg;
+                        buff.buffValue = string.Format("공격력 +{0}", util.value);
+                    }
                     else
+                    {
                         buff.buffImg = atkDebuffImg;
+                        buff.buffValue = string.Format("공격력   {0}", util.value);
+                    }
                     buff.addAtk = util.value;
                     break;
                 case INFLUENCE.DEF:
                     buff.isBuff = true;
                     if (0 < util.value)
+                    {
                         buff.buffImg = defBuffImg;
+                        buff.buffValue = string.Format("방어력 +{0}", util.value);
+                    }
                     else
+                    { 
                         buff.buffImg = defDebuffImg;
+                        buff.buffValue = string.Format("방어력 -{0}", util.value);
+                    }
                     buff.addDef = util.value;
                     break;
             }
             // 버프 설명 텍스트를 가져옴
-            buff.buffDiscription = string.Format("{0}\n{1}", util.discription, util.value);
+            buff.buffDiscription = string.Format("{0}", util.discription);
+
 
             buff.turn = util.turns;
 
@@ -628,6 +642,7 @@ public class GameMgr : MonoBehaviour
         unit.buffIcons[unit.buffCount].sprite = buff.buffImg;
         unit.buffTurnTexts[unit.buffCount].text = buff.turn.ToString();
         unit.buffDiscriptions[unit.buffCount].text = buff.buffDiscription;
+        unit.valueTexts[unit.buffCount].text = buff.buffValue;
         unit.AddBuffCount();
     }
 
