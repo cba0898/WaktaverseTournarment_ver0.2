@@ -163,6 +163,18 @@ public class UIMgr : MonoBehaviour
         }
         battleStartButton.interactable = false;
     }
+
+    public List<KeyCode> skipButton; // 대화를 빠르게 넘길 수 있는 키
+    void Update()
+    {
+        foreach (var element in skipButton) // 버튼 검사
+        {
+            if (Input.GetKeyDown(element))
+            {
+                isButtonClicked = true;
+            }
+        }
+    }
     //--------------전투 화면------------    
 
 
@@ -279,7 +291,7 @@ public class UIMgr : MonoBehaviour
                 // 슬롯 정보 변경
                 setSlot(SLOT.add);
 
-                SoundMgr.Instance.OnPlaySFX("6.slot click");
+                SoundMgr.Instance.OnPlaySFX("7.card click");
 
                 // 수정 필요
                 GameMgr.Instance.Player.SetRemainCost(DataMgr.Instance.GetRemainMana(card.skillData, GameMgr.Instance.Player, -1));
@@ -314,6 +326,37 @@ public class UIMgr : MonoBehaviour
         }
         CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
+    public Text ChatText; // 실제 채팅이 나오는 텍스트
+    public string writerText = "";
+    bool isButtonClicked = false;
+    IEnumerator NormalChat(string narration)
+    {
+        writerText = "";
+
+        //텍스트 타이핑 효과
+        for (int i = 0; i < narration.Length; i++)
+        {
+            writerText += narration[i];
+            ChatText.text = writerText;
+            yield return null;
+        }
+
+        //키를 다시 누를 떄 까지 무한정 대기
+        while (true)
+        {
+            if (isButtonClicked)
+            {
+                isButtonClicked = false;
+                break;
+            }
+            yield return null;
+        }
+    }
+    IEnumerator TextPractice()
+    {
+        yield return StartCoroutine(NormalChat("이것은 타이핑 효과를 통해 대사창을 구현하는 연습"));
+        yield return StartCoroutine(NormalChat("안녕하세요, 반갑습니다."));
+    }
 
     // 현재 마나보다 비용이 높은 카드를 비활성화
     private void CheckDisable(int remainCost)
@@ -333,7 +376,8 @@ public class UIMgr : MonoBehaviour
     // 현재 슬롯을 반환
     public void setCurrentSlot(int value)
     {
-        SoundMgr.Instance.OnPlaySFX("7.card click");
+        // 오류가뜨는데 이유를 모르겠ㅇㅁ
+        SoundMgr.Instance.OnPlaySFX("6.slot click");
         currentSlotIndex = value;
     }
 
@@ -495,6 +539,8 @@ public class UIMgr : MonoBehaviour
         {
             case BUTTON.Main_Start:
                 MoveScene(SCENE.Main, SCENE.CharSelect);
+                //main start
+                SoundMgr.Instance.OnPlaySFX("main start");
                 break;
             case BUTTON.CharSelect_Select:
                 DataMgr.Instance.SetEnemy();
@@ -509,7 +555,7 @@ public class UIMgr : MonoBehaviour
                 break;
             case BUTTON.CharMatch_Start:
                 CharMatchStart();
-                SoundMgr.Instance.OnPlaySFX("main start");                
+                SoundMgr.Instance.OnPlaySFX("match start");                
                 // 첫 라운드에만 재생
                 if (DataMgr.Instance.Round == 1)
                     SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
@@ -606,17 +652,17 @@ public class UIMgr : MonoBehaviour
             case RESULTSCENE.Win:
                 reward.SuccessReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "WIN!";
-                subText.text = "승리! 디스크 조각을 획득했다!";
+                SetResultSubText("승리! 디스크 조각을 획득했다!");
                 break;
             case RESULTSCENE.Lose:
                 reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "LOSE!";
-                subText.text = "패배! 조각을 얻는데 실패했다..! 다시..!";
+                SetResultSubText("패배! 조각을 얻는데 실패했다..! 다시..!");
                 break;
             case RESULTSCENE.Draw:
                 reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "DRAW!";
-                subText.text = "아.. 아깝다! 조각을 얻는데 실패했다! 다시!!";
+                SetResultSubText("아.. 아깝다! 조각을 얻는데 실패했다! 다시!!");
                 break;
         }
     }
@@ -631,6 +677,25 @@ public class UIMgr : MonoBehaviour
     public void OffEndButton()
     {
         end.SetActive(false);
+    }
+    [SerializeField] private GameObject endingMovieObj; // 엔딩 영상 오브젝트
+    [SerializeField] private GameObject endingScene; // 엔딩 화면 오브젝트
+    [SerializeField] private Animator endingMovieAnim;  // 엔딩 영상 애니메이션
+    public void OnEndingMovie()
+    {
+        StartCoroutine(PlayEndingMovie());
+    }
+    private IEnumerator PlayEndingMovie()
+    {
+        endingMovieObj.SetActive(true);
+        while (DataMgr.Instance.IsEndAnim(endingMovieAnim))yield return null;
+        endingMovieObj.SetActive(false);
+        endingScene.SetActive(true);
+    }
+    public void OffEnding()
+    {
+        endingMovieObj.SetActive(false);
+        endingScene.SetActive(false);
     }
     public void OnToMainButton()
     {
@@ -648,6 +713,10 @@ public class UIMgr : MonoBehaviour
         }       
     }
 
+    public bool IsMain()
+    {
+        return (sceneList[(int)SCENE.Main].gameObject.activeSelf);
+    }
     // 재시작. 적의 정보, 특수카드 정보는 남아있음.
     public void Restart()
     {
@@ -677,6 +746,8 @@ public class UIMgr : MonoBehaviour
         OffEndButton();
         OffToMainButton();
         battleStartButton.interactable = false;
+        endingMovieObj.SetActive(false);
+        endingScene.SetActive(false);
     }
 
     // 씬 전환

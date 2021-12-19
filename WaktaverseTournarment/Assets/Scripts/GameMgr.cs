@@ -184,7 +184,10 @@ public class GameMgr : MonoBehaviour
         var playerCard = playerCardList[DataMgr.Instance.turnCount];
         var enemyCard = enemyCardList[DataMgr.Instance.turnCount];
 
-        SoundMgr.Instance.OnPlaySFX(playerCard.openAudio.name);
+        // 카드 오픈 사운드 출력
+        playerCard.OnPlayOpenSound();
+        enemyCard.OnPlayOpenSound();
+
         // 첫 번째 카드가 뒤집히는 애니메이션 실행
         playerCard.CardOpen();
         enemyCard.CardOpen();
@@ -227,6 +230,10 @@ public class GameMgr : MonoBehaviour
         // 지속되는 피격모션이 있다면 중지
         Player.unitanim.OnHitExit();
         Enemy.unitanim.OnHitExit();
+
+        // 카드 오픈 사운드 비활성화
+        playerCard.OffPlayOpenSound();
+        enemyCard.OffPlayOpenSound();
     }
 
     // 전투 화면에 선택한 카드들을 세팅

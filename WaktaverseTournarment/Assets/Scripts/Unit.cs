@@ -78,11 +78,13 @@ public class Unit : MonoBehaviour
         unitRigid2D = GetComponent<Rigidbody2D>();
     }
 
+    private Coroutine barCoroutine = null;
     public void AddHP(int value)
     {
         hp = Mathf.Clamp(hp + value, 0, 100);
         //hpSlider.value = hp;
-        StartCoroutine(BarSlideEffect(hpSlider, hpBackSlider, hp));
+        if (null != barCoroutine) StopCoroutine(barCoroutine);
+        barCoroutine = StartCoroutine(BarSlideEffect(hpSlider, hpBackSlider, hp));
         hpText.text = string.Format("HP {0}", hp);
     }
 

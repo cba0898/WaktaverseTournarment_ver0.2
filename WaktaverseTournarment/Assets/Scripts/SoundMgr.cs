@@ -121,7 +121,7 @@ public class SoundMgr : MonoBehaviour
 
     public void OnPlaySFX(string clipName)
     {
-        SFX.Stop();
+        if (SFX) SFX.Stop();
         if (SFX.isPlaying) return;
         SFX.clip = SFXDictionary[clipName];
         if (!SFX.isPlaying) SFX.Play();

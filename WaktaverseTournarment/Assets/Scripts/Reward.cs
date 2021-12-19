@@ -60,7 +60,7 @@ public class Reward : MonoBehaviour
             rewards[i].gameObject.SetActive(false);
         }
         Frame.gameObject.SetActive(false);
-        UIMgr.Instance.SetResultSubText("완성된 디스크에는 [2021 연말공모전 출품작]이라고 쓰여 있었다. 왁물원에 올려두면 다시는 잃어버리지 않겠지?");
+        UIMgr.Instance.SetResultSubText("드디어 디스크를 완성했다! 이제 도파민 박사의 발명품에 넣어서 소원을 이루자!");
         effect.gameObject.SetActive(false);
         effect.sprite = FinalEffects;
         effect.gameObject.SetActive(true);
@@ -71,4 +71,6 @@ public class Reward : MonoBehaviour
         UIMgr.Instance.OffEndButton();
         UIMgr.Instance.OnToMainButton();
     }
+
+
 }

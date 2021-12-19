@@ -20,7 +20,7 @@ public class Card : MonoBehaviour
     [SerializeField] private GameObject back;           // 카드 뒷면
     [SerializeField] private GameObject disable;        // 카드 사용 불과 효과
     [SerializeField] private Animation anim;            // 카드 애니메이션
-    [SerializeField] public AudioClip openAudio;       // 오디오 오픈 클립
+    [SerializeField] public AudioSource openAudio;       // 오디오 오픈 소스
     public bool isPlayAnimation { get { return (anim) ? anim.isPlaying : false; } }
 
     public Normal skillData { get; private set; }
@@ -32,6 +32,18 @@ public class Card : MonoBehaviour
     //{
     //    ResetCardUI();
     //}
+
+    public void OnPlayOpenSound()
+    {
+        openAudio.gameObject.SetActive(true);
+        openAudio.Play();
+    }
+    public void OffPlayOpenSound()
+    {
+        openAudio.Stop();
+        openAudio.gameObject.SetActive(false);
+    }
+
 
     public void SetData(Normal data, Vector2 pos)
     {
