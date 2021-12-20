@@ -326,8 +326,8 @@ public class UIMgr : MonoBehaviour
         }
         CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
-    public Text ChatText; // 실제 채팅이 나오는 텍스트
-    public string writerText = "";
+    [SerializeField] private Text endingText; // 실제 채팅이 나오는 텍스트
+    [SerializeField] private string writerText = "";
     bool isButtonClicked = false;
     IEnumerator NormalChat(string narration)
     {
@@ -337,7 +337,7 @@ public class UIMgr : MonoBehaviour
         for (int i = 0; i < narration.Length; i++)
         {
             writerText += narration[i];
-            ChatText.text = writerText;
+            endingText.text = writerText;
             yield return null;
         }
 
@@ -352,10 +352,9 @@ public class UIMgr : MonoBehaviour
             yield return null;
         }
     }
-    IEnumerator TextPractice()
+    public IEnumerator TextOut()
     {
-        yield return StartCoroutine(NormalChat("이것은 타이핑 효과를 통해 대사창을 구현하는 연습"));
-        yield return StartCoroutine(NormalChat("안녕하세요, 반갑습니다."));
+        yield return StartCoroutine(NormalChat("징버거는 도파민 박사의 발명품으로 햄버거 양산기계를 얻었다! "));
     }
 
     // 현재 마나보다 비용이 높은 카드를 비활성화
@@ -691,6 +690,7 @@ public class UIMgr : MonoBehaviour
         while (DataMgr.Instance.IsEndAnim(endingMovieAnim))yield return null;
         endingMovieObj.SetActive(false);
         endingScene.SetActive(true);
+        StartCoroutine(TextOut());
     }
     public void OffEnding()
     {

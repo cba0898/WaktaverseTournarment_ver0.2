@@ -36,6 +36,8 @@ public class Card : MonoBehaviour
     public void OnPlayOpenSound()
     {
         openAudio.gameObject.SetActive(true);
+        openAudio.volume = SoundMgr.Instance.SFXSoundVolume;
+        openAudio.mute = SoundMgr.Instance.SFXSoundMute;
         openAudio.Play();
     }
     public void OffPlayOpenSound()
