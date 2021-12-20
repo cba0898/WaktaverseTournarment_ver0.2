@@ -2,6 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Action
+{
+    DEFUALT = 0,
+    MOVE,
+    ATTACK,
+    DEF,
+    HP,
+    MP,
+    BUFF
+}
+
+public class ThisAction
+{
+    public Action action;
+    public float weight;
+}
+
 public class NewAi
 {
     private ThisAction rateHpHeal = new ThisAction();

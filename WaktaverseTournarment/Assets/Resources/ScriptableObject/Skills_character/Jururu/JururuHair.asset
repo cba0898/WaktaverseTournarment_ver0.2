@@ -29,5 +29,5 @@ MonoBehaviour:
   turns: 0
   applyCount: 1
   isSelf: 0
-  isIdle: 1
-  isArts: 0
+  isIdle: 0
+  isArts: 1

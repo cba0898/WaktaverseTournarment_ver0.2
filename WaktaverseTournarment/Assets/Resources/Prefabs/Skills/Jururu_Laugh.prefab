@@ -2179,13 +2179,14 @@ GameObject:
   m_Component:
   - component: {fileID: 7829520115517009241}
   - component: {fileID: 7673597908609959076}
+  - component: {fileID: 2639363532327902360}
   m_Layer: 0
   m_Name: Jururu_Laugh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7829520115517009241
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2219,3 +2220,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 8940365674917542526}
+--- !u!114 &2639363532327902360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829520115517009246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96d808f7a4a2d44686dd6ee5fc66f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTransform: {fileID: 7829520115517009241}
+  textTransform:
+  - {fileID: 7829520114032641135}
+  - {fileID: 7829520114806807060}
+  - {fileID: 7829520113565848204}
+  - {fileID: 7829520115071061196}
+  - {fileID: 7829520114889574034}
+  - {fileID: 7829520115439927560}
+  - {fileID: 7829520114318225674}
+  - {fileID: 7829520114989003890}
+  - {fileID: 7829520114182998598}
+  - {fileID: 7829520113394200069}
+  - {fileID: 7829520113385423079}
+  - {fileID: 7829520113408040880}
+  - {fileID: 7829520115076920001}
+  - {fileID: 7829520113833290271}
+  - {fileID: 7829520113605188794}
+  - {fileID: 7829520113992471306}
+  - {fileID: 7829520114153351587}
+  - {fileID: 7829520114462838779}
+  - {fileID: 7829520115492990111}
+  - {fileID: 7829520115390401131}
+  - {fileID: 7829520114762907509}
+  - {fileID: 7829520113853686112}
+  - {fileID: 7829520115343640617}
+  - {fileID: 7829520113560380681}

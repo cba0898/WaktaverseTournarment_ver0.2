@@ -833,6 +833,7 @@ public class GameMgr : MonoBehaviour
     // 게임의 모든 변동정보 초기화
     public void ResetGame()
     {
+        if (null != StartRoundCoroutine) StopCoroutine(StartRoundCoroutine);
         ResetGameData();
         UIMgr.Instance.ResetUIData();
         DataMgr.Instance.ResetData();

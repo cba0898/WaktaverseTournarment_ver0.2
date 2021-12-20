@@ -30,4 +30,4 @@ MonoBehaviour:
   applyCount: 1
   isSelf: 0
   isIdle: 0
-  isArts: 0
+  isArts: 1

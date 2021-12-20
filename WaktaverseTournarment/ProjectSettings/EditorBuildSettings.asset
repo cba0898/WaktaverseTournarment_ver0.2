@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/CardSetScene.unity
+    path: Assets/Scenes/Scene.unity
     guid: a3e99322c00ac464a8bec53b6647245c
   - enabled: 0
     path: 

@@ -17,15 +17,6 @@ public class UnitAnim : MonoBehaviour
         isMove = false;
     }
 
-    public void OnBuffEnter()
-    {
-        if (anim) anim.SetBool("isBuff", true);
-    }
-    public void OnBuffExit()
-    {
-        if (anim) anim.SetBool("isBuff", false);
-    }
-
     public void OnHitEnter()
     {
         if (anim) anim.SetBool("isHit", true);
@@ -36,12 +27,13 @@ public class UnitAnim : MonoBehaviour
     }
     public void OnGuardEnter()
     {
-        if (anim) anim.SetBool("isGuard", false);
+        if (anim) anim.SetBool("isGuard", true);
     }
     public void OnGuardExit()
     {
         if (anim) anim.SetBool("isGuard", false);
     }
+    
     public void OnBackEnter()
     {
         if (anim) anim.SetBool("isBack", true);

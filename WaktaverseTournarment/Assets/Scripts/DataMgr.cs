@@ -271,10 +271,10 @@ public class DataMgr : MonoBehaviour
     }
 
     // 캐릭터 한글이름 문자열 저장용 딕셔너리 생성
-    public Dictionary<string, string> SetNameTable()
+    public Dictionary<string, string> SetTable(string address)
     {
         Dictionary<string, string> dataTable = new Dictionary<string, string>();
-        var nameTable = Resources.Load<TextAsset>("NameTable");
+        var nameTable = Resources.Load<TextAsset>(address);
         var lines = Regex.Split(nameTable.text, LINE_SPLIT_RE);
 
         for (int i = 0; i < lines.Length; i++)
@@ -283,6 +283,13 @@ public class DataMgr : MonoBehaviour
             dataTable.Add(data[0], data[1]);
         }
         return dataTable;
+    }
+    public List<string> SetList(string address)
+    {
+        var dataFile = Resources.Load<TextAsset>(address);
+        var lines = Regex.Split(dataFile.text, LINE_SPLIT_RE);
+
+        return new List<string>(lines);
     }
     // 해당 캐릭터의 스크립터블 오브젝트를 로드
     public void SetCharSkill(Character character, out Normal[] units)

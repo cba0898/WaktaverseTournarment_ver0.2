@@ -90,6 +90,8 @@ public class UIMgr : MonoBehaviour
     }
 
     [SerializeField] private Button battleStartButton; // 배틀 시작 버튼
+    [SerializeField] private Text helpText; // 도움말 텍스트
+    private List<string> helpTextList;  // 도움말 모음 딕셔너리
     //--------------카드 선택 화면-----------
 
 
@@ -129,6 +131,8 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private DamageText DamageTextPrefab;   // 데미지 텍스트 프리팹
     [SerializeField] private Transform textField;
     private Queue<DamageText> damageTextQueue = new Queue<DamageText>();
+    [SerializeField] private Image background;
+    [SerializeField] private Sprite[] backgroundSprites;
 
     public DamageText GetDamageText()
     {
@@ -162,18 +166,8 @@ public class UIMgr : MonoBehaviour
             }
         }
         battleStartButton.interactable = false;
-    }
 
-    public List<KeyCode> skipButton; // 대화를 빠르게 넘길 수 있는 키
-    void Update()
-    {
-        foreach (var element in skipButton) // 버튼 검사
-        {
-            if (Input.GetKeyDown(element))
-            {
-                isButtonClicked = true;
-            }
-        }
+        helpTextList = DataMgr.Instance.SetList("HelpTable");
     }
     //--------------전투 화면------------    
 
@@ -185,6 +179,13 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Reward reward;
     [SerializeField] private GameObject end;
     [SerializeField] private GameObject ToMainButton;
+    private string endingScrollText = string.Empty; // 엔딩 텍스트의 데이터
+    [SerializeField] private Image endingIllust;    // 엔딩 일러스트
+    [SerializeField] private Text endingText; // 실제 채팅이 나오는 텍스트
+    [SerializeField] private string writerText = "";    // 
+    [SerializeField] private Animation endingAnim;
+    [SerializeField] private GameObject endString;
+    [SerializeField] private GameObject endButton;
     //--------------게임 오버 화면-------------
 
     //-------------옵션--------------
@@ -226,23 +227,30 @@ public class UIMgr : MonoBehaviour
         Character CurPlayer = DataMgr.Instance.CurrentPlayer;
         Character CurEnemy = DataMgr.Instance.CurrentEnemy;
 
-        Dictionary<string, string> nameTable = DataMgr.Instance.SetNameTable();
+        Dictionary<string, string> nameTable = DataMgr.Instance.SetTable("NameTable");
 
+        ShowHelpText();
         PlayerName.text = nameTable[CurPlayer.ToString()];
         EnemyName.text = nameTable[CurEnemy.ToString()];
 
         SetCharImg(playerIcon, CurPlayer, "Sprites/Characters/Icon/Icon_total", "Icon");
         SetCharImg(GameMgr.Instance.playerImg, CurPlayer, "Sprites/Characters/Characters_total", "Characters");
         SetCharImg(miniMap.playerMiniMapIcon, CurPlayer, "Sprites/Characters/Characters_total", "Characters");
-
+        var illust = Resources.Load<Sprite>(string.Format("Sprites/Backgrounds/Ending/Ending_{0}", CurPlayer.ToString()));
+        if(illust) endingIllust.sprite = illust;
+        var txt = Resources.Load<TextAsset>(string.Format("EndingText/Ending_{0}", CurPlayer.ToString()));
+        if(txt) endingScrollText = txt.text;
 
         SetCharImg(enemyIcon, CurEnemy, "Sprites/Characters/Icon/Icon_total", "Icon");
         SetCharImg(GameMgr.Instance.enemyImg, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
         SetCharImg(miniMap.enemyMiniMapIcon, CurEnemy, "Sprites/Characters/Characters_total", "Characters");
     }
 
-    [SerializeField] private Image background;
-    [SerializeField] private Sprite[] backgroundSprites;
+    private void ShowHelpText()
+    {
+        helpText.text = helpTextList[Random.Range(0, helpTextList.Count)];
+    }
+
     // 전투 화면 백그라운드 설정
     private void InitBattleBackground()
     {
@@ -326,35 +334,24 @@ public class UIMgr : MonoBehaviour
         }
         CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
-    [SerializeField] private Text endingText; // 실제 채팅이 나오는 텍스트
-    [SerializeField] private string writerText = "";
-    bool isButtonClicked = false;
+
     IEnumerator NormalChat(string narration)
     {
         writerText = "";
+
+        while (endingAnim && endingAnim.isPlaying) yield return null;
 
         //텍스트 타이핑 효과
         for (int i = 0; i < narration.Length; i++)
         {
             writerText += narration[i];
             endingText.text = writerText;
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
 
-        //키를 다시 누를 떄 까지 무한정 대기
-        while (true)
-        {
-            if (isButtonClicked)
-            {
-                isButtonClicked = false;
-                break;
-            }
-            yield return null;
-        }
-    }
-    public IEnumerator TextOut()
-    {
-        yield return StartCoroutine(NormalChat("징버거는 도파민 박사의 발명품으로 햄버거 양산기계를 얻었다! "));
+        yield return new WaitForSeconds(0.8f);
+        endString.SetActive(true);
+        endButton.SetActive(true);
     }
 
     // 현재 마나보다 비용이 높은 카드를 비활성화
@@ -376,7 +373,7 @@ public class UIMgr : MonoBehaviour
     public void setCurrentSlot(int value)
     {
         // 오류가뜨는데 이유를 모르겠ㅇㅁ
-        SoundMgr.Instance.OnPlaySFX("6.slot click");
+        if(SoundMgr.Instance) SoundMgr.Instance.OnPlaySFX("6.slot click");
         currentSlotIndex = value;
     }
 
@@ -579,7 +576,9 @@ public class UIMgr : MonoBehaviour
 
                 ClearSlot();
 
+                ShowHelpText();
                 MoveScene(SCENE.Battle, SCENE.CardSet);
+                
                 SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
         }
@@ -690,7 +689,10 @@ public class UIMgr : MonoBehaviour
         while (DataMgr.Instance.IsEndAnim(endingMovieAnim))yield return null;
         endingMovieObj.SetActive(false);
         endingScene.SetActive(true);
-        StartCoroutine(TextOut());
+        endString.SetActive(false);
+        endButton.SetActive(false);
+        
+        yield return NormalChat(endingScrollText);
     }
     public void OffEnding()
     {

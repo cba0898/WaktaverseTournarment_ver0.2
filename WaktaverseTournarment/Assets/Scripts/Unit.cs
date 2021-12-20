@@ -17,6 +17,7 @@ public class Unit : MonoBehaviour
     [SerializeField] public int addAtk { get; private set; }    // 추가 데미지
     [SerializeField] public int defense { get; private set; }   // 방어력. 받는 데미지 가/감
 
+    [SerializeField] private Image UnitImg;     // 이미지
     [SerializeField] public UnitAnim unitanim;  // 애니메이션
     [SerializeField] private Slider hpSlider;   // hp바
     [SerializeField] private Slider hpBackSlider;   // hp바
@@ -78,13 +79,11 @@ public class Unit : MonoBehaviour
         unitRigid2D = GetComponent<Rigidbody2D>();
     }
 
-    private Coroutine barCoroutine = null;
     public void AddHP(int value)
     {
         hp = Mathf.Clamp(hp + value, 0, 100);
         //hpSlider.value = hp;
-        if (null != barCoroutine) StopCoroutine(barCoroutine);
-        barCoroutine = StartCoroutine(BarSlideEffect(hpSlider, hpBackSlider, hp));
+        StartCoroutine(BarSlideEffect(hpSlider, hpBackSlider, hp));
         hpText.text = string.Format("HP {0}", hp);
     }
 
@@ -148,6 +147,8 @@ public class Unit : MonoBehaviour
         hpText.text = string.Format("HP {0}", hp);
         mpText.text = string.Format("MP {0}", mp);
         InitBuffIcon();
+        UnitImg.color = new Color(1, 1, 1);
+        unitanim.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
     }
 
     public Vector2 GetUnitPos()
@@ -156,7 +157,6 @@ public class Unit : MonoBehaviour
     }
 
     private string AttackTag = "Attack";
-    private string BuffTag = "Buff";
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -186,12 +186,11 @@ public class Unit : MonoBehaviour
             // 방어력이 존재할 경우 방어 폰트 추가 + 방어 애니메이션 실행
             if (0 < defense)
             {
+                unitanim.OnGuardEnter();
                 posX = 0.3f + Random.value * 0.2f;
                 var def = UIMgr.Instance.GetDamageText();
                 //+ new Vector3(Random.RandomRange(0, 10) * 0.1f, 0, 0)
                 if (def) def.SetDamage(defense, DamageTextType.Defense, transform.position + offset + new Vector3(-posX * offset.x, 1f, 0));
-                //yield return new WaitForSeconds(0.3f);
-                unitanim.OnGuardEnter();
             }
             else
                 unitanim.OnHitEnter();
@@ -205,8 +204,8 @@ public class Unit : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.transform.tag == AttackTag)
-            unitanim.OnHitExit();
+        unitanim.OnHitExit();
+        unitanim.OnGuardExit();
     }
 
 

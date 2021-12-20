@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8333766983436957242}
   - component: {fileID: 644071767877395499}
+  - component: {fileID: 4230925088444196640}
   m_Layer: 0
   m_Name: Jururu_Charm
   m_TagString: Buff
@@ -200,6 +201,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7970992080517676277}
+--- !u!114 &4230925088444196640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990397573056267985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96d808f7a4a2d44686dd6ee5fc66f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillTransform: {fileID: 8333766983436957242}
+  targetTransform:
+  - {fileID: 7400531750573841001}
+  - {fileID: 7400531751086745310}
+  - {fileID: 7400531751003247598}
+  - {fileID: 7400531749170633447}
+  - {fileID: 7400531749425393865}
+  - {fileID: 7400531750357588346}
+  - {fileID: 7400531749803336696}
+  - {fileID: 7400531749595447783}
 --- !u!1 &4255843483603420024
 GameObject:
   m_ObjectHideFlags: 0

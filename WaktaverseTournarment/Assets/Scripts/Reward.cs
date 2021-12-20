@@ -19,6 +19,7 @@ public class Reward : MonoBehaviour
     {
         OnEffect(enemyIndex);
         rewards[enemyIndex].gameObject.SetActive(true);
+        SoundMgr.Instance.OnPlaySFX("12.Getting disc");
     }
 
     // 패배, 무승부 보상 효과
@@ -26,6 +27,7 @@ public class Reward : MonoBehaviour
     {
         OnEffect(enemyIndex);
         rewards[enemyIndex].gameObject.SetActive(false);
+        SoundMgr.Instance.OnPlaySFX("13.getting disc fail");
     }
 
     // 빛나는 효과 실행
@@ -66,7 +68,7 @@ public class Reward : MonoBehaviour
         effect.gameObject.SetActive(true);
 
         FinalReward.gameObject.SetActive(true);
-
+        SoundMgr.Instance.OnPlaySFX("14.100_ disc");
 
         UIMgr.Instance.OffEndButton();
         UIMgr.Instance.OnToMainButton();
