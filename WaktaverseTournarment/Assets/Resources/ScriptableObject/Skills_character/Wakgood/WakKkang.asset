@@ -16,14 +16,14 @@ MonoBehaviour:
   skillName: "\uAE61!"
   discription: Gwang-go is crazy
   target: 4
-  range: 14
+  range: 896
   movePos: 0
   effect: {fileID: 4029378197450301563, guid: 6db45d4714dad974f9865a4ebb7f1310, type: 3}
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: f1ec35efb5282d64e831ac2261c8d6ee, type: 3}
-  cost: 15
-  effectivePos: 1
+  cost: 20
+  effectivePos: 2
   condition: 2
   value: 30
   turns: 0
