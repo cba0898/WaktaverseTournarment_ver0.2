@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   skillName: "\uC0B4\uB824\uC8FC\uC138\uC694~\u2665"
-  discription: "\uB2E4\uC74C \uD134 \uAE4C\uC9C0(2\uD134) \uC801\uC758 \uACF5\uACA9\uB825\uC744
-    \uAC10\uC18C\uC2DC\uD0A8\uB2E4."
+  discription: "2\uD134 \uB3D9\uC548 \uBC1B\uB294 \uD53C\uD574\uAC00 \uAC10\uC18C\uD569\uB2C8\uB2E4. "
   target: 4
   range: 32
   movePos: 0
@@ -23,7 +22,8 @@ MonoBehaviour:
   thisAction: 6
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: a683844e7def29143bfd84d43b9adaec, type: 3}
+  cost: 20
+  effectivePos: 0
   condition: 8
   value: -10
-  cost: 20
   turns: 2

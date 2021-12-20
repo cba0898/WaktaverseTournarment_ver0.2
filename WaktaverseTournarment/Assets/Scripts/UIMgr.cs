@@ -335,11 +335,14 @@ public class UIMgr : MonoBehaviour
         CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
 
-    IEnumerator NormalChat(string narration)
+    [SerializeField] private Text introText;    // 인트로 텍스트
+    IEnumerator TypeChat(string narration)
     {
         writerText = "";
 
         while (endingAnim && endingAnim.isPlaying) yield return null;
+
+        SoundMgr.Instance.OnPlaySFX("15.subtitle");
 
         //텍스트 타이핑 효과
         for (int i = 0; i < narration.Length; i++)
@@ -353,6 +356,7 @@ public class UIMgr : MonoBehaviour
         endString.SetActive(true);
         endButton.SetActive(true);
     }
+
 
     // 현재 마나보다 비용이 높은 카드를 비활성화
     private void CheckDisable(int remainCost)
@@ -485,6 +489,7 @@ public class UIMgr : MonoBehaviour
         if (uniqueCards.Length > index)
         {
             uniqueCards[index].CardOpen();
+            SoundMgr.Instance.OnPlaySFX("special card click");
             disable.SetActive(true);
             while (uniqueCards[index].IsCardOpened()) yield return null;
 
@@ -692,7 +697,7 @@ public class UIMgr : MonoBehaviour
         endString.SetActive(false);
         endButton.SetActive(false);
         
-        yield return NormalChat(endingScrollText);
+        yield return TypeChat(endingScrollText);
     }
     public void OffEnding()
     {

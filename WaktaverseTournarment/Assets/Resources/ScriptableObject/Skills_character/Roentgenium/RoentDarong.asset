@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uB2E4\uB871\uC774\uB2E4\uB871~"
-  discription: 
+  discription: "\uBAB8 \uC18D\uC5D0 \uC228\uACA8 \uD0A4\uC6B0\uB358 \uAD34\uC0DD\uBA85\uCCB4\uC758
+    \uC2DD\uC0AC \uC2DC\uAC04. "
   target: 4
   range: 90
   movePos: 0
@@ -23,6 +24,7 @@ MonoBehaviour:
   MoveCount: 0
   voiceSFX: {fileID: 0}
   cost: 70
+  effectivePos: 0
   condition: 2
   value: 60
   turns: 0
@@ -30,4 +32,3 @@ MonoBehaviour:
   isSelf: 0
   isIdle: 0
   isArts: 1
-  attackPos: 3
