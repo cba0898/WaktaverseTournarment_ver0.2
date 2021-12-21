@@ -743,6 +743,7 @@ public class UIMgr : MonoBehaviour
         // 플레이 화면 비활성화, 게임 오버 창 활성화
         MoveScene(SCENE.Play, SCENE.GameOver);
         reward.OnResultSFX();
+        SoundMgr.Instance.CrossFadeAudio(SoundMgr.Instance.keyWin);
     }
     // 전투 창에서 결과 창으로
     public void SetGameOverUI(RESULTSCENE result)

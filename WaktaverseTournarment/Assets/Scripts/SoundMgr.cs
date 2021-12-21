@@ -31,6 +31,7 @@ public class SoundMgr : MonoBehaviour
     private Dictionary<string, AudioClip> BGMDictionary;   // 리소스에 불러온 오디오 클립을 저장할 딕셔너리
     private Dictionary<string, AudioClip> SFXDictionary;   // 리소스에 불러온 오디오 클립을 저장할 딕셔너리
     [SerializeField] private AudioSource BGM;    // BGM
+    [SerializeField] private AudioSource SubBgm;    // SubBgm
     [SerializeField] private AudioSource SFX;    // SFX
 
     // bgm key 문자열 변수들
@@ -89,6 +90,41 @@ public class SoundMgr : MonoBehaviour
         ApplyBGMVolume();
     }
 
+    Coroutine coroutine;
+    public void CrossFadeAudio(string key)
+    {
+        //BGM.clip = mainClip;
+        SubBgm.clip = BGMDictionary[key];
+        if (null != coroutine) StopCoroutine(coroutine);
+        coroutine = StartCoroutine(CrossFade());
+    }
+
+    private IEnumerator CrossFade()
+    {
+        SubBgm.volume = 0;
+        BGM.volume = BGMSoundVolume;
+        SubBgm.gameObject.SetActive(true);
+        SubBgm.Play();
+
+        float value = 1f;
+        while (0 < value)
+        {
+            value = Mathf.Clamp01(value - 0.1f);
+            BGM.volume = BGMSoundVolume * value;
+            SubBgm.volume = BGMSoundVolume * (1 - value);
+
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        BGM.clip = SubBgm.clip;
+        BGM.Play();
+        BGM.time = SubBgm.time;
+        BGM.volume = BGMSoundVolume;
+        SubBgm.volume = 0;
+        
+        SubBgm.gameObject.SetActive(false);
+    }
+
     public void LoadAudio()
     {
         BGMDictionary = DataMgr.Instance.SetDictionary<AudioClip>("Sounds/BGM");
@@ -99,8 +135,8 @@ public class SoundMgr : MonoBehaviour
 
     public void ApplyBGMVolume()
     {
-        BGM.volume = BGMSoundVolume;
-        BGM.mute = BGMSoundMute;
+        SubBgm.volume = BGM.volume = BGMSoundVolume;
+        SubBgm.mute = BGM.mute = BGMSoundMute;
     }
     public void ApplySFXVolume()
     {
