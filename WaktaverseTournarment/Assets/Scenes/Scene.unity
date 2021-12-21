@@ -26646,7 +26646,7 @@ MonoBehaviour:
   currentEnemy: 0
   enemyList: 
   playerPosRate: -1.5
-  enemyPosRate: -1.5
+  enemyPosRate: 1.5
   arrPublicSkill: []
   arrPlayerSkill: []
   arrEnemySkill: []
@@ -26699,6 +26699,7 @@ MonoBehaviour:
   - {fileID: 1756335059320137928, guid: aac1e5b4d02cdae409bf64ca10310a03, type: 3}
   - {fileID: 4374565656672310867, guid: 32d13da10aa80f3428306a3acd11362d, type: 3}
   - {fileID: 893389040131978930, guid: 3fac9e49f66a4104982ba31a043ed370, type: 3}
+  - {fileID: 5082861760649459572, guid: c658c8685a58f3949a1acd78a23b0371, type: 3}
 --- !u!4 &1811226508
 Transform:
   m_ObjectHideFlags: 0

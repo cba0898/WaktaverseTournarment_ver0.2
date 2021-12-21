@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
-  m_Name: WakKkang
+  m_Name: WakMesi
   m_EditorClassIdentifier: 
   priority: 2
-  skillName: "\uAE61!"
-  discription: Gwang-go is crazy
+  skillName: "\uBA54\uC2DC"
+  discription: "\uBA54\uC2DC\uC57C! \uBA54\uC340\uB9C8!"
   target: 4
   range: 896
   movePos: 0
-  effect: {fileID: 4029378197450301563, guid: 6db45d4714dad974f9865a4ebb7f1310, type: 3}
+  effect: {fileID: 5082861760649459572, guid: c658c8685a58f3949a1acd78a23b0371, type: 3}
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: f1ec35efb5282d64e831ac2261c8d6ee, type: 3}

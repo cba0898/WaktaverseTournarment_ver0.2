@@ -660,7 +660,8 @@ public class UIMgr : MonoBehaviour
             case BUTTON.CardSet_Start:
                 CardSetStart();
                 SoundMgr.Instance.OnPlaySFX("match start");
-                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyBattle);
+                if (DataMgr.Instance.Round == 1)
+                    SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyBattle);
                 break;
             case BUTTON.CardSet_Clear:
                 SoundMgr.Instance.OnPlaySFX("9.card clear");
@@ -680,7 +681,7 @@ public class UIMgr : MonoBehaviour
                 ShowHelpText();
                 MoveScene(SCENE.Battle, SCENE.CardSet);
                 
-                SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
+                //SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
         }
     }

@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: 456e6d1fe7f390d499e234785dacc335
+guid: 204d0b2b5fb1cdc4487d42cff2296a7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5250657687756452233
-    second: highlight_0
+      213: -4421696866381463319
+    second: Mesi_0
   - first:
-      213: 1742661827530308330
-    second: highlight_1
+      213: -2851534522460519097
+    second: Mesi_1
   - first:
-      213: 5330189501848549449
-    second: highlight_2
+      213: -2051507003947015776
+    second: Mesi_2
   - first:
-      213: 2299934817977829721
-    second: highlight_3
+      213: -4775125414101245224
+    second: Mesi_3
   - first:
-      213: 5102697734358824364
-    second: highlight_4
+      213: 3905705391142231109
+    second: Mesi_4
+  - first:
+      213: -2250505626046766846
+    second: Mesi_5
+  - first:
+      213: -5451267691580564279
+    second: Mesi_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -47,7 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,7 +98,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: 12
     textureCompression: 1
@@ -118,13 +124,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: highlight_0
+      name: Mesi_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 462
-        height: 561
+        width: 339
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77e4a14f6aae127b0800000000000000
-      internalID: -5250657687756452233
+      spriteID: 9e000ee802af2a2c0800000000000000
+      internalID: -4421696866381463319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highlight_1
+      name: Mesi_1
       rect:
         serializedVersion: 2
-        x: 462
+        x: 339
         y: 0
-        width: 462
-        height: 561
+        width: 339
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeab399f2bd2f2810800000000000000
-      internalID: 1742661827530308330
+      spriteID: 7454afbb5705d68d0800000000000000
+      internalID: -2851534522460519097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highlight_2
+      name: Mesi_2
       rect:
         serializedVersion: 2
-        x: 924
+        x: 678
         y: 0
-        width: 462
-        height: 561
+        width: 339
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 948f2338c13a8f940800000000000000
-      internalID: 5330189501848549449
+      spriteID: 0a1238fcf359783e0800000000000000
+      internalID: -2051507003947015776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highlight_3
+      name: Mesi_3
       rect:
         serializedVersion: 2
-        x: 1386
+        x: 1017
         y: 0
-        width: 462
-        height: 561
+        width: 339
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9590f1808820bef10800000000000000
-      internalID: 2299934817977829721
+      spriteID: 8d22e8e4cb85bbdb0800000000000000
+      internalID: -4775125414101245224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highlight_4
+      name: Mesi_4
       rect:
         serializedVersion: 2
-        x: 1848
+        x: 1356
         y: 0
-        width: 462
-        height: 561
+        width: 339
+        height: 165
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +222,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca5f5acdd8c60d640800000000000000
-      internalID: 5102697734358824364
+      spriteID: 54c5c542c5ad33630800000000000000
+      internalID: 3905705391142231109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mesi_5
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 0
+        width: 339
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201e67a8e0994c0e0800000000000000
+      internalID: -2250505626046766846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mesi_6
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 0
+        width: 339
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccd6c3aae43954b0800000000000000
+      internalID: -5451267691580564279
       vertices: []
       indices: 
       edges: []
@@ -225,7 +273,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0569f485a7047ac45a720351137f03ae
+    spriteID: 8f015933ec318254aa9d82e8489f9e58
     internalID: 0
     vertices: []
     indices: 

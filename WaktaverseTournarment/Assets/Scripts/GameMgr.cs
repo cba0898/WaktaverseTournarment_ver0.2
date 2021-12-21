@@ -104,6 +104,8 @@ public class GameMgr : MonoBehaviour
             playerCardList[i].InitOriginPos();
             enemyCardList[i].InitOriginPos();
         }
+        // 모바일 고정
+        Screen.SetResolution(1600, 900, true);
     }
 
     public void Update()
