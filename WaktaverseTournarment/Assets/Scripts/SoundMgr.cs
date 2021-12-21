@@ -119,12 +119,22 @@ public class SoundMgr : MonoBehaviour
         if (!BGM.isPlaying) BGM.Play();
     }
 
+    public void OnDefaultButtonSFX()
+    {
+        SFX.clip = SFXDictionary["Click"];
+    }
+
     public void OnPlaySFX(string clipName)
     {
         if (SFX) SFX.Stop();
         if (SFX.isPlaying) return;
         SFX.clip = SFXDictionary[clipName];
         if (!SFX.isPlaying) SFX.Play();
+    }
+
+    public AudioClip GetAudioClip(string clipName)
+    {
+        return SFXDictionary[clipName];
     }
 
     public bool IsSFXPlaying()

@@ -81,6 +81,7 @@ public class UIMgr : MonoBehaviour
     public Vector3 selectSlotPos { get { return slotList[currentSlotIndex].transform.position; } } // 선택한 슬롯의 위치
 
     [SerializeField] private Card[] uniqueCards;    // 특수카드 배열
+    [SerializeField] private GameObject disable;    // 특수카드 비활성화 오브젝트
 
     [SerializeField] public CardSet cardSet;    // 카드 선택 화면 스크립트
     [SerializeField] private MiniMap miniMap;    // 미니맵
@@ -168,6 +169,8 @@ public class UIMgr : MonoBehaviour
         battleStartButton.interactable = false;
 
         helpTextList = DataMgr.Instance.SetList("HelpTable");
+        introTextList = DataMgr.Instance.SetList("IntroText");
+        //isIntro = true;
     }
     //--------------전투 화면------------    
 
@@ -335,26 +338,113 @@ public class UIMgr : MonoBehaviour
         CheckDisable(GameMgr.Instance.Player.mpRemain);
     }
 
+    //-------------------인트로-----------------------------
+    [Header("인트로")]
+    [SerializeField] private GameObject intro;  // 인트로 오브젝트
     [SerializeField] private Text introText;    // 인트로 텍스트
-    IEnumerator TypeChat(string narration)
+    [SerializeField] private List<GameObject> introObjectList; // 인트로 오브젝트 리스트
+    //private bool isIntro = true;    // 인트로 단 한번 활성화할지 정하는 변수
+    private int introObjCount = 0;    // 인트로 오브젝트를 불러오는 타이밍을 정하는 변수
+    private List<string> introTextList = new List<string>();
+    private bool isNextText;   // 다음 텍스트가 나와야하는지 확인
+    //-------------------인트로-----------------------------
+
+    private IEnumerator PlayIntro()
     {
+        introObjectList[introObjCount].SetActive(true);
+        for (int i = 0; i < introTextList.Count; i++)
+        {
+            // 한 줄의 타이핑이 완료될 때 까지 대기
+            yield return TypeChat(introText, introTextList[i]);
+            // 코루틴을 탈출하면 현재 문장 전부 불러옴
+            introText.text = introTextList[i];
+
+            //yield return new WaitForSeconds(0.2f);
+
+            while (!isNextText) yield return null;
+            isNextText = false;
+        }
+        // 인트로가 끝났을 경우 인트로 비활성화 호출
+        OffIntro();
+    }
+
+    public void introNext()
+    {
+        // 텍스트가 끝나지 않았을 경우
+        if (!isTextEnd)
+        {
+            // 텍스트 출력을 한번에 하고 리턴.
+            isTextCut = true;
+        }
+        // 텍스트 출력이 끝났을 경우
+        else
+        {
+            // 텍스트 초기화
+            introText.text = "";
+            // 인트로 오브젝트가 남아있는 경우에만 활성화
+            if (introObjCount + 1 < introObjectList.Count)
+            {
+                introObjectList[introObjCount].SetActive(false);
+                introObjCount++;
+                introObjectList[introObjCount].SetActive(true);
+            }
+            isNextText = true;
+        }
+    }
+
+    // 인트로 정보 초기화
+    private void ResetIntro()
+    {
+        for (int i = 0; i < introObjectList.Count; i++)
+        {
+            introObjectList[introObjCount].SetActive(false);
+        }
+        intro.SetActive(false);
+        //isIntro = false;  // 인트로를 단 한 번만 실행하게 하기
+        introText.text = "";
+        introObjCount = 0;
+        isTextCut = false;
+    }
+
+    Coroutine playIntroCoroutine = null;
+    // 인트로 활성화
+    private void OnIntro()
+    {
+        intro.SetActive(true);
+        playIntroCoroutine = StartCoroutine(PlayIntro());
+    }
+
+    // 인트로 비활성화
+    public void OffIntro()
+    {
+        if(null != playIntroCoroutine) StopCoroutine(playIntroCoroutine);
+        intro.SetActive(false);
+        ResetIntro();
+    }
+    //-------------------인트로-----------------------------
+
+    private bool isTextCut;   // 텍스트 출력을 한번에 할지 결정
+    private bool isTextEnd;   // 텍스트 출력이 끝났는지 확인
+
+    private IEnumerator TypeChat(Text text, string narration)
+    {
+        isTextEnd = false;
         writerText = "";
-
-        while (endingAnim && endingAnim.isPlaying) yield return null;
-
-        SoundMgr.Instance.OnPlaySFX("15.subtitle");
 
         //텍스트 타이핑 효과
         for (int i = 0; i < narration.Length; i++)
         {
+            // textCut 호출 시 출력을 한번에 한다.
+            if (isTextCut) break;
+
             writerText += narration[i];
-            endingText.text = writerText;
+            text.text = writerText;
+            SoundMgr.Instance.OnPlaySFX("15.subtitle");
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(0.8f);
-        endString.SetActive(true);
-        endButton.SetActive(true);
+        isTextEnd = true;
+        isTextCut = false;
     }
 
 
@@ -483,7 +573,7 @@ public class UIMgr : MonoBehaviour
         DataMgr.Instance.SetUniqueCards(uniqueCards);
     }
 
-    [SerializeField] private GameObject disable;
+    // 유니크 카드 선택 코루틴
     private IEnumerator SelectUniqueCardAction(int index)
     {
         if (uniqueCards.Length > index)
@@ -541,6 +631,12 @@ public class UIMgr : MonoBehaviour
             case BUTTON.Main_Start:
                 MoveScene(SCENE.Main, SCENE.CharSelect);
                 //main start
+                OnIntro();
+                //if (isIntro)
+                //{
+                //    OnIntro();
+                //    isIntro = false;
+                //}
                 SoundMgr.Instance.OnPlaySFX("main start");
                 break;
             case BUTTON.CharSelect_Select:
@@ -646,6 +742,7 @@ public class UIMgr : MonoBehaviour
         MoveScene(SCENE.Battle, SCENE.CardSet);
         // 플레이 화면 비활성화, 게임 오버 창 활성화
         MoveScene(SCENE.Play, SCENE.GameOver);
+        reward.OnResultSFX();
     }
     // 전투 창에서 결과 창으로
     public void SetGameOverUI(RESULTSCENE result)
@@ -696,8 +793,14 @@ public class UIMgr : MonoBehaviour
         endingScene.SetActive(true);
         endString.SetActive(false);
         endButton.SetActive(false);
-        
-        yield return TypeChat(endingScrollText);
+
+        while (endingAnim && endingAnim.isPlaying) yield return null;
+
+        yield return TypeChat(endingText, endingScrollText);
+
+        yield return new WaitForSeconds(0.8f);
+        endString.SetActive(true);
+        endButton.SetActive(true);
     }
     public void OffEnding()
     {
@@ -755,6 +858,7 @@ public class UIMgr : MonoBehaviour
         battleStartButton.interactable = false;
         endingMovieObj.SetActive(false);
         endingScene.SetActive(false);
+        ResetIntro();
     }
 
     // 씬 전환

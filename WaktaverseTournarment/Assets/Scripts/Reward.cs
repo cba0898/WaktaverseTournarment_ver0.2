@@ -12,14 +12,14 @@ public class Reward : MonoBehaviour
     [SerializeField] private Image FinalReward; // 마지막 보상
     [SerializeField] private Image Frame; // 보상 틀
     [SerializeField] private Sprite FinalEffects; // 마지막 효과
-
+    private string resultSFXString;   // 보상 효과음 이름
     
     // 승리 보상 효과
     public void SuccessReward(int enemyIndex)
     {
         OnEffect(enemyIndex);
         rewards[enemyIndex].gameObject.SetActive(true);
-        SoundMgr.Instance.OnPlaySFX("12.Getting disc");
+        resultSFXString = "12.Getting disc";
     }
 
     // 패배, 무승부 보상 효과
@@ -27,8 +27,14 @@ public class Reward : MonoBehaviour
     {
         OnEffect(enemyIndex);
         rewards[enemyIndex].gameObject.SetActive(false);
-        SoundMgr.Instance.OnPlaySFX("13.getting disc fail");
+        resultSFXString = "13.getting disc fail";
     }
+
+    public void OnResultSFX()
+    {
+        SoundMgr.Instance.OnPlaySFX(resultSFXString);
+    }
+
 
     // 빛나는 효과 실행
     private void OnEffect(int index)
