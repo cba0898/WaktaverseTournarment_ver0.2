@@ -347,10 +347,18 @@ public class UIMgr : MonoBehaviour
     private int introObjCount = 0;    // 인트로 오브젝트를 불러오는 타이밍을 정하는 변수
     private List<string> introTextList = new List<string>();
     private bool isNextText;   // 다음 텍스트가 나와야하는지 확인
+    [SerializeField] private Animation introBackAnim;
+    [SerializeField] private GameObject introSkipButton;
+    [SerializeField] private GameObject introNextButton;
     //-------------------인트로-----------------------------
 
     private IEnumerator PlayIntro()
     {
+        introBackAnim.Play();
+        while (introBackAnim.isPlaying) yield return null;
+        MoveScene(SCENE.Main, SCENE.CharSelect);
+        introSkipButton.SetActive(true);
+        introNextButton.SetActive(true);
         introObjectList[introObjCount].SetActive(true);
         for (int i = 0; i < introTextList.Count; i++)
         {
@@ -399,6 +407,8 @@ public class UIMgr : MonoBehaviour
         {
             introObjectList[introObjCount].SetActive(false);
         }
+        introSkipButton.SetActive(false);
+        introNextButton.SetActive(false);
         intro.SetActive(false);
         //isIntro = false;  // 인트로를 단 한 번만 실행하게 하기
         introText.text = "";
@@ -629,7 +639,8 @@ public class UIMgr : MonoBehaviour
         switch(button)
         {
             case BUTTON.Main_Start:
-                MoveScene(SCENE.Main, SCENE.CharSelect);
+                SoundMgr.Instance.FullPlaySFX("main start");
+
                 //main start
                 OnIntro();
                 //if (isIntro)
@@ -637,7 +648,6 @@ public class UIMgr : MonoBehaviour
                 //    OnIntro();
                 //    isIntro = false;
                 //}
-                SoundMgr.Instance.OnPlaySFX("main start");
                 break;
             case BUTTON.CharSelect_Select:
                 DataMgr.Instance.SetEnemy();

@@ -162,12 +162,26 @@ public class SoundMgr : MonoBehaviour
 
     public void OnPlaySFX(string clipName)
     {
+        if (isFull) return;
         if (SFX) SFX.Stop();
         if (SFX.isPlaying) return;
         SFX.clip = SFXDictionary[clipName];
         if (!SFX.isPlaying) SFX.Play();
     }
-
+    private bool isFull = false;
+    public void FullPlaySFX(string clipName)
+    {
+        isFull = true;
+        if (SFX) SFX.Stop();
+        SFX.clip = SFXDictionary[clipName];
+        StartCoroutine(FullSFX());
+    }
+    public IEnumerator FullSFX()
+    {
+        if (!SFX.isPlaying) SFX.Play();
+        while (SFX.isPlaying) yield return null;
+        isFull = false;
+    }
     public AudioClip GetAudioClip(string clipName)
     {
         return SFXDictionary[clipName];
