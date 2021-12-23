@@ -601,7 +601,8 @@ public class GameMgr : MonoBehaviour
                     //buff.addHp = util.value;
                     break;
                 case INFLUENCE.MP:
-                    buff.addMp = util.cost; //MP는 cost가 value 
+                    unit.AddMP(util.cost);
+                    //buff.addMp = util.cost; //MP는 cost가 value 
                     break;
                 case INFLUENCE.ATK:
                     buff.isBuff = true;
