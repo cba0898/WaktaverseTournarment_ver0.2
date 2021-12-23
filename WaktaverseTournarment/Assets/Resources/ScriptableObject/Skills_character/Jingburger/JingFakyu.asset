@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: JingFakyu
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uBE60\uB028"
+  discription: "\uBE60~~\uD050 \uBE60~~\uD050 \uC655 \uBE60\uC544\uD050\uC6B0\uC6B0! "
+  target: 4
+  range: 928
+  movePos: 0
+  effect: {fileID: 6356537162020760699, guid: cf504eed571e0af48aeb2b68b882cdad, type: 3}
+  thisAction: 2
+  MoveCount: 0
+  voiceSFX: {fileID: 0}
+  cost: 20
+  effectivePos: 0
+  condition: 2
+  value: 25
+  turns: 0
+  applyCount: 1
+  isSelf: 0
+  isIdle: 0
+  isArts: 0

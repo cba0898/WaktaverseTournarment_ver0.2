@@ -157,7 +157,7 @@ public class SoundMgr : MonoBehaviour
 
     public void OnDefaultButtonSFX()
     {
-        SFX.clip = SFXDictionary["Click"];
+        SFX.clip = SFXDictionary["1.Click"];
     }
 
     public void OnPlaySFX(string clipName)

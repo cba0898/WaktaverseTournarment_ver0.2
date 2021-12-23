@@ -10,7 +10,7 @@ public class SelectCharacter : MonoBehaviour
     public void OnSelect()
     {
         DataMgr.Instance.CurrentPlayer = character;
-        SoundMgr.Instance.OnPlaySFX("character click");
+        SoundMgr.Instance.OnPlaySFX("2.character click");
 
         var start = FindObjectOfType<Button>();
         start.interactable = true;

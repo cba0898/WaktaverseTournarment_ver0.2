@@ -450,7 +450,7 @@ public class UIMgr : MonoBehaviour
             writerText += narration[i];
             text.text = writerText;
             SoundMgr.Instance.OnPlaySFX("15.subtitle");
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.07f);
         }
 
         isTextEnd = true;
@@ -589,7 +589,7 @@ public class UIMgr : MonoBehaviour
         if (uniqueCards.Length > index)
         {
             uniqueCards[index].CardOpen();
-            SoundMgr.Instance.OnPlaySFX("special card click");
+            SoundMgr.Instance.OnPlaySFX("11.special card click");
             disable.SetActive(true);
             while (uniqueCards[index].IsCardOpened()) yield return null;
 
@@ -639,7 +639,7 @@ public class UIMgr : MonoBehaviour
         switch(button)
         {
             case BUTTON.Main_Start:
-                SoundMgr.Instance.FullPlaySFX("main start");
+                SoundMgr.Instance.FullPlaySFX("5.main start");
 
                 //main start
                 OnIntro();
@@ -653,23 +653,23 @@ public class UIMgr : MonoBehaviour
                 DataMgr.Instance.SetEnemy();
                 InitMatchScene();
                 MoveScene(SCENE.CharSelect, SCENE.CharMatch);
-                SoundMgr.Instance.OnPlaySFX("character accept");                
+                SoundMgr.Instance.OnPlaySFX("3.character accept");                
                 break;
             case BUTTON.CharMatch_Change:
                 if (DataMgr.Instance.IsFirstEnemy())
                     MoveScene(SCENE.CharMatch, SCENE.CharSelect);
-                SoundMgr.Instance.OnPlaySFX("character change");
+                SoundMgr.Instance.OnPlaySFX("4.character change");
                 break;
             case BUTTON.CharMatch_Start:
                 CharMatchStart();
-                SoundMgr.Instance.OnPlaySFX("match start");                
+                SoundMgr.Instance.OnPlaySFX("10.match start");                
                 // 첫 라운드에만 재생
                 if (DataMgr.Instance.Round == 1)
                     SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyCardSet);
                 break;
             case BUTTON.CardSet_Start:
                 CardSetStart();
-                SoundMgr.Instance.OnPlaySFX("match start");
+                SoundMgr.Instance.OnPlaySFX("10.match start");
                 if (DataMgr.Instance.Round == 1)
                     SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyBattle);
                 break;
@@ -754,7 +754,7 @@ public class UIMgr : MonoBehaviour
         // 플레이 화면 비활성화, 게임 오버 창 활성화
         MoveScene(SCENE.Play, SCENE.GameOver);
         reward.OnResultSFX();
-        SoundMgr.Instance.CrossFadeAudio(SoundMgr.Instance.keyWin);
+        //SoundMgr.Instance.CrossFadeAudio(SoundMgr.Instance.keyWin);
     }
     // 전투 창에서 결과 창으로
     public void SetGameOverUI(RESULTSCENE result)
@@ -764,17 +764,17 @@ public class UIMgr : MonoBehaviour
             case RESULTSCENE.Win:
                 reward.SuccessReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "WIN!";
-                SetResultSubText("승리! 디스크 조각을 획득했다!");
+                SetResultSubText("승리! 상대의 디스크 조각을 손에 넣었다!");
                 break;
             case RESULTSCENE.Lose:
                 reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "LOSE!";
-                SetResultSubText("패배! 조각을 얻는데 실패했다..! 다시..!");
+                SetResultSubText("패배.. 디스크 조각을 위해 다시 한 번 도전해보자!");
                 break;
             case RESULTSCENE.Draw:
                 reward.FailReward(DataMgr.Instance.GetEnemyIndex());
                 mainText.text = "DRAW!";
-                SetResultSubText("아.. 아깝다! 조각을 얻는데 실패했다! 다시!!");
+                SetResultSubText("당신과 상대는 동시에 쓰러졌다. 멋진 싸움이었지만, 다시 한 번 도전해보자!");
                 break;
         }
     }
@@ -795,10 +795,12 @@ public class UIMgr : MonoBehaviour
     [SerializeField] private Animator endingMovieAnim;  // 엔딩 영상 애니메이션
     public void OnEndingMovie()
     {
+        SoundMgr.Instance.OnPlayBGM(SoundMgr.Instance.keyEnding);
         StartCoroutine(PlayEndingMovie());
     }
     private IEnumerator PlayEndingMovie()
     {
+        endingText.text = "";
         endingMovieObj.SetActive(true);
         while (DataMgr.Instance.IsEndAnim(endingMovieAnim))yield return null;
         endingMovieObj.SetActive(false);

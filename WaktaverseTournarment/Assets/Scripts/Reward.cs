@@ -73,8 +73,8 @@ public class Reward : MonoBehaviour
         effect.sprite = FinalEffects;
         effect.gameObject.SetActive(true);
 
-        FinalReward.gameObject.SetActive(true);
         SoundMgr.Instance.OnPlaySFX("14.100_ disc");
+        FinalReward.gameObject.SetActive(true);
 
         UIMgr.Instance.OffEndButton();
         UIMgr.Instance.OnToMainButton();

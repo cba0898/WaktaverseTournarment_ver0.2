@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab0723c4835cab45b939d076b97d8c5, type: 3}
+  m_Name: LilpaDanceTime
+  m_EditorClassIdentifier: 
+  priority: 2
+  skillName: "\uB304\uC2A4 \uD0C0\uC784!"
+  discription: "\uC88C\uC911\uC744 \uC555\uB3C4\uD558\uB294 \uBA4B\uC9C4 \uB304\uC2A4!  "
+  target: 4
+  range: -1
+  movePos: 0
+  effect: {fileID: 893389040131978930, guid: 3fac9e49f66a4104982ba31a043ed370, type: 3}
+  thisAction: 2
+  MoveCount: 0
+  voiceSFX: {fileID: 0}
+  cost: 25
+  effectivePos: 0
+  condition: 2
+  value: 20
+  turns: 0
+  applyCount: 1
+  isSelf: 0
+  isIdle: 0
+  isArts: 1

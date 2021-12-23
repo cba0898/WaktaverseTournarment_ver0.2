@@ -25,9 +25,9 @@ MonoBehaviour:
   cost: 35
   effectivePos: 0
   condition: 2
-  value: 5
+  value: 10
   turns: 0
-  applyCount: 4
+  applyCount: 3
   isSelf: 0
   isIdle: 0
   isArts: 0
