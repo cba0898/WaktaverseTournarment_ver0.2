@@ -118,7 +118,7 @@ public class NewAi
         // 유닛 사이의 거리에 반비례한 방어 비중*0.05f
         rateDefense.weight = Mathf.Max((maxDistance - dist - 40) * 0.05f * defs.Count, 0);
         // 기본 이동 비중 + 유닛 사이의 거리에 비례한 이동 비중*0.1f
-        rateMove.weight = 30 + dist * 0.1f;
+        rateMove.weight = 40 + dist * 0.1f;
 
         // 총합
         rateSum = rateHpHeal.weight + rateMpHeal.weight + rateBuff.weight + rateAttack.weight + rateDefense.weight + rateMove.weight;

@@ -25,7 +25,7 @@ MonoBehaviour:
   cost: 15
   effectivePos: 0
   condition: 2
-  value: 1500
+  value: 15
   turns: 0
   applyCount: 1
   isSelf: 0

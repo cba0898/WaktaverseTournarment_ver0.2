@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 2
   skillName: "\uC6A9\uB454\uC774\uC57C!"
-  discription: "\uC8FC\uC758! \uC790\uC2E0\uB3C4 20\uC758 \uD53C\uD574\uB97C \uC785\uC2B5\uB2C8\uB2E4!"
+  discription: "\uC8FC\uC758! \uC790\uC2E0\uB3C4 15\uC758 \uD53C\uD574\uB97C \uC785\uC2B5\uB2C8\uB2E4!"
   target: -1
   range: 372
   movePos: 0
@@ -25,9 +25,9 @@ MonoBehaviour:
   cost: 25
   effectivePos: 0
   condition: 2
-  value: 20
+  value: 15
   turns: 0
-  applyCount: 2
+  applyCount: 3
   isSelf: 1
   isIdle: 0
   isArts: 1

@@ -93,7 +93,6 @@ public class SoundMgr : MonoBehaviour
     Coroutine coroutine;
     public void CrossFadeAudio(string key)
     {
-        //BGM.clip = mainClip;
         SubBgm.clip = BGMDictionary[key];
         if (null != coroutine) StopCoroutine(coroutine);
         coroutine = StartCoroutine(CrossFade());

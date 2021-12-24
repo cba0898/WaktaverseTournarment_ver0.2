@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Heal
   m_EditorClassIdentifier: 
   priority: 0
-  skillName: "\uD68C\uBCF5"
+  skillName: "\uCC9C\uC0AC\uC758 \uC190\uAE38"
   discription: "\uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
   target: 2
   range: 32

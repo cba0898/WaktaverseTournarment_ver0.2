@@ -105,7 +105,7 @@ public class GameMgr : MonoBehaviour
             enemyCardList[i].InitOriginPos();
         }
         // 모바일 고정
-        Screen.SetResolution(1600, 900, true);
+        //Screen.SetResolution(1600, 900, true);
     }
 
     public void Update()
@@ -676,13 +676,6 @@ public class GameMgr : MonoBehaviour
 
         for (int i = 0; i < buffs.Count;)
         {
-            // 버프 지속시간이 만료된 경우 해당 버프 제거
-            //if (0 >= buffs[i].turn)
-            //{
-            //    buffs.RemoveAt(i);
-            //    Debug.Log("buff end");
-            //    continue;
-            //}
 
             // 타겟이 플레이어일 경우
             if (buffs[i].buffTarget == Player)
