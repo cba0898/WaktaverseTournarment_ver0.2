@@ -8360,8 +8360,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -553.8}
-  m_SizeDelta: {x: 656.53, y: 1107.6}
+  m_AnchoredPosition: {x: 0, y: -654.38}
+  m_SizeDelta: {x: 656.53, y: 1308.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &602297770
 MonoBehaviour:
@@ -8410,10 +8410,11 @@ MonoBehaviour:
     \uC544\uC774\uB514\uC5B4 \uC81C\uACF5 - Junefw\r \uB2D8\n\r\n\uAE30\uC220 \uC544\uC774\uB514\uC5B4
     \uC81C\uACF5 - \uB534\uB534 \uB2D8, bridepl \uB2D8\r\n\r\n\n- \uC74C\uC131 \uC81C\uACF5
     -\n\r\n\uD48D\uC2E0 \uB2D8\r\n\r\n\n- \uACF5\uC2DD \uBCA0\uD0C0 \uD14C\uC2A4\uD2B8
-    \uCC38\uC5EC -\n\n\uAC04\uB2E8\uC774 \uB2D8\n\n\uC544\uB80C\uBE44\r \uB2D8\n\n\n-
-    \uC544\uD2B8 \uC800\uC791\uAD8C \uB9C1\uD06C -\n\r\n\uC138\uD305 \uC544\uC774\uCF58\r\nIcons
-    made by <a href=\"https://www.flaticon.com/authors/pixel-perfect\" title=\"Pixel
-    perfect\">Pixel perfect</a> from <a href=\"https://www.flaticon.com/\" title=\"Flaticon\">www.flaticon.com</a>\r\n\r\n\r\n\r\n"
+    \uCC38\uC5EC -\n\n\uAC04\uB2E8\uC774 \uB2D8\n\n\uC544\uB80C\uBE44\r \uB2D8\n\n\uB85C\uC9C0\uC12C
+    \uB2D8\n\npixelchu \uB2D8\n\n\n- \uC544\uD2B8 \uC800\uC791\uAD8C \uB9C1\uD06C
+    -\n\r\n\uC138\uD305 \uC544\uC774\uCF58\r\nIcons made by <a href=\"https://www.flaticon.com/authors/pixel-perfect\"
+    title=\"Pixel perfect\">Pixel perfect</a> from <a href=\"https://www.flaticon.com/\"
+    title=\"Flaticon\">www.flaticon.com</a>\r\n\r\n\r\n\r\n"
 --- !u!222 &602297771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31368,7 +31369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2136802093
 RectTransform:
   m_ObjectHideFlags: 0

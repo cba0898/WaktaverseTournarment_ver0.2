@@ -873,6 +873,7 @@ public class UIMgr : MonoBehaviour
         endingMovieObj.SetActive(false);
         endingScene.SetActive(false);
         ResetIntro();
+        roundImg.InitReoundImg();
     }
 
     // ¾À ÀüÈ¯

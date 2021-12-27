@@ -23,10 +23,10 @@ MonoBehaviour:
   thisAction: 2
   MoveCount: 0
   voiceSFX: {fileID: 8300000, guid: 9f1dc0a4a016b7d47a5ddfbd6cbb5837, type: 3}
-  cost: 50
+  cost: 45
   effectivePos: 0
   condition: 2
-  value: 40
+  value: 35
   turns: 0
   applyCount: 1
   isSelf: 0

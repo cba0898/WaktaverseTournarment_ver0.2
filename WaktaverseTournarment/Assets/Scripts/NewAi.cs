@@ -83,15 +83,15 @@ public class NewAi
             RemoveSkillToName(ref skillList, EffectivePos.Left);
         }
         // 적이 가장 위에 있을 경우
-        if(prePos.y == tileDist.y)
+        if(prePos.y >= tileDist.y)
         {
             // 위쪽에만 영향을 주는 스킬은 제거
             RemoveSkillToName(ref skillList, EffectivePos.Up);
         }
         // 적이 가장 아래에 있을 경우
-        if (prePos.y == -tileDist.y)
+        if (prePos.y <= -tileDist.y)
         {
-            // 위쪽에만 영향을 주는 스킬은 제거
+            // 아래쪽에만 영향을 주는 스킬은 제거
             RemoveSkillToName(ref skillList, EffectivePos.Down);
         }
         // 적이 나와 x 위치가 같아지지 않는 경우
@@ -114,7 +114,7 @@ public class NewAi
         // 버프 기술의 개수(0개 고려)
         rateBuff.weight = Mathf.Max((maxDistance - dist - 40) * 0.1f * buffs.Count, 0);
         // 유닛 사이의 거리에 반비례한 공격 비중*0.2f
-        rateAttack.weight = Mathf.Max((maxDistance - dist - 40) * 0.2f * atks.Count, 0);
+        rateAttack.weight = Mathf.Max((maxDistance - dist - 40) * 0.15f * atks.Count, 0);
         // 유닛 사이의 거리에 반비례한 방어 비중*0.05f
         rateDefense.weight = Mathf.Max((maxDistance - dist - 40) * 0.05f * defs.Count, 0);
         // 기본 이동 비중 + 유닛 사이의 거리에 비례한 이동 비중*0.1f
@@ -173,12 +173,9 @@ public class NewAi
                     prePos.y -= DataMgr.Instance.tileInterval.y * selectCard.MoveCount;
                     break;
             }
-
             // 적의 남게
             enemy.SetRemainCost(DataMgr.Instance.GetRemainMana(selectCard, enemy, -1));
         }
-
-
         return SelectCardList;
     }
 

@@ -831,8 +831,9 @@ public class GameMgr : MonoBehaviour
     {
         if (null != StartRoundCoroutine) StopCoroutine(StartRoundCoroutine);
         ResetGameData();
-        UIMgr.Instance.ResetUIData();
         DataMgr.Instance.ResetData();
+        UIMgr.Instance.ResetUIData();
+
     }
 }
 

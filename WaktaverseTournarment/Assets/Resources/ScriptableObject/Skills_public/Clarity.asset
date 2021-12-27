@@ -22,7 +22,7 @@ MonoBehaviour:
   thisAction: 5
   MoveCount: 0
   voiceSFX: {fileID: 0}
-  cost: 15
+  cost: 20
   effectivePos: 0
   condition: 4
   value: 0
